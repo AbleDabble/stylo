@@ -1,0 +1,172 @@
+Allison Nixon, chief research officer at security firm Unit 221B, said evidence collected to date shows that Clark and hackers he worked with started by scraping LinkedIn in search of Twitter employees who were likely to have access to the account tools. Using features that LinkedIn makes available to job recruiters, the attackers then obtained thoI think Pine Barrens is 2nd rank for me. It brought out the devil in both Paulie and Christopher, some amazing facial expressions in this episode. Also Christopher earned my respect as a smart guy who can defend himself against that lying prick Paulie. I hope that Russian guy takes a good revenge on Paulie in the future. 
+
+But I must say, the PauliI feel Janice is a bigger cunt than her. Stealing a handicapped person's leg. And that do not resuscitate scene with Livia in the hospital. I feel sad her comeuppance for taking away the leg was just a few minor injuries. Wish the Russians had maimed her leg instead.  All the time talking about "karma and dharma" and bs while acting like a total poOoh... TiL about Saints of Newark, nice, something to look forward to. 
+
+&gt; tragic figure
+
+I think I phrased my post incorrectly. I should've said I'm gonna miss Nancy Marchand instead. I mean I've got no sympathy for her character as Livia was plain evil... But I enjoyed her scenes anyway just for the pure entertainment that Nancy delivered. HerYeah I was pretty sure I would be in the minority. Have stayed away from this sub due to spoilers but just had to come here &amp; post now that my fav character is dead. :'(
+
+I think the actor died shortly after her character died. RIP Nancy.
+
+Edit - as far as fast forwarding scenes goes, I wish I could do that for the shrink visit scenes. I do notSo how do you pip install package for all 3 of these individually? 
+
+I recently learnt that by doing pip3 i could install the package for 3.x &amp; by doing pip it would go to 2.x. So how do you differentiate between your 3.7 &amp; 3.8 when doing pip3? 
+
+Also, aren't there unnecessary errors/conflicts due to these multiple versions &amp; env variab&gt; ”but my Reddit app doesn’t support that!”
+
+Come to think of it, you're right, even my Relay app doesn't support it. :( But I would still never downvote these people and demotivate newcomers. I myself was a newcomer once. 
+
+&gt; Legendary username btw
+
+ &lt;333
+
+EDIT - Relay CAN filter posts by flair! For example in this sub you just gotta searYeah I mean what's even the point of having r/madeinpython if we are continuing to post creations in here. 
+
+I feel that sub should be deleted and everything should be allowed to be posted in here with the correct flair instead. Centralisation of info is good imo, instead of having to follow a bunch of different subs which can easily be done with dI'm scared of upgrading Python. I'm a beginner who installed Python following the instructions on the codecademy Pro lesson in May and I've totally forgotten how i did it. 
+
+Now if I uninstalled the existing Python and tried to go for a new one I bet I will have unnecessary errors and problems pop up. I wish there was a simple "update" command or sFrom Google: Red Hat, Inc. is an American multinational software company that provides open source software products to enterprises. Founded in 1993, Red Hat has its corporate headquarters in Raleigh, North Carolina, with other offices worldwide. It became a subsidiary of IBM on July 9, 2019. Wikipedia
+
+I don't understand... How do these guys make Dang I've been looking for a way to do if else on the same line in python for a long time, thanks for showing me how!  As for my argument, I agree with u/kurem0n's answer, that there's other cleaner ways of getting Python to do it as well. 
+
+But you know what? I learned Ruby first (&amp; forgot everything, sadly due to not using it at all): &amp; PESP tech savvy celebrities. Can see people (even myself if i adored a celeb &amp; followed their every tweet) falling for it easily. "hey the celeb will DEFINITELY payback x2 'coz they tweeted it PUBLICLY to millions".
+
+If they had got the account for Jack Dorsey damn would they have raked in twice more lol... Jack keeps tweeting BTC stuff all the Most of automation and day to day coding: Python. 
+
+Coding for websites/extensions/only in the browser kinda stuff: JavaScript. 
+
+I suggest you begin with Python as it has a very easy learning curve. Many other languages exist, such as Java for Android and Swift for iOS, but those have a very steep learning curve. For beginners it is easiest to staI feel its weird they never had a public profile. Or maybe GitHub became popular recently, i don't know I'm not that familiar with GitHub history. 
+
+But someone like Christopher Wylie, he became famous only recently. And he's been coding since long... Surely thought I'd find his profile. Maybe they just deleted their profiles once they started hitt&gt; They tried to block very big IP pools, so several government services was blocked too, very pathetic.
+
+Lol! Serves them well.
+
+&gt; So, this will not stop people to share what they want, believe me.
+
+True 👍🏽
+
+&gt; Durov was able to give encryption keys to Russian government because of unban. 
+
+You mean Russian govt can now read encrypted messaZe code:
+
+    import requests
+    import os
+    import io
+    import time
+    from url import FirefoxBinary
+    from url import Options as FirefoxOptions
+    from selenium import webdriver
+    from url import WebDriverWait #t5his &amp; next two both needed for waiting
+    from url import By
+    from url import expected_conditions as EC
+    fI never realized that was the "design flaw", but I did find it weird that an app which publicizes privacy so much forces you to link your Telegram account to a phone number. Governments can EASILY perform the SIM swap fraud (esp in countries where telcos are still not privatized). 
+
+High time Telegram stopped relying on the mobile number. Instead tThanks for replying! No I couldn't figure out how to do it in PS, so made the background image in ImageMagick, brought it into PS, touched it up, and exported back out as the fixed url :P Anyway, I'll note down your steps so can do it manually in the future, thanks for that!
+
+Regarding render, True Google be God; I found results saying it happens There ya go OP:
+
+Doge with only orientation corrected:  url 
+
+Doge with orientation corrected &amp; Warp Stabilized:  url 
+
+Note to myself on how i did it because come next month i definitely will forget how i did it lol: 
+
+1. Manually rotate and correct the orientation by placing rotation keyframes where the rotation changes. (no need to split layEven in UAE it is the same, lockdown enforced strictly only after 10 pm. I think it is so that companies and people can now start working and get used to taking extra precautions... After all, how long can a rickshaw driver who's taken his rickshaw on a loan and has to pay monthly installments earn anything or survive. 90% of Indians live hand to mFuck me... Still no answer? Time to do the needful:
+
+Raynaud syndrome, also known as Raynaud's phenomenon, is a medical condition in which spasm of arteries cause episodes of reduced blood flow.[1] Typically, the fingers, and less commonly the toes, are involved.[1] Rarely, the nose, ears, or lips are affected.[1] The episodes result in the affecteHaha incredible! I hope your server stands strong. 
+
+Also the programming languages you listed out, except Python html &amp; css, I haven't even heard of the others. Currently all I can work with is a little basic python; tried my hand at Ruby first but that was a severe dead end somehow, I'm faring much better at python. I am super impressed man, What i'm trying to achieve is this: i have a filter which will skip inbox &amp; apply the label "games" if the email is from [pop@url](mailto:pop@url) OR [ac@url](mailto:ac@url) OR [mgs@url](mailto:mgs@url). Now, using my Python code, i want to add [botw@url](mailto:botw@url) to this filter's from field. But since there's no update/modify function Hey man, thanks for updating your code to make this functionality possible. :)
+
+I'm a total beginner at Python. I did the following so far:
+
+\- Downloaded everything as zip from your Github page &amp; extracted to a folder.
+
+\- I created the OAuth Client ID creds as per your instructions on your Github page and copy/pasted the details and saved theYes, exactly. My Gmail filter is pretty simple as well, it puts all emails from certain email IDs into a separate label. Thing is, I need to manually add newer email IDs as time goes by.
+
+Can i make a simple Python program that will accept one or more email IDs &amp; puts them in the "From:" field of my gmail filter? I have zero experience working You're correct. So when I do inspect element there's no way to have a look at the back end JavaScript I guess right? 
+
+How about this: Every time a player inputs a word, it must be checking the same using an _if word == answer print("Correct!")_ (sorry for Python syntax)... So maybe it sends the answer over using HTML somehow, &amp; that way I coulThanks for your kind words :-) 
+
+I think this episode was the best episode so far, starting right from season 1 episode 1 till now. It had so much cool stuff! Right after I posted this and resumed watching it I was introduced to the amazing Tipsy song by Jkwon! Sooooo good!
+
+I started watching the wire because people kept telling me it is much bettHey man, sorry for dropping in like this but thanks a ton for your wonderful answer over here:  [url](url) 
+
+Especially this sentence that you wrote: *A key of "APPLE" basically says: "don't shift the first letter (A), shift the second letter by 15 (p), shift the third letter by 15 (p), shift the fourth letter by 11 (l) and shift the fifth letter bi'm in the same boat as you mate. Literally know about coding... but i'm still trying to learn, i'm sure someday in the future it will pay off. I highly suggest you follow along as well. :) 
+
+CodeAcademy Pro is free right now for everyone, just register with a edu email ID (even a fake one will do, they don't send a verification mail or anything) &Thank you, great explanation!
+
+Tagging all those who were interested: u/IrrelevantTale u/oblivion-age u/-topa-u/Booleard u/AJ0629 u/MCRusher u/eeddb u/aryanrawlani28 u/aryanrawlani28 u/BlueStarr45 u/thunderkhawk u/rhughes3 u/IMdogaa u/surendrarmc u/tlsme u/JacksinthePulpit u/hfenrir221 u/davidor2357 u/Aaalaa u/One2curious u/FoxBearBear u/Mr_Gates69I came to the same realisation, as I want my tiny apps to be accessible from anywhere in the world on any device. So basically a web app.
+
+Have written a tiny code that formats an inputted string &amp; copies it to user's clipboard, unfortunately hosting it on web doesn't work as no web compiler is able to write to a user's native clipboard. Time tAs far as stabilization tools are concerned After Effects warp stabilizer does the job pretty well most of the time automatically. I'm not aware of APIs SDKs stuff though... 
+
+Also, I can stabilize manually as well so if you need any help in the actual stabilisation process let me know. Post an example of your frames / video, I will give it a try aThanks mate, highly appreciate your words of wisdom. I will keep what you said in mind.
+
+I started with Ruby/Python just because i heard that they are the simplest to learn. No real use case scenarios in mind, except a few which i feel are way too advanced for me to achieve at my current stage of learning. For example, keeping a program running in I'm not downplaying the work mods put in to create the guide as comprehensive as possible, but yes, even after following the guide to a T, sometimes it just doesn't work on your phone. And the plethora of posts on here is testimonial to that fact. Not EVERYONE is an idiot/dumbo for not following the instructions well; sometimes it just won't work, tbh, &amp; i'm not dissing your efforts in creating your guide as comprehensive as possible really appreciate it thanks for that, but your MIUI guide didn't work for my EU ROM phone. In the end even *I* don't know how i managed to install it lol! Was a ton of trial &amp; error &amp; i was sleepy af while doing it so if i need to format my phone or Damn man... Batavia was really good, and so was Amy Allwine. (I got the latter recommendation from the podcast's sub)
+
+Do you have any other episode recommendation other than Silk Road? Feel like not waste time listening to it as I've already listened to American Kingpin twice &amp; studied a ton of Ross Ulbricht details on the web... So wanna learYessss... Woohoo! Great success! I'm 99% sure I found the podcast episode I was looking for: url 
+
+Reply All - The Founder - it is about Paul Le Roux. Downloaded it right away &amp; now am gonna listen to it ASAP!
+
+Thanks for your help in jogging my memory, buddy! Also next up on my listing list, the Evan Rastiff book The Mastermind. Sounds extremeYes the helicopter bit is definitely in the book, it was recited in the audiobook as well, and that's when I got all excited to hear about the private armies. But to my crushing disappointment that bit never came. 
+
+And now I just can't stop thinking about it and badly want to hear that podcast/book :( where some tech guys actually hire private armFrom your comments in r/whatsapp regarding encryption &amp; stuff, looks like you already know programming. If yes, then yeah definitely go ahead &amp; learn it, you'll easily pick it up. 
+
+But i'm a complete programming newb, &amp; only reason i took up Ruby is because i heard it is the easiest language to learn. Otherwise i still feel like i'm miLet me try from memory. The trilogy was:
+
+The Forgotten Sands, Warrior Within, ... (Can't remember the third one)
+
+The next in line was called just POP, it was a colourful artistic POP game iirc. I only ever played Warrior Within &amp; the third one. Remember Warrior Within because it was truly game changing graphics &amp; the various fight moves wI think you're right about the 6 months bit. I will continue learning however frustrating it might get. 
+
+I saw this automating Tinder tutorial, url asked in r/Ruby if I can replicate it in Ruby and they suggested Capybara. So shouldn't Ruby Capybara be able to do it as well without Strava api on the Strava webpage? I know what an api is (heard ofStare at a woman bit is exaggeration. VPNs are illegal but still many use it. Strictness, yes, they're pretty strict overall.
+
+I'll say one good thing about UAE: women are much safer here than say India or maybe even the US (former DEFINITELY, latter you guys help me decide. I'm an Indian.). The strict policies &amp; swift justice on sexual/other cKudos to your hardwork man... I tried my hand at it as well but totally gave up just 10% in iirc. And that's when I suggested we share the workload... But good on you for doing the whole task completely yourself man. Great job! I totally forgot this video after messaging you about collaborating on it lol.
+
+Your stabilization looks absolutely fine tWhile different algorithms provide different degrees of protection, the security of an encryption key is often based on its length, which indicates the level of difficulty involved in solving a specific algorithm’s underlying math problem. In algorithms that correlate longer keys with better security, the improvement is exponential. If we presume tSeriously, why haven't we been represented still ITT? smh ffs. Here, you dumbos, read this gyaan from 'whatsup":
+
+India seems to be coronavirus free even though it is a close neighbor of China. 
+There is a lot of speculation and eyebrows raised as to why this is so. 
+Various reasons are being put out:
+
+1) The Indian gene is Covid-19 resistant.
+
+2) Don't worry, the Indian gene is Covid-19 resistant.
+
+Edit - for those of you not privileged to be on Indian WhatsApp groups, enjoy;)
+
+India seems to be coronavirus free even though it is a close neighbor of China. 
+There is a lot of speculation and eyebrows raised as to why this is so. 
+Various reasons are being put out:
+
+1) The Indian gene is CoviAh, probably a different shift coming in for the night work. TBH, if i was a worker, i'd vote to work nights too. You don't get sun-burnt &amp; there's no heat! It is great for the workers but bad for the nearby neighbours.
+
+It should be the developer's responsibility (&amp; the govt should enforce it) to somehow block the noise with barricades or Thanks for the detailed explanation. All the points you detailed seem to be cases of the copyright holder manually putting a strike on a video in due course of time. The video that I uploaded however got 'Blocked - Contains Copyright Material' as soon as I hit "Save" after uploading. Literally immediately. (actually I clicked schedule, as I uploadeAhh, it's starting to make sense now when paired with the meaning of the word Corona kindly shared by u/VengefulKulak:
+
+corona (meaning 'crown' in Latin derived from Ancient Greek 'κορώνη' (korōnè, "garland, wreath")) is an aura of plasma that surrounds the Sun and other url Sun's corona extends millions of kilometres into outer space and is most e&gt; render multiple times, which lowers the quality 
+
+You're so right about that.
+
+Also, the steps you pointed out work fantastic for Position stabilization. However, when I do Rotation Stabilization, it causes a jump when it switches from Tracker 1 to 2. See this for what i mean: url 
+
+I think there must be something to that straight line going We drove down just like that using Google Maps, without booking anything on the website. Reached the construction site. There the security guard told us to go wait alongwith few more cars that were further up the road. After about 10 mins waiting, a police car showed up &amp; beckoned everyone to follow it. It took us over the outer periphery &amp;The main reason why i didn't bother to upgrade is because Auto Repeat is gone now. You can see the other dropped features in the OP here:  [url](url) 
+
+Secondary reason: i'm on MIUI EU ROM &amp; i can't even find the "Turn off MIUI optimization in Developer Settings" and overall it seems it's a pain to install on MIUI now. Tried to install but it jThanks! I downloaded the app, logged in &amp; but I'm being shown 0 traffic fines &amp; 0 black points. (my driving licence is registered with them)
+
+Since the rental co takes my driving licence details, definitely I should be the one getting the fines on my licence &amp; the black points on my licence, right? I mean if those things went onto the l&gt; no one gives black points just for entering the road without making sure it’s clear.
+
+Hey no! I have no clue whether i've incurred black points or not. That is the very reason why i'm asking where should i check to see all the black points that i may have incurred till date. 
+
+Online search results say that the fine with this wording comes awiHey, thanks for the link. I was wondering where i'd have to go for renewing my driving licence, and i see that it can be done easily from this website. 
+
+Also, i browsed through all the services, but nowhere does it show that I have been fined. Nor am i seeing any option to view Black Points. Could you check your profile &amp; tell me exactly whereHmm that's very interesting, it may very well be possible that what you say actually happens. Your friend had his guardian angel looking out for him it seems!
+
+In my case though, any other place I could check for the black points on my licence? I was fined on 30th Jan (as per the rental company) &amp; so I'm surprised that I still don't see any blaI downloaded RTA app, went to Traffic Fines section &amp; therein searched by my driving licence number, but it says "no fines". I also checked on this Dubai Police website, i get same "no fines".
+
+Thing is, i was charged by Budget rental car yesterday on my CC for a fine. The fine is for "entering road without making sure it is clear". I checked &Love doing paneer bhurji lately, the veggies are optional whatever you have in the house. Also crumbly paneer tastes better in this recipe I feel. Sorry I'm just copy pasting from my Keep :p
+
+1 - Paneer Bhurji
+
+Tomatoe chopped, Onion chopped, G Chilly, Paneer teeny bits, Peas/Capsicums/Veggies/Optional/Etc,
+Ggarlic paste, redCh, turmeric, corianderAmazing, I never realized it worked like that. I always wasted a lot of time making perfect alignment manually on the first run itself. I have one stabilization request in mind from r/ImageStabilization, and will give it a try as per your guidance of running the tracking multiple times, thanks. 
+
+Haha wow, that pen spinning stabilization is pretty Hey mate, sorry to drop in like this but I really loved your 'de'-stabilization over here: url
+
+Care to give a quick rundown on how you did it? I would've done it with object tracking in AE. First track the top of the bat, then the bottom, then stabilize for rotation. But I'm guessing that will consume a lot of time as the tracker might go off freq

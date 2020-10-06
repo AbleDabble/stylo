@@ -1,0 +1,206 @@
+&gt; It's one thing to take a stance against injustice in one's own country, but to stick your nose into the affairs of another could be seen as overstepping.
+
+They did stick their nose into it.. except they went the other way.  They banned people who spoke out against the mistreatment of HK citizens.
+
+Makes sense from a purely financial perspectivNope.  WoW **fully** supports loading and playing sound files that are placed within its own directory.  [This is a supported scenario](url) and would have been removed if it were unintended, just like many API calls before it (hello, AVR.)
+
+The part of the ToS you're referring to applies to people who pick apart MPQ/CASC files and replace bundled &gt; but like, why? why would you do that? (almost) the entire world is settled on this one system and you just decide to slap an extra month onto the end of it?
+
+Could say the same for Americans and their wacky habit of using different units of measurement to everyone else in the world.
+
+This calendar system is just what Ethiopians are used to and&gt; This is not out of good will though
+
+Professional goal-post mover.
+
+"They profit off Linux and don't give back!"
+
+"Actually, they are quite significant contributors to the kernel."
+
+"Yeah... but... good will."
+
+Of course they're not contributing out of the goodness of their hearts, they're contributing because they're getting something out of &gt; the subreddit for that would explode with emo comments during every event about all the sacrificing of sleep that was needed in order to finish events
+
+This just sounds every game that has ever had a limited-time online event, if I'm honest.  Not sure it's exclusive to fans of the AC series - it's far more likely just a fear of missing out tha"I don't use systemd btw" is in pole position with "I use arch btw" in the race for the answer to the question that nobody asked - the key difference being that Arch users are well aware of the joke.
+
+The question was not "Do you use systemd and do you like/dislike it?", it was simply "When will distributions consider building around homed?"
+
+&gt; This right here is one of the reasons that some developers are content with letting their apps balloon up in size and can't be arsed optimising.
+
+I'd be fine with an application taking up several gigabytes of RAM if it were literally the **only** thing I was running on my device.  Unfortunately, it's not.  It's sharing resources with the system and&gt; In 3 days, you 1 shot every mob in areas where anything makes any kind of sense as a new player, and there is no sense of accomplishment ("that mob killed me and now I 1 shot him") since nothing ever was a challenge in the first place.
+
+For what it's worth, this has nothing to do with the experience buff.  It does not affect mob scaling at allIf I recall, the url preference changes how the new address bar *visually* looks when you focus it.  It's what gives it the bright blue border and the "enlarged" look.
+
+The behaviour described by the OP is another matter.  Previously, on Linux, when clicking the address bar, the text cursor would be placed where you clicked, and the text in the adFor me, the more worrying part is listed on the actual feature web page itself, which this blog post doesn't seem to highlight at all.
+
+From https://firefox-source-url
+
+&gt; The Default Browser Agent is a Windows-only scheduled task which runs in the background to collect and submit data about the browser that the user has set as their OS default &gt; I think you're trying to use the wrong tool for the job. Load balancing? Service discovery? These are the problems of large distributed applications. Docker compose purpose is to simplify launching docker containers on a single machine, that's it. You don't need load balancing and service discovery there.
+
+Not sure about this.  It's also an inThink that's what they're saying.  These people have always existed - but their backwards ideas were generally inflicted only upon those within their local community.
+
+Social media has given them the means to broadcast their shite for the world to hear, and it encourages other people with the same daft beliefs that they otherwise wouldn't have been&gt; Look around you.. the majority of people are assholes. Is this really that big of a surprise to you? Stupid is as stupid does!
+
+Are you really trying to say that people who don't consider browser privacy their #1 concern are arseholes?  Low bar for arseholery if you ask me.
+
+In general, *everyone* wants privacy.  Try asking a randomer on the s&gt; You sound like a very fragile person if youre mad about the fact that people posted about Able and Nook stores of all things. They were in past games and there is no reason to think they wouldn't have been in this one.
+
+What you're essentially saying is that new players apparently don't deserve the wonder of discovering new things in the serie&gt; Any idea what is going on in these people's heads?
+
+Lazy answer: not much.
+
+Probably a sad bastard who thinks far too highly of themselves and cannot believe the government would *dare* tell them to stay isolated in the midst of a public health crisis.
+
+Add in a few mates with similar thoughts and suddenly that person is a "fuckin' ledge" for &gt; he said a week ago that the virus was “just the flu”
+
+It's not like our understanding of the thing changes as we gather more information on it, is it.
+
+Your lad sounds denser than a black hole.  To be blunt, it's up to you if leaving on good terms with him is worth compromising your health and that of others.  If you get lucky and stick it out100%.  Working from home means just that, you're located at home.  It does not mean "working from home 24/7".
+
+Even if it might feel awkward turning down requests after hours (for me, it doesn't), you're still well within your rights to do so and you should, lest your colleagues come to expect you available at all times.  If they want  to work afteMate.
+
+Reddit is hosted on servers across the world and has contributions from users in every single country.
+
+Those TV programmes that you're wanking yourself into a frenzy over likely feature actors and actresses, producers, directors and other staff from all corners of the globe.
+
+Shove off with this "hurr it's an American website" ballbag.  I'dMost of the answers to these questions will depend on the person.  With that in mind, these are answers from my own point of view.
+
+&gt; If I were to ask you where you are from, would you refer to your homeland as England, Britian, or the UK? I know UK is several countries. No idea the difference between Britian and England tho.
+
+Personally I'd go &gt;  It had nothing to do with her being pregnant
+
+No, I'd wager it was definitely a factor.
+
+Not sure what world you live in, but pointing out that someone is acting like an arsehole could just as easily fuel their annoyance and make them double down on it.
+
+A few people are fine being regarded as arseholes. Even fewer than that are fine being re100%.  With the various integrations Blizzard has done between retail and the mobile app (guild chat, mission table shit), I'm surprised that pet battling hasn't happened yet.  I know people that would keep a subscription running just to fuck about with their companion pets on their phone during life downtime.
+
+I can only assume there hasn't been eI think Gatherer will be fine.  From what I remember of it, it doesn't use any chat or cross-addon communication channels for its (main) functionality, which is importing pre-cached nodes from a database, recording nodes that you yourself gather, and showing them on a map.
+
+It DOES use a separate add-on for its importable database but that won't beThis is mostly bollocks.
+
+WoW add-ons are written in Lua and XML with a TOC file to bind them together.  If you're using offsets/encryption in the context of "add-ons" then you're referring to third-party programs that are against the ToS in the first place.  Lua only has access to a table of functions that the WoW client allows you call.
+
+Sure, so&gt; the fact that gamers aren’t still frothing about mtg tells me everything I need to know
+
+Could just be that not every gamer plays MtG enough (or at all) to have an opinion on it.  Do you want people to get angry about things they don't know much about it?  We have enough of that in the world.
+
+For what it's worth, they're both predatory.  I grLooking at various threads, it seems like a few of us 3X70K users are hopping over to this new Ryzen line.  Been using a 3770K myself since launch but it is starting to show its age as my development and virtualisation tools become more... excessive.
+
+Not to mention all of the performance shortcuts Intel took that compromised security and were fixeIt was a long time ago, when people didn't expect link prefetchers to click destructive looks that were traditionally only clicked intentionally (or accidentally) by users. I believe it first became an issue when people started using software such as Google Web Accelerator.
+
+It doesn't excuse it (because they should have just put a button inside a &gt; In any case, I suspect some no small part of WSL runs on Hyper-V anyway. Or will.
+
+I have this feeling too.  Part of me hopes it doesn't, because I've currently got my virtualisation environment running on VMware Workstation / VirtualBox.
+
+Having said that, I have to admit that the main thing stopping me transitioning it all to Hyper-V is justIf you have Windows 10, try this:
+
+1. Open Start.
+2. Type "graphics" and click `Graphics Settings` (or, go `Settings` -&gt; `System` -&gt; `Display` -&gt; `Graphics settings` at the bottom)
+3. Make sure the `Choose an app to set preference` dropdown is `Classic app`.
+4. Click Browse and find the Hat executable.  It might be at `Steam\steamapps\commAdd-ons can play sounds, but sound replacement packs work differently.  When a game is told to play a sound, it first scans the Sound directory in its folder, then delves into its CASC (prior to that, MPQ) archives for it.
+
+Blizzard have explicitly coded their game to scan the Sound directory, so it's not against the ToS to put in your own sound reSorry, but I've seen enough people who just latch on to our use of the word "free" and attempt to use it as an excuse to tell us that we're all brainwashed into thinking everything is *literally* free and poor doctors are paid nothing.
+
+If that wasn't your intent, then I apologise for lashing out at you.  Could do with less of the sarcy attitude, tAh this shit again.
+
+Are you aware that (in the UK) we get a tax breakdown at the end of the year? And one of the items is healthcare?
+
+We fucking know it's not free.
+
+"Free" is shorthand for: it's free at the point of entry and our citizens don't avoid going to get life-threatening illnesses checked due to fear of bankruptcy.
+
+There's always some My Grandfather smoked his whole life. I was about 10 years old when my mother said to him, 'If you ever want to see your grandchildren graduate, you have to stop immediately.' Tears welled up in his eyes when he realized what exactly was at stake. He gave it up immediately. Three years later he died of lung cancer. It was really sad and destroyed mAgreed.
+
+The computer that I use for everything is basically your old one, but a generation behind.  I've got 7 years of use from these components and I can easily see myself hitting a full decade (unless some revolutionary platform shift occurs - I have doubts.)
+
+Obviously I am biased, but I think it is fair to say that you **do not** need to be s&gt; This kind of unhealthy skepticism is what is leading people to question facts, like the earth being round.
+
+Doubt it.  Someone asking for a source for the claim "water striders were intended to be nerfed in Legion" would accept a blue post as proof.
+
+You can throw centuries of research at a flat-Earther and they'll still call all of it a conspThe examples of "hip web frameworks" are Vue, React, GraphQL and Docker.
+
+I don't think you can count these as "hip" anymore.  They're mature and well-supported enough to get serious work done in them.
+
+&gt; your first version of your idea almost always doesn't need that hipster web framework you're thinking about using.  If you're building a new iTotally agreed.  Vista has a bad reputation (some of it deserved, some of it via external actors shifting blame) but there had to be *some* version of Windows that brought security up to snuff (running shit as admin being a given was not a viable security model) and that version happened to be Vista.
+
+Its legacy was buffing Windows' security signifMet Chris Barrie at a photo signing in Comic-Con, Manchester.  He laughed at my shite "*it's not for me, it's for my sister - we call her Arnie*" crack (despite hearing it, I'm sure, for the billionth time) and did the Rimmer salute with me for a photo.
+
+The lass behind me was full of nerves, stammered that she wanted a hug from him - he didn't skiWorked out well for SEGA to be fair.  [A fan made a Sonic game engine](url), originally intending to re-make the Mega Drive games with it, then decided to re-create Sonic CD for iPhone and submitted it to SEGA.
+
+They took him on to create a string of old Sonic re-makes on various platforms and they eventually went on to create Sonic Mania.
+
+Not sayI'd rather they didn't tbh.  There are multiple UK-based subreddits to discuss that subject 365/24/7 for people who want to vent about it.
+
+Allowing it here even for a day would go against the ethos of CasualUK.  It's pretty much the only solid rule this sub has (other than the implicit 'don't be a knob'.)  It will inevitably end up a shit-flingingYou were able to invite people to a circle that you owned. They would then have the option to invite further people. They also had the option (and so did the people they invited) to delete your circle completely.
+
+I guess the idea was to invite people to build a massive circle, made tough by the fact that they, or anyone they invited, or anyone *thI think there would be a difference, though how measurable it is would be anyone's guess.
+
+If one sees a headline along the lines "*[Software] 1.2.3 offers performance improvements*" then they may think... "*Sounds about right. New version, better code.*"
+
+On the other hand - "*[Software] 1.2.3 offers huge performance boosts*"?
+
+Well then - "*ImproYou don't need to apologise for it.
+
+In fact, you finding your own solution and coming back to report it is something to be applauded. I can't count the number of times I've searched for an issue only to find the OP saying "nvm fixed it" and vanishing into the nether.
+
+Now, if someone has the same problem you did and searches for it, they will findThe source of the meme is the Q&amp;A, whether you like it or not.
+
+With almost everyone in the Diablo community expecting the Diablo IV announcement at BlizzCon, tell me how revealing the phone-only Immortal and quipping "do you guys not have phones?" was *not* a case of misunderstanding your playerbase.
+
+"Mutliple Diablo projects in the work" are&gt; Does anybody use this proprietary software any longer
+
+I do when FTP/SFTP'ing into legacy systems.  With basically no plug-ins installed, it opens quick and runs nicely.
+
+The fact that it's proprietary doesn't personally bother me, although I acknowledge that many people dislike proprietary software.
+
+For me, anything outside of the legacy codIt boggles the mind that in a global, interconnected world where you can search for literally any subject (like, say, other countries) and get information in a matter of seconds...
+
+...there are some Americans online that still think Freedom™ is unique to them.
+
+Of course there are things that I myself am ignorant of, but fuck me that's one drum thWhile I'm looking forward to seeing Classic flourish (and hoping it does), comparing it to the RS situation is misguided and pretty daft.
+
+Current WoW is not the MTX/treasure hunter-ridden pile of shite that RS3 became ^^yet and Blizzard have not announced any plans to introduce new content to Classic WoW.  Both of those things *might* happen in th&gt; If something ever comes from another source, that assignment will be type checked by Typescript
+
+This really only comes into play if the other source is a module (e.g. from npm) that is either written in TS or includes TS type definitions and follows the behaviour below:
+
+The programmer can declare that a value *should* be a certain type, but Realms no longer exist, but their name becomes your character's surname?
+
+Though, personally, I would dislike that.  I never intended my gnome's surname to be "Shadowsong" when I first made her.  If they went ahead with such a plan, they'd have to let people choose a new surname (or omit it if their name is truly unique).
+
+Of course I could just be`__DIRNAME__` is definitely a good practice, but is `DIRECTORY_SEPARATOR` at all useful when `require()`ing?  Windows supports forward-slashes for directory separators, and I cannot think of any other OSes that run PHP which also use backslashes and don't support forward-slashes.
+
+I can only see `DIR_SEP` being useful when you're trying to parse a Happens often enough on /r/worldnews whenever a US company gets fucked for breaching the GDPR.  "Fucking salty euros trying to sue US companies out of existence because they can't create their own competitor."
+
+I'm not a full-on /hailcorporate or /latestagecaptilism bloke but (IMO) going to bat for a faceless corporation is fucking baffling behavio&gt; you don't deserve the love that animal gave you.
+
+Don't get me wrong, I love dogs and if it (my own) were to suddenly stop loving me I'd be devastated, but...
+
+&gt; I hope the dog's owner dies a horrible and painful agonizing death that drags on for hours and hours. I hope he screams and cries in agony while dying.
+
+...that seems just a *littlThank fuck someone said it.
+
+I personally don't mind concepts... as long as it's made explicit that that's what they are.  It's frustrating when some dickhead uses an ambiguous thread title to bait people into thinking it's official and clicking through.
+
+...OK, I've calmed down.  But my point remains.  "Just wow" is a shite title for nothing more &gt; Also Wow subscribers: Blizzard is having a sale around Christmas time?!?!? Wow, that’s just psychological manipulation to raise your fourth quarter numbers. Blizzard is dead to me.
+
+The bundle is advertised with the tagline of "[See you later - Get it now before it's too late](url)", implying that they'll be gone permanently... with "*these itIt looks like the Promise-&gt;async conversion [was added in TypeScript 3.1](url#refactor-from-then-to-await).
+
+This VS Code update should come with that TS version, but there is a chance that VS Code is using the version of TS from your current workspace which might be an older one - check the bottom-right of the [VS Code status bar](url) and ensuI'm surprised that they had Hanako join the group...  I'd have honestly preferred if she just remained as backroom staff (but with a bigger role) - the anime seemed as if it was trying to show that Hanako could make a big difference to the group even though she wasn't a member and her becoming one sort of dampens it.
+
+Oh well... I'm going to assume&gt; On the topic of reputation, the main question I'd ask is why most reputations feel mandatory on alts.
+
+For me, I've spent the last ~10 years building up a massive bunch of exalted reputations on my main, a warlock.  I feel like I can never just switch away from her simply because of that.  Right now I'm loving my monk as a class but I look at &gt; we're at the point where people need to make addons to fix bugs
+
+Even sadder, it's not a recent development.  There has been an add-on called [BlizzBugsSuck](url) which has been around since 2010 to fix numerous UI issues (but not this one).
+
+For me the worst offender was the fact that any add-on which used dropdown menu functions had a chance&gt; the auto-reporting system we have for TSM errors with TSM4 is a massive improvement. We are able to build a bunch of tools around this (and have done so) which let us quickly know what issues are affecting the most people, and narrow in on a solution as efficiently as possible
+
+Would it be possible to provide a read-only view of this data to t&gt; that's exactly why I made the email in the first place. To call some attention to it and see if they could make a determination either way.
+
+Fair play.  Getting clarification on this rule of theirs would be nice.  An explicit "yes, it's allowed" / "no, it's not allowed" would be even better too.
+
+&gt; Unfortunately they have chosen to be assho&gt; pushed out a broken tsm4 for bfa so more people will use it and get premium for more $$$.
+
+This is definitely the main reason that v4 was pushed.  I became a premium member for access to the beta, used it in the months leading up to the expansion and it was nowhere near ready for production when they decided to go ahead with the release.
+
+Why 

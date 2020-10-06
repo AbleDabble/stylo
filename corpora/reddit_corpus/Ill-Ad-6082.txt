@@ -1,0 +1,133 @@
+You can use the AI tendency to honor non-aggression pacts to your advantage in some cases here.  If one of the faraway empires that you’re friendly with has a non-aggression pact with one of your neighbors, improve relations on the faraway empire and grab a defensive pact.  
+
+Your neighbor will then avoid aggression on you since your defensive pactThe corvettes do mostly die off the instant you face a fleet that’s roughly the same strength.  Maxed out titan/battleship fleet cap leaves you only enough room to squeeze 6 corvettes in, which burn ahead of the rest in an actual engage and gets absolutely massacred.
+
+It is still very very useful though.  It is a very (lategame) cheap way to get yoIt’s unintuitive for total war at first I agree, but it is consistent with the way multiple competing claims will work for other war types.  Total war in practice works off ownership of nearest node a lot of the time rather than who did the conquering, with claims overriding
+
+Further somewhat complicated by how it isn’t ever explained that starbaseClaim the systems.  Total war doesn’t need claims to flip ownership but claims still affect who the system flips ownership to.  If you get one or two layers of systems deep in terms of claims/ownership then the systems that come after those will flip to you by default instead of ally
+
+Claiming systems in total war is the empire equivalent of sayingYou can just take enough afterburner corvette fleet strength to kill their starbases quickly, and wait until they slowly trundle out of whichever starting system.  The unbidden ships and construction ships have ungodly slow sub-FTL speed in vanilla and they often stack most of their shit together + don’t properly protect the construction ships. 
+
+S&gt; Hold on, I need to do a shitton of meth math to answer that properly, but the cliffnotes version is that overpopulation debuffs cap at some point, so it's better to just spam researchers because while they'll operate at reduced efficiency there will be simply more of them.
+
+Think you may have misunderstood the question lol.  Funny enough thougDitto.  I declared war on the whole galaxy on one of my longer runs.  On vanilla + tiny outliner and automatic pop resettlement mods, I lost a couple 1-2million fleet power fleets guarding borders, when I wasn’t paying attention to AI federations doomstacking a *double digit number of fleets*  and overwhelming with numbers.  The AI are definitely aI don’t know if it’s just my imagination but the vanilla AI does feel like it got significantly better at some point in the last several mo.  I’ve seen (non scaling GA) federations *immediately stomp* awakened empires before going toe to toe fairly well with a 10x crisis. 
+
+At the least it doesn’t seem to do stupid stuff like not check enemy fleet Only thing to note is that corvette fleets are always useful regardless of how lategame you get.  Unless you’re doing ship speed warp exploit on your battleship fleets, just being able to take most of the systems or backdoor shipyards at afterburner corvette speed instead of lolslow titan speed is very useful.  
+
+Ranges from convenient timesaver anIn general build individual ships to counter enemy weapon setups.  Hull for bypass weapons, armor for kinetics, shield for energy, etc....  armor/shield over hull in general unless specifically building against bypass since hull damage reduces dps 
+
+Similar for weapon setups.  Except note that traditional energy/kinetic beats AE/CL/disruptor bypassShould be hitting those yellow planets up immediately rather than after habitat tech/habitability mod/terraforming, regardless of planetary features or size.  
+
+ Basically as long as the planet at least breaks even on upkeep/production you should be colonizing as soon as you can afford it.  Robots don’t care about biome and even organics break evenAs far as being effective goes, wide is always the most effective.  However, on most normal difficulties, tall can work just fine (if a bit more challenging).  The real question is, for roleplay purposes are you looking be small as in low territory or low colonies? 
+
+Personally I’d go for the former and make up for habitable planets by spamming rinTbf if he doesn’t have cloud lightning  for L slot on AE battleship (which a lot of newer players miss if void clouds don’t spawn next to them), strikecraft are probably the second best option.  They’re midway between KA and NL for DPS while also having shield pen + 150% on armor (which is the same as NL) making them by far the most likely L slot oThe mechanics are less developed than CK2 there unfortunately, but you do have several options 
+
+Impose ideology won’t directly make them leave federation - it’ll simply change ethics to match yours and massively improve their opinion of you.  You could further bolster this with improve opinion and trust from pacts - eventually  winning them over -They vote no if the AI themselves have a bad relation to the empire that you’re proposing for association status.  
+
+Normally foolproof way of becoming the complete dictator of your federation is to trade rare resources for favors to your federation members, use the favors to pass “vote by diplomatic weight” as a federation law, then change your diA Xenophobic empire that uses livestock slavery obviously has spirited debates about which xeno sentients taste the best.  It’s well known that the only part of xeno culture that is ever adopted are the cooking methods, and only then for the irony of eating particularly arrogant xeno species by preparing them with their own culinary techniques.
+
+ItThe unbidden are arguably the most vulnerable of the crisis factions against asymmetrical warfare.  Even you can’t straight up beat them, if you at least have fleets that can break their star bases without taking much damage, they become ludicrously easy to contain when played correctly.  
+
+They’re slow as hell and rely heavily on their even slowerHonestly I like the RP builds more than the min maxed ones nowadays.  
+
+Divine empire (@ imperial cult civic) +psionic for literal immortal chosen one psychic god-emperor enforcing spiritualist indoctrination on the galaxy, is one of my all time favorites.  Especially since you get a divine enforcer colossus that just converts pops into spiritualisJust to preface I’m personally pro-abortion but this particular argument is actually completely off. 
+
+When you’re discussing conflict of rights you’re essentially discussing the mechanics of duty ethics, and it’s a pretty common sense understanding in that negative obligations generally trump positive freedoms.  In the case of most pregnancies, ifWhen I particularly hate an empire I steal all their pops with nihilistic acquisition without conquering them.  I set all the stolen pops to livestock and trade it back to them, so they can live out a feeble existence for a few decades while cannibalizing their own people.  Their old buddies will see an empire with 20 pops left across 10 planets anThey added buildings to buff up your admin cap now.  You get percentage increase in cost of tech and traditions (varies for megacorp and gestalt) based on flat sprawl over cap.  The strategy is to still ignore it to start, and at some point time to research will favor building cap over research (iirc it’s something like (research - 400)*0.6) at whiSorry to say my testing was in game sandbox, just console command spawning max fleets and ramming them into each other. If there is a way to do large scale simulations, I haven’t found it. The guide I originally followed to set it up below: 
+
+url
+
+ The targeting weights are pretty complex and I gave up figuring it out in favor of doing sandbox testWhat causes the actual lag in the lategame isn’t multithreaded to any degree that matters 
+
+Here’s a good summary: 
+
+url
+
+As for why people ask for it without knowing how to do it, well they also ask for paychecks without knowing accounting and vaccines without being a doctor.  You don’t have to be an expert on the subject to be allowed toMake the game multithreaded 
+
+Automatic pop migration as a feature instead of a mod 
+
+More persistent flavor/events in game for mid-lategame.  Space storms and the neutral stuff was good.  Archaeology was good. Federations was good. Give more.  Need more mid/endgame political events or options, so I have a reason not to set 2250 endgame date.  I woYou know, I’ve never thought about sabotaged pops before.  Theoretically you could nihilistic acquisition nearly all the pops from an empire into livestock without actually conquering the planets, bio ascension gene mod them into nerve stapled worthless pops, resettle them all into a conquered world and give the world back to the original empire.  Yeah, it was surprising to find out the ultra vanilla “boring” origin in this game is one of the strongest ones when I started.  
+
+Also gonna have to agree on interstellar dominion,  influence saver just to blob faster is always good.  IMO the underrated brother of tech ascendancy for tier 0s in both single and multiplayer.  Blob fast gets more impWell, you can do a non-Ironman game and use console commands to set up something that’s more or less a testing arena.  Pretty quick after you set it up, although yes I do wish there was an easier way rather than spending a few hours customizing that the first time.  
+
+But I mean it does work, that’s how we found out way back that contrary to theoryQuadratic is the word you’re looking for.  And imo the engineering repeatables side quickly gets outdated for fleet comparisons mid game I find, since everyone starts refitting to arc emitter @ around 10-20 repeatables for damage efficiency which doesn’t take all that long.  
+
+But I mean, just in general what he was saying is true, about psionics gI don’t disagree in principle considering that it’s often a question of building bureaucrats in conjunction with researchers rather than instead of, and I also agree that there’s a heavy variation (even just going Xenophobe throws it off), but I’ll have to hold to those numbers for a newbie rule-of-thumb for the tech rush builds most people start wIt actually used to be to a degree, before admin buildings were introduced.  Overall just going wide generally ended up being more efficient over time regardless, but there was a legitimate argument for tall at different parts of the game.  The YouTube tutorials you saw were probably 100% correct for their time.  
+
+Nowadays though we have buildableAs in... combat target weight for stuff like kinetics vs energy @ different exposed ship health types?  Man I tried looking into that ages ago and it isn’t worth it.  Much more practical to just set up a the same old testing game imo.  
+
+If you’re just looking for the good old GC/NL vs TL/KA battleship argument, iirc testing shows line computer beaSo, more of a moderate level tip for the both of you, don’t be concerned about sprawl in the early early game.  It matters in the mid and late game but not immediately, since realistically it’s not about the cost of the techs so much as time it takes to research them.  
+
+There is a point where getting a researcher for more raw research is less effiIf you’re talking beating the AI, you don’t even need ascension perks to blow them out of the water.  The comparison only makes sense for equal skill human players (pvp or pve), and in that regard every single pop trick you use with a psionic empire is flat out better in the hands of a synthetic one. 
+
+A single roboticist job gives +2 pop growth.  Low habitability isn’t a big deal if you have decent resource income otherwise.  Worst case scenario if your pops are too inefficient you can at least use it for some amount of pop growth and resettle to other planets.  Robots also grow just fine.  Plus habitability modification isn’t even that far down the tech tree, only tier 3 iirc, so just haviGet access to other species, which you can then use to (more efficiently) colonize other biomes without waiting for gene mod or terraforming tech 
+
+If they have a trait (like psionic) you might want access to those pops. 
+
+If your planets are more attractive than the xeno planets (not difficult) via stuff like Gaia or having more housing/jobs open,Ironically, the thing that makes synthetic evolution stronger is how it actually has significantly higher pop growth than clone vat + fertile from biological evolution.  
+
+Clone vats and fertile are additive percentage bonuses to base pop growth, ending up with about 1.9 bonus pop growth in total.  
+
+Synthetic evolution adds roboticist jobs to the Yeah that sounds like a worker stratum issue lol.  Go check your jobs tab of planets and see if there are a ton of free jobs in the lowest level of worker.  If so, the issue will go away on its own eventually 
+
+You’ve  got a sizable surplus in food, so for now just temporarily disable farmer jobs and a few clerk jobs to force your pops to work moreSo realistically you just need to wait until you get pop growth to fill up the worker stratum, unless you’re a gestalt where you can just disable some specialist jobs and call it a day 
+
+As far as balancing jobs across the worker stratum goes, you can wait for the AI to do it for you in a few mo, or do it manually by either clicking on miner jobs tDid you build a bunch of specialist tier buildings that took jobs out of worker stratum?  Common issue if you get overzealous with tier 2 or 3 production buildings.  If your worker stratum is underpopulated you might just have very few pops actually employed as miners 
+
+Either that or you lost an ambition/swapped a bunch of planets to a different dPlaying tall there’s going to be a limit to how much you can build up, but it should be more than enough to handle a 1x strength crisis if you just max out on fleets and naval cap as much as possible. Pretty much mess around with the senate and vassalize everyone I guess.  
+
+If you want to try going nuts with fleet power, there’s the option of goin1. Swap Edicts if you don’t have them running.  Run multiple resource edicts at once.  You’re over edict capacity?  Who gives a shit!  It’s just sprawl, and you can turn them off later after weathering the storm. 
+
+2. Your resource districts probably aren’t maxed so sacrifice food income to pad energy by replacing districts if you have some sort ofOn pc there were mods that have since been worked into the game, but it’ll be a while before you get the patch for that.  Not sure about mod support on console. 
+
+A significant part of the lag comes from calculation of available jobs, so in the lategame maybe try not to flood with 700+ available jobs or anything crazy, it should help a bit.  Once IGameplay wise not nearly as impactful 
+
+Personally I love the archaeology/story packs because I like the RP flavor, but I know that’s not necessarily what everyone is looking for 
+
+if you’re looking for the most bang for your buck in terms of gameplay mechanics it’s probably megacorp/synthetic dawn.  
+
+If you’re looking for the factor of cool in blSo as other people mentioned you need to refit all yo fleets to counter the scourge, and how you should hit and run after the AI splits fleets so I won’t reiterate that.  But you appear to have the ability to immediately fix your logistics/econ into a war machine so imma tell you how to do that.  
+
+1.  Don’t build static defenses.  AI with new patcSo, realistically the envoys are less about increasing raw availability of them so much as using them, well, strategically in a diplomatic sense.  Envoys are something you aim to try getting more of in the looooooong term but plan to make use of as-is in the short term. 
+
+Questions for you: 
+
+Why is it currently more important for you to have your Huh. Do disengage cruisers actually survive long enough to deal armor/hull damage or pop something?  I would’ve thought standard TL/KA line battleship setups would either oneshot them or volley them into disengage before they can actually do damage, at least before everyone switches to AE/CL after repeatables start stacking too much 
+
+Or is this moIt kind of is comparable to be honest.  Most people guess that extraterrestrial life is likely due to the sheer scale of the universe, which is fine, but no educated person in their right mind ever says life on other planets is in any way *scientifically definitive*. 
+
+ You can’t trend with a sample size of one, nor can you make definitive predictiIronically, it was the corporate greed that got the best of your megacorp - the machine uprising can also be stopped from happening by either outlawing robotic workers from the start OR never picking up synthetics (stop at droids)/sapient AI.  The hubris of thinking you could give robots sentience AND keep them enslaved is what caused your downfallI’m really not sure where you’re getting the idea that feminism is against men who are separately campaigning for their own issues. 
+
+One thing you have to understand is that a lot of movements are not what they’re advertised to be.  The same way that “all lives matter” nowadays isn’t an active campaign to solve the problems that all races face, soIf you’re at 3k research and your sprawl is that much over cap, I would 1000% recommend building a shit ton of admin buildings until you’re no longer over cap.  For your current levels of research and unity, building admin buildings and keeping sprawl below your admin cap for the rest of the game will be the most efficient way to go by far.  After So, there’s two points I would point out here.  One, it isn’t wrong to focus on a single set of issues, and two it isnt as if feminism doesn’t address the same underlying causes that are the source of men’s issues. 
+
+First point, let’s use an analogy.  Say you’re sitting with your family at dinner.  Everyone there has a burger and fries, except forCorvette screens in front of battleships are absolutely still useful and part of even the hardcore multiplayer meta.  Don’t disband them, use them as a screen for your battleships as you theorycrafted.  That is the correct response.  Especially if it is a spiritualist AE that uses missiles and torpedoes as part of its standard loadout, since you caNo best combination of mods, but there are a few that I always bring along 
+
+Tiny outliner is still king of mods 
+
+Real space makes shit look pretty and doesn’t have many incompatibilities 
+
+Pop migration is super super nice QoL and saves you tens of hours of micro if you play wide 
+
+  Strega and tall white shipsets  are outdated now, but mostly stDepends on what your unity production is to begin with.  Generally, if you have high research/unity production to begin with, start building bureaucrats.  Else build raw amount of unity/tech.  Tradition takes a larger penalty than research so I would say the cutoff for starting to build admin over unity is much lower than admin over research
+
+This To add to this: For performance, note that a big part of the (remaining) lag has to do with available open jobs.  Lategame will progress a LOT faster if you resettle unemployed pops and manage your economy to limit the number of free jobs, rather than ignoring overpopulated planets and having 600+ open jobs as it is very tempting to do once you get... have you ever actually worked in industry before?  
+
+I don’t mean to be harsh, but it’s just as likely for a 50 year old (or even a 20 year old) to be a top earner by kissing the right ass, having the right connection, or just being in an industry that has more money in it to begin with.  
+
+Industry wages are not nearly as, uh, meritocratic as &gt; I never said “there is no such thing as shallow or deep attraction”, what I said was “people shouldn’t be shamed or forced to change their attraction because others don’t like it or don’t agree with it”
+
+&gt;What is it you disagree with again?
+
+Honestly I thought that was what you were saying.  Or that’s how it read to me anyway.  I.E:
+
+&gt; T&gt; What I meant was that people shouldn’t get to decide the “shallow attraction” or the “deep attraction” of others.
+
+This is the sticking point that I think we (somewhat) disagree on.  Unless I’m just misunderstanding.  
+
+I think there definitely are types of attraction that can be considered shallow, because they (usually) do not require any soI’m gonna make a simple counter argument 
+
+There is such a thing as shallow attraction, but the problematic view is the one that says shallow attraction is somehow *wrong* or that others are obligated to disregard shallow attraction 
+
+I’m all for healthy relationship views and understanding that personal choice of relationships don’t need to be jusIt actually depends more on the oceans than anything.  Oceanic phytoplankton is currently understood to be producing the **vast majority** of oxygen on the planet - estimated 70-80%. 
+
+The fact that one of the mechanisms behind global warming as it currently is being high amounts of  carbon being released into the atmosphere, is rather worrying.  A

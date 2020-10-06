@@ -1,0 +1,219 @@
+ok, lets take this slowly: the hubshell moves and the axle stays still no matter if the wheel is moved by hand or by chain, right? that means that the seal on the non-driveside always touches a moving part and moving the wheel by hand or by chain doesn't have any influence on the non driveside seal. so it can't be the culprit of the noise
+
+the onlythe total dataflow is capped at 2GB/s. 
+
+I have basically no experience with speed requirements for video editing. BUT [this](url#) says that 4K RAW 24fps 16 bit needs 400MB/s to record and 8K RAW 24fps 16 bit 1.6GB/s. I don't know if it's a direct correlation but I can't see how something that requires X amount of storage per second to record coul&gt;I feel like copy-pasting a parts list off a guide is basically the same as buying a prebuilt and that's kinda boring lol
+
+and you'd rather like a parts list from a random on the internet? ;)
+
+stupid question first, but the ram you have is ddr4 and not ddr3? ram speed can make a decent difference in gaming and other tasks. the sweetspot is betwe[PCPartPicker Part List](url)
+
+Type|Item|Price
+:----|:----|:----
+**CPU** | [AMD Ryzen 5 3400G 3.7 GHz Quad-Core Processor](url) | €137.08 @ Senetic 
+**Motherboard** | [ASRock B450M PRO4 Micro ATX AM4 Motherboard](url) | €75.90 @ Amazon Deutschland 
+**Memory** | [Corsair Vengeance LPX 16 GB (2 x 8 GB) DDR4-3200 CL16 Memory](url) | €56.90 @ Amazon Deif the second monitor is only for browser or chat or whatever than pretty much anything will work. best value will be at 1080p 60hz 24".
+
+a 1200p 16:10 22,5" display can also make sense if you are running it vertical or have limited room to the side (in landscape exactly as tall as 24" 16:9 but ~4cm less wide).
+
+webcam prices are through the roof. but you are aware that one (1) usb 3 connection can use up the entire bandwidth the pci slot can provide?
+
+if you think you can run 2 (or more) usb 3 devices at max speed you will be disappointed. this will also get worse if you have multiple pci devices since all pci slots share the same bandwidth.
+
+maximum (theoretical) pci bandwidth is 533MB/s. [PCPartPicker Part List](url)
+
+Type|Item|Price
+:----|:----|:----
+**CPU** | [AMD Ryzen 5 3600 3.6 GHz 6-Core Processor](url) | $160.00 
+**CPU Cooler** | [Cooler Master Hyper 212 Black Edition 42 CFM CPU Cooler](url) | $37.99 @ Amazon 
+**Motherboard** | [MSI B450 TOMAHAWK MAX ATX AM4 Motherboard](url) | $124.99 @ Best Buy 
+**Memory** | [url Ripjaws Vdefinitely get some faster ram. 3000mhz minimum. shouldn't be much more expensive. for games you want a hdd with 7200rpm and maybe even 2tb depending and what games you want to run. 1,25tb can become limiting quite fast.
+
+the screen is probably a bit overkill. ~300$ more just for IPS over comparable screens.
+
+I would get the P300A case instead. it'That's a bike from the mid 90s. Square taper has been the standard for 30-40ish previous years? you can't fault the manufacturer for not knowing that an ocean of axle standards are going to be released within the next 20 years (and which of those are good and bad and compatible with BSA or not). In a time were ST is the only option this makes perfefrom a weight and manufacturing perspective this actually makes a lot of sense in this case at that time. a smaller diamater bb shell with no cups will be lighter and cutting big threads into Ti is a huge pain in the ass. also bearing spacing is great for a ST axle which would reduce the bending moment on the axle and could allow the use of (hollowprobably FC-6400? 
+
+you could definitely just upgrade the chainrings, but you'd be locked into 130mm and standard gear ratios (52/38 or bigger) and I assume you want either compact or semi compact chainrings?
+
+If you want to change to 110mm then FC-6400 would be very good news. it would make the spindle either a 113mm or 115mm spinde which has the &gt;Fortunately square taper is widely available and usually pretty affordable
+
+and even if affordable isn't the goal you can still get some nice and light ST cranks.
+
+&gt;if/when the spindle is worn
+
+not sure how you would wear out a spindle with cartridge bearings. only way I can see to break it is if it was a hollow Ti spindle and it would break10400f seems to be out of stock. if you have the budget, upgrading to a 10500 or even 10600 would likely make a noticeable difference
+
+if the ram you buy is faster than what the motherboard supports it will just run at the maximum speed the motherboard can handle. I would save the $25 and go with the faster ram with the slightly higher cas latency probably better like this:
+
+[PCPartPicker Part List](url)
+
+Type|Item|Price
+:----|:----|:----
+**CPU** | [Intel Core i5-10400 2.9 GHz 6-Core Processor](url) | $182.00 @ Amazon 
+**CPU Cooler** | [CRYORIG C7 40.5 CFM CPU Cooler](url) | $60.96 @ Amazon 
+**Motherboard** | [ASRock B460M-ITX/ac Mini ITX LGA1200 Motherboard](url) | $98.98 @ Newegg 
+**Memorywatch out for the pcie connector though if you buy one of those china boards. the throughput of a x1 pcie slot is limited and the controller of those cards might easily be overwhelmed when you actually connect and use multiple of the ports it provides
+
+the silverstone card I linked has a x2 connector which has double the transfer rate of 1x and is yeah, that novatec f372sb flange is weird. I built one wheelset with normal rims with those and used some old spokes and built just one side with a 0mm offset, measured the spoke and then calculated the actual needed spoke length with the pythagorean theorem. for the (radial) front it made no difference and the (2x) rear needed to be 1mm longer comI would clean the gpu and change the thermal paste. the 960 is definitely usable if you are fine with medium to low settings.
+
+not sure how much space you need but the 4 3.5" slots could become restricting to some people if you factor in redundancy. also the board has only 4 sata connectors. depending on the (dual) cards you want to use you might ryou seem to have linked the wrong board. you definitely have a compatible motherboard. you only have to use the single 8 pin. for that, use the 2x4pin (in picture 3 the cable on the right) in the 8 pin slot and leave the 4 pin slot empty.
+
+the extra 4 pin is for "backup" if you have an extremely powerhungry cpu (while overclocked). not every power no, that wouldn't influence the boot. while it could be that your motherboard doesn't have a speaker (beep codes are also output through the 3.5mm jack on some boards) this test is mainly to see if the motherboard can even detect that something is wrong. 
+
+I guess depending on what exactly you cable managed you could have also shorted out the powerif you have important data then you need redundancy. no matter if you have an ssd or a hdd. both can fail.  
+it would have probably been cheaper and safer to buy a 500gb or 1tb ssd and 2x2tb hdds and run the hdds in raid 1.
+
+build looks good otherwise. psu wattage might restrict your upgradepath in the future but as is it is fine. what do you intenI guess extremely fast nvme ssd's could become a necessity once the SSD technology from the ps5 becomes usable on pcs but that definitely won't happen with the next generation of pc components. 
+
+In a scenario where the choice is intel + RTX X060 or a (roughly similar) AMD and X070 then the later would definitely result in better performance.
+
+The Hmm, In my (limited) experience that could also be due to difference in mounting pressure. Since the M2 technically doesn't support the 5700xt I played around with that a bit. On my first try with plastic washers and Morpheus X-plate I got ~83c Jmax, I then tried with slightly less pressure and got back up to 110c again. Removing washers got me bac1. neither sata m2 nor nvme m2 will make a noticeable difference while gaming. the transfer rates are theoretically higher when transferring data but if you don't have an equally fast drive to transfer to/from it has no benefit. the appeal for me is that with most decent motherboards having 2 m.2 slots you can have decent amount of fast storage witno amount of fans and watercooling will completely fix the bad cooling of the h510. I would change to a meshify c. 400 mhz will make more of a performance difference than rgb.
+
+I'd do it like this
+
+[PCPartPicker Part List](url)
+
+Type|Item|Price
+:----|:----|:----
+**CPU** | [AMD Ryzen 5 3600 3.6 GHz 6-Core Processor](url) | $159.97 @ Amazon 
+**Motherno amount of fans and watercooling will completely fix the bad cooling of the h510. I would change to a meshify c. 400 mhz will make more of a performance difference than rgb.
+
+I'd do it like this
+
+[PCPartPicker Part List](url)
+
+Type|Item|Price
+:----|:----|:----
+**CPU** | [AMD Ryzen 5 3600 3.6 GHz 6-Core Processor](url) | $159.97 @ Amazon 
+**Mother[PCPartPicker Part List](url)
+
+Type|Item|Price
+:----|:----|:----
+**CPU** | [AMD Ryzen 5 3600 3.6 GHz 6-Core Processor](url) | kr2177.00 @ url 
+**CPU Cooler** | [Cooler Master Hyper 212 EVO 82.9 CFM Sleeve Bearing CPU Cooler](url) | kr488.00 @ url 
+**Motherboard** | [MSI B450 Gaming Plus MAX ATX AM4 Motherboard](url) | kr1341.00 @ url 
+**Memory** | I would do it like this
+
+[PCPartPicker Part List](url)
+
+Type|Item|Price
+:----|:----|:----
+**CPU** | [AMD Ryzen 5 3600 3.6 GHz 6-Core Processor](url) | $159.97 @ Amazon 
+**CPU Cooler** | [Cooler Master Hyper 212 EVO 82.9 CFM Sleeve Bearing CPU Cooler](url) | $34.99 @ Amazon 
+**Motherboard** | [MSI B450 Gaming Plus MAX ATX AM4 Motherboard](url) | $10generally as long as you have space for them in terms of mounting space and fan diameter: yes
+
+the meshify c comes with 2 fans (front and rear) and has space for 6-7 fans but you get diminishing returns once you have 2 intakes in the front and and exhaust in the rear and the top. I would recommend at least 2 in the front and 1 exhaust. especially wuserbenchmark should not be used to determine the quality of anything. just look at [this](url) and tell me that it makes sense. 
+
+they heavily favor single and dualcore performance in the scoring even though modern games are optimized for usually 4 and up to 8 cores.
+
+this is especially noticeable when comparing intel and amd in similar price rangI don't see any incompatibilities with your built but I would still change it a bit:
+
+[PCPartPicker Part List](url)
+
+Type|Item|Price
+:----|:----|:----
+**CPU** | [AMD Ryzen 7 3800XT 3.9 GHz 8-Core Processor](url) | $529.99 @ Amazon Canada 
+**CPU Cooler** | [be quiet! Dark Rock Pro 4 50.5 CFM CPU Cooler](url) | $129.99 @ Mike's Computer Shop 
+**ThermI know that video.
+
+I can only tell you from my personal experience. I tried what he did in the video and was not satisfied with the overall result. basically the only things I changed from stock settings is the fan curve and the voltage at position 3 (was 1200).
+
+I tried each of the other settings from the video individually and the power limit at[PCPartPicker Part List](url)
+
+Type|Item|Price
+:----|:----|:----
+**CPU** | [AMD Ryzen 5 2600 3.4 GHz 6-Core Processor](url) | $139.80 @ Amazon 
+**Motherboard** | [ASRock B450 Pro4 ATX AM4 Motherboard](url) | $89.99 @ Newegg 
+**Memory** | [Team T-FORCE VULCAN Z 16 GB (2 x 8 GB) DDR4-3200 CL16 Memory](url) | $57.99 @ Amazon 
+**Video Card** | [Gigabyt[PCPartPicker Part List](url)
+
+Type|Item|Price
+:----|:----|:----
+**CPU** | [AMD Ryzen 5 2600 3.4 GHz 6-Core Processor](url) | £133.38 @ More Computers 
+**Motherboard** | [ASRock B450 Pro4 ATX AM4 Motherboard](url) | £79.99 @ CCL Computers 
+**Memory** | [Team T-FORCE VULCAN Z 16 GB (2 x 8 GB) DDR4-3200 CL16 Memory](url) | £56.74 @ Amazon UK 
+**Videocan you post a picture of the crank? or alternatively, can you determine the model or bolt circle diameter? unless you have one of their proprietary bolt arrangements (unlikely for a 2015 bike) you probably have 110mm five bolt. if it's 110mm you can use pretty much any 11s chainring with the same bolt circle. a good and (usually) cheap example is yeah, but then you are also using a 10s cassette which OP doesn't want to change? I know that 7/8/9 and 10s road (except tiagra 4700) has the same pull ratio. there is no way you are running 10s shifters on an 8s cassette.
+
+&gt;finding a good working pair of 8 sp brifters will be rather dificult
+
+what about claris st-r2000? sure, you could argue thin the rear yes. front is problematic. pull ratio of the fd is different. shift quality will be shit if you use the mtb fd. a road fd is built for a narrower chainline. depending on the bike you can try using a shorter square taper bb but you might need a new crank+bb
+
+running (non indexed) bar end shifters (at least in the front) is usually the ch(I didn't see this follow up comment before writing my other reply)
+
+in that case you could have worded it better. I would never argue that the usa is not an influential country in terms of scientific achievements but claiming that "america did most of [the science]" and backing it up with a source that is kind of questionable and doesn't really suurl
+
+&gt;The data behind the tables are based on a relatively **small proportion of total research papers**, they cover the natural sciences only and outputs are non-normalized (that is, **they don’t reflect the size of the country or institution, or its overall research output**).
+
+I didn't calculate it for all the countries but normalized/per per&gt;Tell me more about how a post mount bike will take a flat mount caliper with a fitting?
+
+I'm not sure when I said that flatmount fits on postmount but adapters like that [exist](url)/existed (website of as-solutions is currently down). with fitting I meant theI once replaced the bottom half of a 11-28 with a 12-25. the shift between 16 and 17 was sometimes a bit sluggish but it worked. I personally would do it the same way because by just replacing 2 cogs you'll have unoptimized positions between 12/13, 15/16 and 16/17 as opposed to just 16/17 when you replace the complete bottom half. I would also do idoesn't look like a custom frame but the build could be custom (although you probably wouldn't do that with daytona). daytona is decent. overall mid range I would say.
+
+frame is aluminium. with the columbus sticker on the seattube it could be altec which was pretty nice and light at the time. paint doesn't look to great on the rear triangle.
+
+size we have sp dynamos on a bunch of our trekking/touring bikes and the failure rate is pretty low. only son failure I ever saw was on the commuter of my boss. was a disc version and it started corroding between the two halves of the shell and cracks started to form (ridden every day in every weather with maybe 20-25k km total). was 6 or 7 years old anI guess it really depends on what performance expectations OP has.
+if 1440p is the goal then 2070s/3070/3060 and upgrade down the line is definitely the way to go. if 4k or 1440pUW is the goal then there aren't really alternatives to 2080s/2080ti or 3080 and you just have to upgrade once you are not satisfied anymore. if that point is reached in 3,I completely agree on not getting a 2080 when 3080 is right around the corner. but, there have been some massive die shrinks in the last 5 years that we are unlikely to see again in the near future. getting a top tier gpu (3080) now(-ish) could actually pay of if the performance gains stagnate. even with the die shrinks, the 5 year old 980ti is sti&gt;So, although not recommended as a diy fix, but almost certainly fixable.
+
+yes, while this particular problem is fixable at home, there is no way for OP to determine if the other lugs are still good or will also come loose once the bike is built up.
+
+I would personally feel a lot safer on a bike that previously had damage if it was completely chhave you done the math about selling the cube as is and reinvesting the money into the new bike? in the current market bikes sell pretty good. if that bike is in good condition you could still get 500-600€ for it.
+
+you'll almost definitely need a new rear rack and mudguard, definitely a new headset and brake adapter from is to pm in the front, you what do you mean by broken?
+
+those two wheels are highly incompatible.
+
+you can't just transfer the uniglide cassette because of the different freehub bodys and there are no 7s cassettes for that campa freehub. the spacing/width on the old hub is likely 126mm while the new one has 130mm.  
+it also looks like the spoke count is different (32 vs 36) &gt;I feel the bigger wheels take less constant pedaling than the smaller ones which make me feel like I have to work significantly more, especially on longer rides
+
+that sounds to me like you haven't compared them objectively. the rollout difference is minimal between 26"/50mm and 28"/40mm at around 7%. so as long as you have an equally higher geawhy would you want to handicap yourself in such a way? only because it can be done doesn't mean that it should be done.
+
+smaller wheels can usually take more abuse (if everything else is the same)
+
+bigger tires are more comfortable
+
+brake performance will not be great because if the brake pads are higher the lever ratio of the brake is worse than inot all park tool tools are great or necessary.
+
+what set do you mean exactly: ek3 or pk4?
+
+on average about 10% of the set will be straight up filler tools that don't save time, are duplicates or you already have. 
+
+30% will be questionable choices or combinations of tools that either make no sense at the pricepoint or make no sense for the target&gt;but will still rattle if I hit a bump **and my hands are not on the hoods**.
+
+this is interesting.
+
+is the rattle different from the one you had before?
+
+can you be more precise with the hand position? are you just touching the hood or also the lever when the rattle doesn't happen?
+
+does it happen when you put pressure on the small silver arms huh, totally forgot about those. 
+
+I guess you can see "popular" from two perspectives: if it still works and sells well, why invest in new tooling and a new design (same thing applies to pd-m505 and m530)? since it would still have a steel cage at that pricepoint it would look pretty much exactly the same. and most users manage to wear the cones bthe end cap is separate from the grip. it might be hard to remove the rest of it. if it's not possible to remove it, you can simply push it further in and install a new one. the only real purposes it serves is to prevent foreign objects to get in the bars and to prevent the bars from acting like an "apple pitter" if someone lands unfortunately on t&gt;As for other Shimano oddities: check out the PD-M324
+
+that's not odd at all. the pd-m324 design is ~20 years old at this time catridge bearing pedals were not common and the shimano system that is used nowadays in most pedals was only available at the high end.
+
+if you look at cheaper pedals nowadays and pretty much all pedals &gt;30 years ago wow, ok, since automoderator doesn't like one word answers I'll write  it longer this time:
+
+in terms of braking performance: no
+
+in terms of quality: the brake release lever is supposedly more aero on the new brake.
+
+the bearing where two arms meet is more exposed from the bottom on r7000. it will will require more regular service in that regard iI'd say it's unlikely for that bike to be 73mm. it most likely has a 68mm bb shell. you can measure it without taking anything apart. just look at [this](url) length. 122 or 122.5mm axle length (freely interchangeable) is commonly used on current square taper cranks. that is however no guarantue that your crank uses 122(.5)mm. only way to be sure wchainline difference is only 0.9mm so in that regard it would very likely work.
+
+a problem would be that the curvature of the derailleur cage doesn't match the radius of the smaller chainrings.
+
+you'll also need 2x2,5mm 24mm axle spacers to accommodate the longer axle of the mtb crank.
+
+shifting performance would be reduced but likely still accepta"1.37"x24TPI" is the diameter x threads per inch of the frame. the bb has to have the matching threads to fit in the frame. 
+
+the shimano a070 crank is a square taper crank built for 7/8s
+
+the megaexo is a proprietary 19mm hollow axle that is solely used by fsa.
+
+how many gears does she have in the rear and what gear ratio does she require? why doethis is by design and completely normal for a shimano system. the reason for this is that the trajectory of the upper pulley under the cassette is curved but the distance between the cogs and the amount of cable pulled for each shift stays the same. 
+
+see [here](url) (simplified)
+
+the optimal route under the cassette would be the straight route, bu1) money
+
+2) you can retrofit the magura brakebooster to the HS22. the only difference between the models (11/22/33) is the lever (and sometimes the absence of the brakebooster or a different mount (easy or evo))
+
+3) we have to differentiate different brake boosters. v-brake booster attach at the canti studs. magura brakes technically have a booste

@@ -1,0 +1,163 @@
+Don't really know, don't really care shitpost:
+
+Needs to go:
+Bum
+Belt
+Craw
+Shark
+Rodriguez (to AAA, come back soon)
+
+Maybes:
+Super unsure about Anderson, but want him to get these big games in.
+Pomeranz, probably the same, a little more exp and level up
+Buster, wait shit... (unless DH for the catcher was a thing but then who can catch like buster? Stop reading the news and applying it to this move. This is purely technical, our 2018 consolidation to the \~$6000 level broke down because the system is still over valued.  The only thing we know \*for sure\* is that the $200 level was undervalued.  $3000 is a reasonable target right now.  Calm down, don't be cocky,  and trade, this is the best tThe reason proof of work works is because people are greedy and want to maximize profit.  Sometimes it is to a miners' advantage to publish a block before they have transactions to add.  Until block reward sufficiently diminishes, empty blocks are basically a sign of network health.  The more participation in mining, the better the network.  By extThe real question is if bitcoin is more or less energy efficient than traditional banking and capital transfer systems. It's a difficult comparison...There are a lot of things that bitcoin doesn't need to maintain its security.  Things like vaults, brokers, armed guards, computer security experts, lawyers (this is a big one), etc...
+
+The more peoplI sent OKEX a support question asking if they would shut down:
+
+My Question:
+
+Hello, Does url have any plans to shut down service in accordance with the new statement released by the PBOC on banning bitcoin exchanges in China? url Also what about url and url Thanks!
+
+
+Their response:
+
+Dear user, we have released an announcement today on url that uSo I sold the little bit of the BCC I was given for free on Okex at .086 Now the price has risen 4x and I am wanting to move some out of cold storage and sell. But I'm also worried about privacy. Can anyone recommend a "how-to" I can follow for like a 4 out 5 star quality tumbling? In the past I have moved btc into xmr but this was smaller amounts I came here to see what this community thinks about the CFTC options approval news but there doesn't seem to be much discussion so far (or maybe I missed in an earlier daily?).
+
+I don't really know much about options.  The [ZH](url) article states "Expect a burst of institutional trading activity to follow."  Does anyone see ways that this action wIt's not fair to call people trolls because the disagree with the compromise. Many people believe that the blocksize increase is unnecessary and risky.  There is good evidence and computer science best practices to support this (remember when people only had 4k of RAM or less to work with? Efficiency &gt; bloat). But we can argue all day about the Bitcoin is a consensus protocol and not everyone agrees on the best way to scale.  It is commonly said that are 5 major economic groups, none of which have the power by themselves to make consensus change: Miners, Developers, Exchanges, Service Providers and End Users.  This post is saying that the miners are supporting the SegWit2x proposal which Today is a good day, I was gonna cash out a small percent if my stash at 3000, but instead I went camping and spent the weekend out of range laughing my ass off around a campfire. Got back to town right as we bottomed (well at least most recently) so it's possible the correction enabled me to hodl. Plus the commentary today is best in a while.
+
+I wI think you are taking "full node sovereignty" out of context. It's not about control of the network it's about not having to rely on a 3rd party to trust transactions.  (And as a side note, if you can't self validate then PayPal is a better option)
+
+Also, anyone who thinks mining hash power has the final say in consensus level decision making immeI trade smaller positions than you and I probably have much less overhead than you.  The statement about thinking you're a good trader after 2 months definitely doesn't apply to me, I've been trading for 3.5 years and I don't think I am good, I just don't think I am bad and I know I can improve.
+
+Edit: I was gonna list out some of the things I usedWell, I am more of a swing trader and my best weeks were those where BTC broke out into a new range or those with big corrections...ie when volatility was highest.  If BTC stayed at $500 this whole time, I don't think I would have done as well. In 2015 I was looking at other markets and I imagine I will do the same when BTC looks like it did in 201Well guys, today is a special day for me. I have broken even in terms of BTC meaning I have regained everything I lost learning how to trade.  My USD average cost is $389 so in these terms, i'm happy.
+
+I was never a trader before bitcoin and I started during the Nov 2013 bubble.  Over the course of my obsession I have bought bitcoin with any extra I wanna say I miss the old days when... but I can't cause I wasn't alive then. Can an old timer please tell me that this used to be a little less surprising?
+
+Why is everyone all of sudden throwing Strickland under the bus because he has beef? Sure there are classier ways of handling it, but heat has a way of rising. Every one of you has a grudge tThis is a ridiculous claim and the only backing argument is that ETH hit $200 (which would have never happened without bitcoin).
+
+There are a lot of concepts that most people don't understand about bitcoin and blockchain tech, the most common two being decentralization and immutability.  The value of ETH is derived from BTC and the value of BTC is I made a thread yesterday to discuss holding an /r/bitcoinmarkets bubble [top calling pot](url).  There is not a whole lot of interest, which may be because people just don't like my idea, but I think it's also likely that it points to sentiment around here that the top is already in.
+
+So, I'm gonna put this idea on hold until a new ATH is made. CoThose are some sexy weekly candles we just drew! We finally got our next bubble.  I am pretty excited to see what the burst actually ends up looking like.  My current idea uses the approx low of $200 x 10 = $2000, but it's wild to think that the possibility of an even more insane move like &gt; $3000 exists.  My strategy as the burst warning gets hWhat are your thoughts on the idea that mining is a shadow of the network and that (other than these temporary disruptions) miners hold no power over the network?
+
+I'm sorry if I missed it, but do you support UASF for SegWit?  I understand that judging the metrics of who wants to move to SegWit is difficult and can be gamed, but it does seem like SBut your comment about the bubble isn't entirely off.  Bitfinex customers for some time have not been able to withdraw USD, which is very much like the Mt. Gox scenario during the Nov 2013 bubble.  Its likely that that effect isn't as big a deal because there are plenty of other exchanges, but still people wanting to cash out on bitfinex does mean It seems likely that the most of the signals for BU are fake.  (Meaning they are running non-BU software but using a BU coinbase text). My reasoning is based on the 3 times that about 3/4 of BU nodes were knocked off the network due to a remote exploit.  In all cases normal mining operations signalling BU have not been affected.
+
+If true, it is of This is the first time since Nov 2013 that feels the same as that rise, especially with the way the alts are behaving.   I'm not gonna count any chickens, but i think the current weekly candle is gonna be a big fat green one.  And the eventual fall will be glorious.
+
+Be careful out there, don't get too greedy.  Making profits will be easy.  HoldingEconomic majority is not new. It is another way of saying consensus.
+
+Take these 3 consensus items:
+
+1) Economic majority = Wants 21 million coin cap
+2) Economic majority = Wants double spends to be invalid
+3) Economic majority = Wants bitcoin to stay as decentralized as possible
+
+The first 2 are very concrete, the last is fuzzy and has divided us."By the way if anyone here is in advertising or marketing…kill yourself. It’s just a little thought; I’m just trying to plant seeds. Maybe one day they’ll take root – I don’t know. You try, you do what you can.
+
+(Kill yourself.)
+
+Seriously though, if you are, do.
+
+Aaah, no really. There’s no rationalisation for what you do and you are Satan’s littlI'm open to learning more about this but at first glance it seems like quite a stretch. Lets give it a shot:
+
+ * Is bitcoin a scarce resource in which multiple owners have the "right to individually exclude others from it's use"?
+
+Yes, definitely.
+
+ * Does this make it so no one has an "effective privilege of use?"
+
+No
+
+* Are "new property rights aHere is the notice posted on url
+
+Dear Users: 
+
+Considering from the perspectives of Anti-Money Laundering and risk control, we have established a few suggestions and guidelines for you. These are purely for the purpose of boosting your trading experience and account security. They will not affect your funds and trades. Your cooperation will be grI agree that getting caught in the switch could be bad, not knowing when this will end.  That said I think the 2nd symbol is a little childish and the space could be better used.
+
+There no reason for us to claim the blue, but i see the battle is already on.  Fighting this is diverting a lot of resources.
+
+I included the rainbow on the bottom left b"Hashcash" was published 1997. "Proofs of work and bread pudding protocols" was published in 1999.
+
+It's likely that there are many contributors/inventors of Proof of Work since it evolved over time and wasn't called that in its first instance.
+
+The fact remains that there are few people with the kind of experience Adam has with PoW and AdrianX's cI've learned that my main problem is trading with positions that are too large...and I only learned this because I lost so much of my trading account on multiple occasions that I was forced (if I wanted to continue) to trade with a small amounts because I wasn't willing to deposit more.  So with that knowledge, I am trying to keep my profit seekingI let the market take about 20% of my bitcoin stash via bad, emotional trading a few months back.  With this recent FUD and drop after the ETF announcement recovery, I have been able to earn 95% of it back shorting.
+
+I am ready to go back up now, though I am cautious and not ready to go in on leverage.  Every new mini-breakup going up brings me joyI don't agree.  Consensus and centralization are not mutually exclusive, in fact this common overlap is the exact thing that bitcoin provided an alternative to for the first time in history.  Not to say that all members of the existing financial systems agree with the centralized controls, but they end up doing so by proxy (or under duress) since tEveryone seems so sure the prices will come back down.  This is speculation and previous results do not dictate future results (at least until we have definitive knowledge of the print run size and/or plans for a 2nd print run).  I think the safe play, if you can wait, is dollar cost average: buy 1 of each of the cards you plan to get a playset of While I tend to agree in the legal context, violating copyleft is negligent in the social context.  I read your comment as "I'm gonna do whatever I want and I don't care if what I do pisses anyone else off".  Author's of open source software work for free and only ask for the smallest of respect via their open source license.
+
+I would say that this&gt; I would rather have multiple buggy implementations
+
+I agree with having multiple implementations.  Bugs are part of software, but running buggy production software that secures a $20b network is risky.
+
+&gt; one centrally controlled one
+
+The claim that bitcoin core is more centrally controlled than any other implementation is unfounded.  MaintI admit that I was overly alarmed by Desantis' tweets and have since calmed down.  But the reality is that FUD works and investors dislike uncertainty.  The perceived chance of a fork is being priced in now.  I mentioned in the main thread that this is something to keep an eye on.  If there is even a chance that someone can write up some fake news I agree with you.  I think the point I was trying to make was done incorrectly.
+
+My point is that "Mining is how you vote for rule changes" is false unless the ideology of  1 CPU = 1 peer vote is true.  
+
+Mining is not voting rather it is investing in the chain with the greatest economic value.  Any majority hash power that votes for incompatible cOh man that's a long answer, and if I took the time to write it, I might end up posting a medium article lol.
+
+Short version:
+
+* Node stats (I understand these can be gamed, that's a long topic on its own)
+* rejection of classic/xt
+* stated support for segwit across service providers
+* support for my own thinking across social platforms that largerNakamoto Consensus* includes the whole bitcoin ecosystem, not just hashpower.  Without support of the economic majority, miner collusion to change the rules is a 51% attack.  This will cause a contentious hard fork, loss of confidence (definitely in the short-term, possibly long-term), and a headache for developers.  Thbi is nothing bitcoin can't rAs someone who is opposed to BU, this is a point I agree with.  Bitcoin is permissionless and there is nothing stopping anyone from running any modification they want.  There are obvious reasons why doing so is not a good idea, but that's never stopped anyone in the past.
+
+Emergent consensus introduces nothing new conceptually, but it accelerates t&gt; a user configurable block size limit
+
+Isn't the blocksize limit is already user-configurable since it is trivial to change?  It would be foolish to do so without overwhelming consensus.  What makes emergent consensus any different? and why force the issue when there are obvious difference of opinions?
+
+&gt; BU decentralized decision making awaXthin sounds great as you describe, I will look into it more.  Segwit increases capacity, provides many optimizations and is ready to go, I imagine you have heard the supporting arguments so I won't repeat them.
+
+I disagree that core is "holding the bitcoin network hostage". While it is impossible to say with 100% certainty, node data and statementI do not support Bitclub's behavior, but *listen closely*: IF bitcoin users decided to flag-day activate segwit (so-called UASF) BU and segwit would coexist on the same network at the same time without a hard fork UNLESS a non-segwit node intentionally mined an 'attack' block (valid to BU/non-segwit nodes but not segwit nodes).  And though risky soYou are right it is not an upgrade, it is a coordination method.  And yes any coordination method, including UASF, can result in a fork.  It is important to note that with a UASF, the only way a hard fork can occur is if miners not in support of the SF intentionally mine bad blocks (which is risky for their bottom line).  Never has there been as muFrom the payment page:
+
+Trailblazer Pass admits one person to Oregon Eclipse 2017 from August 17-23, 2017. All passes include camping! Gates will open at 10am on August 17, 2017. Please come prepared to have a good time! Limit 4 Trailblazer Passes per person. All Trailblazer Passes will be delivered electronically. All sales are final. No refunds oLuckily for us the politics of bitcoin are proving to be just as immutable as the hash chain itself.  Also lucky for us there are many communication channels not as infested with trolls and provocateurs.
+
+But, thanks for this piece, our continued efforts to discover and promote truth are motivated by the same reasons we got into bitcoin in the firs/u/congenial1 
+
+&gt; Why would you assume that in April/May it would all of a sudden increase like that? Wouldn't that just bring you back to where we are today (in terms of BBW)?
+What if the support is not being built exactly linearly? What if you model it as a (slightly) upwards curve instead?
+
+The time frame does not need to be exact, neither doI'm not at all saying the complaints are made by bots.  And i'm definitely not saying this is not a real, valid complaint.
+
+Included in this great debate is a lot of speculation over plays to manipulation public opinion.  This is an interesting post to study since it misleadingly strikes a chord.  It takes a very simple view on a very complex problRegarding the top contract holder:
+url
+
+The contracts were opened on Jan 11/12, right at the bottom of the epic fall from above $1000.  The only way this isn't net long is if:
+a) They are net equal
+or b) They are net short and have enough cross margin to cover
+
+If it's all long it's worth ~10674 BTC profit if open is $800 and avg. close was $1000 l7500 is the last significant CNY horizontal resistance below ATH and we most likely are already through it. 1035 was the last significant USD horizontal resistance and this is broken now.  East/West markets have had a lot of synergy since we broke up out the Jan 2017 consolidation.  By synergy I mean, they have been alternating making new local higSame issue here.  I pretty much put the game down because of the recent issues (pogo+ connections, unstable while running in background, long loading time).  I was stoked to see some fixes but now this? I am actually impressed at how bad the programming team is considering the popularity of the game.  Fingers crossed though, I'd love this game to bTraders are so damn bitter lol.  Yes, you might just well loose all your money trading.  But this community is not about not trading and you asked so you know you will probably loose all the money you put up.  And here is my advice that I wrote a while back:
+
+url
+
+Note that I am pretty sure whalepool is gone but a lot of the same folks are on url t~~Can anyone here kindly explain how trail orders work on OK Coin?~~ Let me explain OKC trail orders lol
+
+Edit: Actually I think I have it.  I set a trail with a trigger price of 1015 (Quarterlies) and callback rate of 1%.  The current high after my trigger price is 1032.8 so if the price drops below 1% of this (1022.47) then my position will sell So from what I can tell someone just opened a short position of about 53,953 contracts on OKC quarterly futures:
+
+url
+
+You probably saw that huge wall get eaten up @ $1079.23 and it appeared to be someone taking profit.  But now take a look at the change in the top contract holders, before and after this chomp fest:
+
+url
+
+The new #3 spot is 53,961.1509 days. I will play for 4 more years if Niantic does a good job. I'd love to see this game be really engaging, both socially and in-game.
+
+Trading would be fun but I think it is just about guaranteed to ruin the some aspect of the game. Probably still worth it.
+
+Battles though, why can't we battle other trainers? What about group battles? What aThis is good example how the vocal minority wreck havoc on communities.  Most people are happy to be part of something revolutionary in just about any capacity while a small percentage wage a war with each other making it look like we are divided.
+
+The trust problem is not solved yet, but bitcoin is a major step towards allowing honest people to kiBest game of the year!!! (So Far) Wow, everything about it.  Go Giants! Momentum is still a little sluggish but certainly picking up steam.
+
+I believe whole heatedly that the recent slump is the exact same team with luck playing out the way it must.  Calls going against them, opponent balls finding holes, giants hard hits (over and over) finding glIt is this dude....right NOW. 
+
+And you forgot to emphasize the PEER TO PEER part, which is where its censorship resistant properties come from....you just ignore this when deciding that the blockchain should grow by 10GB+ a month making it less accessible to people lower on the economic scale.  The CASH part hasn't been forgotten and is working ex&gt; Of economic freedom outside of government currency.
+
+Fuck yeah.  I'm so fucking sick of hearing people talk about how "something will replace bitcoin" because in their mind it's not scaling.  They ignore the fact that the whole god damn purpose is to transfer stores of value without centralized, bought out governance.  Honestly, if you are reaI'm a huge fan (and holder) of Peercoin.  I believe in proof of stake for a very specific use case, a cryptocurrency focused around providing a reserve store of value (not so much as a payment network).  I am not thrilled with this advertisement though I do hope it turns at least one person on to this intriguing and innovative coin Sunny King has bThere is now a [mempool megathread](url).
+
+Those in genuine need of help have been given advice...which happens to be the same every time:
+
+ * Make sure you include the right fee (url)
+ * If you didn't, wait for a while
+ * If you can't wait, learn about, or consult help over, double spending the original tx in order to cancel it
+
+Please note that 
