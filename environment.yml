@@ -1,6 +1,7 @@
-name: stylo
+name: base
 channels:
   - defaults
+  - conda-forge
 dependencies:
   - _ipyw_jlab_nb_ext_conf=0.1.0=py38_0
   - _libgcc_mutex=0.1=main
@@ -43,6 +44,9 @@ dependencies:
   - cloudpickle=1.5.0=py_0
   - clyent=1.2.2=py38_1
   - colorama=0.4.3=py_0
+  - conda=4.8.5=py38_0
+  - conda-build=3.18.11=py38_0
+  - conda-env=2.6.0=1
   - conda-package-handling=1.6.1=py38h7b6447c_0
   - conda-verify=3.4.2=py_1
   - contextlib2=0.6.0.post1=py_0
@@ -319,5 +323,3 @@ dependencies:
   - tensorflow
   - pip:
     - PyQt5
-    
-
