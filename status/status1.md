@@ -3,7 +3,7 @@
 
 * Sam: Created a reddit developer application to use in praw web scraping corpus generation and started to lay out the framework for implementation.
 
-* Andy: Created a Twitter developer account that will give me the tokens to pro
+* Andy: Created a Twitter developer account that will give me the tokens to properly access the Twitter API. Started working on python and Tweepy integration in version 3.8. Attended zoom meetings For project discussion.
 * William: Research methods for authorship profiling, and the use of an embedding space as classification method when dealing with large amounts of data. 
 
 
@@ -15,7 +15,7 @@ So far we have written out a rough sketch of general design features such as: Gr
 
  * Twitter and Reddit Corpus Gathering
 
- * Andy was able to get the Tweepy package installed and imported into a python project and Sam are…
+ * Andy was able to get the Tweepy package installed and imported into a python project
 
  * Research for how to create a classification algorithm that doesn’t need to be completely re-trained at the
 
@@ -49,9 +49,7 @@ Sam: Set up the developer account and was able to access a reddit instance.
 
 Andy: Created/was approved for a Twitter developer account. Have found a potential solution to the tweepy problem. I was able to get Tweepy to import!
 
-William: Found a corpus for authorship profiling that enables classification of individuals personalities based 
-
-on reddit account flairs attached to users in a subreddit. 
+William: Found a corpus for authorship profiling that enables classification of individuals personalities based on reddit account flairs attached to users in a subreddit. 
 
 
 
