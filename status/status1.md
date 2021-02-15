@@ -5,7 +5,7 @@
 
 * Andy: Created a Twitter developer account that will give me the tokens to pro
 * William: Research methods for authorship profiling, and the use of an embedding space as classification method when dealing with large amounts of data. 
-Contents of Status Update
+
 
 
 ## Recap of what was planned for the last 3 weeks
