@@ -21,7 +21,7 @@ So far we have written out a rough sketch of general design features such as: Gr
 
  * introduction of a new user
 
-# What was done during the last 3 weeks (by whom):
+## What was done during the last 3 weeks (by whom):
 Ian: Downloaded Python QT designer and created rough layouts for the visual portion of the software.
 Sam: Created a reddit developer application to use in praw web scraping corpus generation and started to lay out the framework for implementation.       
 Andy: Created a Twitter developer account that will give me the tokens to properly access the Twitter API. Started working on python and Tweepy integration in version 3.8. Attended zoom meetings
@@ -57,7 +57,7 @@ William: Found a corpus for authorship profiling that enables classification of 
 
 Ian: Watching YouTube lecture series for QT/Python GUI design.
 Andy: Solution- adding the “conda-forge” channel to the conda navigator. This allowed for Tweepy to get imported.
-William: Googling it
+
 
 ## Were there other things that you tried that did not work and why?
 Ian: I have tried to link the python code to the gui code, but am still struggling to learn the GUI designer tool.
@@ -71,16 +71,16 @@ and not the installation that was having issues.
 
 Tweepy was struggling to be found by the package manager though it was installed properly 
 
-# Describe the challenges
+## Describe the challenges
 
 Learning new libraries and reading through documentation.
 
-# Describe how you overcame them
+## Describe how you overcame them
 We have been working by using sprints. We do a brief planning meeting where everyone talks about their
 individual role in the project and what their plan is for their next programming cycle, then we re-meet and 
 discuss challenges and solutions.
 
-# What challenges are still left?
+## What challenges are still left?
 
 
 Sam is working on generating a corpus of reddit comments based on username.  
