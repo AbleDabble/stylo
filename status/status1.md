@@ -97,7 +97,7 @@ Ultimately we still need to implement automation for web-scraping, change the cu
 ## Changes/Deviation from Plan
 None
 
-## Details Description of Goals/ Plan for
+## Details Description of Goals/ Plan for next 3 weeks
 Implementation of automation tools for web scraping, and creation and testing of authorship identification tool on the current reddit corpus. 
 
 
