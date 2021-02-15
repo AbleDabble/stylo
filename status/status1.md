@@ -23,9 +23,13 @@ So far we have written out a rough sketch of general design features such as: Gr
 
 ## What was done during the last 3 weeks (by whom):
 Ian: Downloaded Python QT designer and created rough layouts for the visual portion of the software.
-Sam: Created a reddit developer application to use in praw web scraping corpus generation and started to lay out the framework for implementation.       
+
+Sam: Created a reddit developer application to use in praw web scraping corpus generation and started to lay out the framework for implementation. 
+
 Andy: Created a Twitter developer account that will give me the tokens to properly access the Twitter API. Started working on python and Tweepy integration in version 3.8. Attended zoom meetings
-For project discussion. William: Research methods for authorship profiling, and the use of an embedding space for extreme classification methods.
+For project discussion. 
+
+William: Research methods for authorship profiling, and the use of an embedding space for extreme classification methods.
 
 
 ## Description of tasks completed
