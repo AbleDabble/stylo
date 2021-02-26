@@ -1,5 +1,5 @@
 ## FEATURE
-<!-- provide a description of the feature here -->
+<!-- plz, provide a description of the feature here -->
 
 
 ## BUG REPORT
