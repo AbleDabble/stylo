@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 # Form implementation generated from reading ui file 'application main.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.2
@@ -9,7 +7,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from PyQt5.QtCore import pyqtSlot
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -34,9 +32,10 @@ class Ui_MainWindow(object):
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
-
+        
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -44,7 +43,6 @@ class Ui_MainWindow(object):
         self.pushButton.setText(_translate("MainWindow", "Authorship Identification"))
         self.pushButton_2.setText(_translate("MainWindow", "Authorship Verification"))
         self.pushButton_3.setText(_translate("MainWindow", "Authorship Profiling"))
-
 
 if __name__ == "__main__":
     import sys
