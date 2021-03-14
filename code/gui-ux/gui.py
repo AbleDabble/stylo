@@ -59,6 +59,8 @@ class id_Window(QWidget):
     def __init__(self):
         super().__init__()
         self.setupUi(MainWindow)
+
+
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(668, 447)
@@ -127,7 +129,8 @@ class id_Window(QWidget):
         self.returnButton.clicked.connect(self.returnClicked)
 
     def returnClicked(self):
-        print("msg")
+        app_window = Ui_MainWindow
+        app_window.show()
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -188,7 +191,7 @@ class profiling(QWidget):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.returnButton.setText(_translate("MainWindow", "< Return"))
         self.lineEdit_8.setText(_translate("MainWindow", "Username"))
-        self.pushButton_2.setText(_translate("MainWindow", "Test"))
+        self.pushButton_2.setText(_translate("MainWindow", "Generate Profile"))
         self.checkBox_2.setText(_translate("MainWindow", "Dowload Twitter"))
         self.checkBox.setText(_translate("MainWindow", "Download Reddit"))
 
