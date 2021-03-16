@@ -1,6 +1,12 @@
-from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtCore import pyqtSlot
-from PyQt5.QtWidgets import QWidget, QMainWindow
+try:
+    import os
+    import sys
+    from PyQt5 import QtCore, QtGui, QtWidgets
+    from PyQt5.QtCore import pyqtSlot
+    from PyQt5.QtWidgets import QWidget, QMainWindow
+except Exception as e:
+    print("Some modules are missing  {}", format(e))
+
 class Ui_MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -29,7 +35,6 @@ class Ui_MainWindow(QMainWindow):
         MainWindow.setStatusBar(self.statusbar)
         
         self.retranslateUi(MainWindow)
-        #self.id_Window = id_Window()
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         
         self.pushButton.clicked.connect(self.id_click)
@@ -44,8 +49,11 @@ class Ui_MainWindow(QMainWindow):
         self.pushButton_3.setText(_translate("MainWindow", "Authorship Profiling"))
         
     def id_click(self):
-        id_window = id_Window()
-        id_window.show()
+        self.window = QtWidgets.QMainWindow()
+        self.ui = Ui_identificationForm()
+        self.ui.setupUi(self.window)
+        self.window.show()
+        print("ID Clicked")
 
     def prof_click(self):
         prof_window = profiling()
@@ -55,100 +63,66 @@ class Ui_MainWindow(QMainWindow):
         ver_window = verification()
         ver_window.show()
         
-class id_Window(QWidget):
-    def __init__(self):
-        super().__init__()
-        self.setupUi(MainWindow)
+class Ui_identificationForm(QWidget):
+    def setupUi(self, identificationForm):
+        identificationForm.setObjectName("identificationForm")
+        identificationForm.resize(604, 363)
+        self.numUsers = QtWidgets.QSpinBox(identificationForm)
+        self.numUsers.setGeometry(QtCore.QRect(270, 100, 41, 21))
+        self.numUsers.setObjectName("numUsers")
+        self.user1 = QtWidgets.QLineEdit(identificationForm)
+        self.user1.setGeometry(QtCore.QRect(20, 100, 241, 21))
+        self.user1.setObjectName("user1")
+        self.user2 = QtWidgets.QLineEdit(identificationForm)
+        self.user2.setGeometry(QtCore.QRect(20, 130, 241, 21))
+        self.user2.setObjectName("user2")
+        self.user3 = QtWidgets.QLineEdit(identificationForm)
+        self.user3.setGeometry(QtCore.QRect(20, 160, 241, 21))
+        self.user3.setObjectName("user3")
+        self.user4 = QtWidgets.QLineEdit(identificationForm)
+        self.user4.setGeometry(QtCore.QRect(20, 190, 241, 21))
+        self.user4.setObjectName("user4")
+        self.user5 = QtWidgets.QLineEdit(identificationForm)
+        self.user5.setGeometry(QtCore.QRect(20, 220, 241, 21))
+        self.user5.setObjectName("user5")
+        self.user6 = QtWidgets.QLineEdit(identificationForm)
+        self.user6.setGeometry(QtCore.QRect(20, 250, 241, 21))
+        self.user6.setObjectName("user6")
+        self.user7 = QtWidgets.QLineEdit(identificationForm)
+        self.user7.setGeometry(QtCore.QRect(20, 280, 241, 21))
+        self.user7.setObjectName("user7")
+        self.mainUser = QtWidgets.QLineEdit(identificationForm)
+        self.mainUser.setGeometry(QtCore.QRect(330, 100, 241, 21))
+        self.mainUser.setObjectName("mainUser")
+        self.cValue = QtWidgets.QLineEdit(identificationForm)
+        self.cValue.setGeometry(QtCore.QRect(330, 160, 71, 31))
+        self.cValue.setObjectName("cValue")
+        self.cReset = QtWidgets.QPushButton(identificationForm)
+        self.cReset.setGeometry(QtCore.QRect(420, 160, 61, 31))
+        self.cReset.setObjectName("cReset")
+        self.redditChecked = QtWidgets.QCheckBox(identificationForm)
+        self.redditChecked.setGeometry(QtCore.QRect(330, 220, 111, 17))
+        self.redditChecked.setObjectName("redditChecked")
+        self.twitterChecked = QtWidgets.QCheckBox(identificationForm)
+        self.twitterChecked.setGeometry(QtCore.QRect(330, 240, 111, 17))
+        self.twitterChecked.setObjectName("twitterChecked")
+        self.testButton = QtWidgets.QPushButton(identificationForm)
+        self.testButton.setGeometry(QtCore.QRect(330, 260, 241, 41))
+        self.testButton.setObjectName("testButton")
 
+        self.retranslateUi(identificationForm)
+        QtCore.QMetaObject.connectSlotsByName(identificationForm)
 
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(668, 447)
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
-        self.centralwidget.setObjectName("centralwidget")
-        self.returnButton = QtWidgets.QPushButton(self.centralwidget)
-        self.returnButton.setGeometry(QtCore.QRect(10, 10, 81, 31))
-        self.returnButton.setObjectName("returnButton")
-        self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit.setGeometry(QtCore.QRect(20, 120, 211, 31))
-        self.lineEdit.setObjectName("lineEdit")
-        self.lineEdit_2 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_2.setGeometry(QtCore.QRect(20, 160, 211, 31))
-        self.lineEdit_2.setObjectName("lineEdit_2")
-        self.lineEdit_3 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_3.setGeometry(QtCore.QRect(20, 200, 211, 31))
-        self.lineEdit_3.setObjectName("lineEdit_3")
-        self.spinBox = QtWidgets.QSpinBox(self.centralwidget)
-        self.spinBox.setGeometry(QtCore.QRect(240, 120, 51, 31))
-        self.spinBox.setObjectName("spinBox")
-        self.lineEdit_4 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_4.setGeometry(QtCore.QRect(20, 240, 211, 31))
-        self.lineEdit_4.setObjectName("lineEdit_4")
-        self.lineEdit_5 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_5.setGeometry(QtCore.QRect(20, 280, 211, 31))
-        self.lineEdit_5.setObjectName("lineEdit_5")
-        self.lineEdit_6 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_6.setGeometry(QtCore.QRect(20, 320, 211, 31))
-        self.lineEdit_6.setObjectName("lineEdit_6")
-        self.lineEdit_7 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_7.setGeometry(QtCore.QRect(20, 360, 211, 31))
-        self.lineEdit_7.setObjectName("lineEdit_7")
-        self.lineEdit_8 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_8.setGeometry(QtCore.QRect(370, 120, 281, 31))
-        self.lineEdit_8.setObjectName("lineEdit_8")
-        self.lineEdit_9 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_9.setGeometry(QtCore.QRect(370, 220, 81, 31))
-        self.lineEdit_9.setObjectName("lineEdit_9")
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(470, 220, 71, 31))
-        self.pushButton.setObjectName("pushButton")
-        self.spinBox_2 = QtWidgets.QSpinBox(self.centralwidget)
-        self.spinBox_2.setGeometry(QtCore.QRect(370, 270, 81, 31))
-        self.spinBox_2.setObjectName("spinBox_2")
-        self.checkBox = QtWidgets.QCheckBox(self.centralwidget)
-        self.checkBox.setGeometry(QtCore.QRect(370, 320, 141, 16))
-        self.checkBox.setObjectName("checkBox")
-        self.checkBox_2 = QtWidgets.QCheckBox(self.centralwidget)
-        self.checkBox_2.setGeometry(QtCore.QRect(370, 340, 111, 16))
-        self.checkBox_2.setObjectName("checkBox_2")
-        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(370, 360, 281, 31))
-        self.pushButton_2.setObjectName("pushButton_2")
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 668, 21))
-        self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
-
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
-
-        self.returnButton.clicked.connect(self.returnClicked)
-
-    def returnClicked(self):
-        app_window = Ui_MainWindow
-        app_window.show()
-
-    def retranslateUi(self, MainWindow):
+    def retranslateUi(self, identificationForm):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.returnButton.setText(_translate("MainWindow", "< Return"))
-        self.lineEdit.setText(_translate("MainWindow", "User Name One"))
-        self.lineEdit_2.setText(_translate("MainWindow", "User Name Two"))
-        self.lineEdit_3.setText(_translate("MainWindow", "User Name Three"))
-        self.lineEdit_4.setText(_translate("MainWindow", "User Name Four"))
-        self.lineEdit_5.setText(_translate("MainWindow", "User Name Five"))
-        self.lineEdit_6.setText(_translate("MainWindow", "User Name Six"))
-        self.lineEdit_7.setText(_translate("MainWindow", "User Name Seven"))
-        self.lineEdit_8.setText(_translate("MainWindow", "Main User"))
-        self.lineEdit_9.setText(_translate("MainWindow", "C Value"))
-        self.pushButton.setText(_translate("MainWindow", "Reset C"))
-        self.checkBox.setText(_translate("MainWindow", "Download Reddit"))
-        self.checkBox_2.setText(_translate("MainWindow", "Dowload Twitter"))
-        self.pushButton_2.setText(_translate("MainWindow", "Test"))
+        identificationForm.setWindowTitle(_translate("identificationForm", "Stylometric Identification"))
+        self.cReset.setText(_translate("identificationForm", "Reset C"))
+        self.redditChecked.setText(_translate("identificationForm", "Download Reddit"))
+        self.twitterChecked.setText(_translate("identificationForm", "Download Twitter"))
+        self.testButton.setText(_translate("identificationForm", "Test"))
+
+    def testClicked(self):
+        print("testClicked")
 
 class profiling(QWidget):
     def __init__(self):
