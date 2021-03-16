@@ -44,10 +44,12 @@ class Ui_MainWindow(QMainWindow):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        #set up the 3 buttons to take user to the proper pane
         self.pushButton.setText(_translate("MainWindow", "Authorship Identification"))
         self.pushButton_2.setText(_translate("MainWindow", "Authorship Verification"))
         self.pushButton_3.setText(_translate("MainWindow", "Authorship Profiling"))
         
+    #opens the identification pane
     def id_click(self):
         self.window = QtWidgets.QMainWindow()
         self.ui = Ui_identificationForm()
@@ -55,10 +57,12 @@ class Ui_MainWindow(QMainWindow):
         self.window.show()
         print("ID Clicked")
 
+    #opens the profiling pane
     def prof_click(self):
         prof_window = profiling()
         prof_window.show()
 
+    #opens the verification pane
     def ver_click(self):
         ver_window = verification()
         ver_window.show()
@@ -113,6 +117,10 @@ class Ui_identificationForm(QWidget):
         self.retranslateUi(identificationForm)
         QtCore.QMetaObject.connectSlotsByName(identificationForm)
 
+        #connect the buttons to their functions
+        self.testButton.clicked.connect(self.testClicked)
+        self.cReset.clicked.connect(self.cResetClicked)
+
     def retranslateUi(self, identificationForm):
         _translate = QtCore.QCoreApplication.translate
         identificationForm.setWindowTitle(_translate("identificationForm", "Stylometric Identification"))
@@ -123,6 +131,10 @@ class Ui_identificationForm(QWidget):
 
     def testClicked(self):
         print("testClicked")
+
+    def cResetClicked(self):
+        print("cReset Clicked")
+        self.cValue.setText("1")
 
 class profiling(QWidget):
     def __init__(self):
