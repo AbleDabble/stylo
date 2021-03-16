@@ -121,6 +121,7 @@ class Ui_identificationForm(QWidget):
         self.testButton.clicked.connect(self.testClicked)
         self.cReset.clicked.connect(self.cResetClicked)
 
+
     def retranslateUi(self, identificationForm):
         _translate = QtCore.QCoreApplication.translate
         identificationForm.setWindowTitle(_translate("identificationForm", "Stylometric Identification"))
@@ -131,10 +132,25 @@ class Ui_identificationForm(QWidget):
 
     def testClicked(self):
         print("testClicked")
+        #check if reddit and twitter are set to download
+        if self.redditChecked.isChecked() == True:
+            print("Downloading usernames from reddit")
+        if self.twitterChecked.isChecked() == True:
+            print("Downloading usernames from twitter")
 
     def cResetClicked(self):
         print("cReset Clicked")
         self.cValue.setText("1")
+
+    def pullUsernames(self):
+        Users = []
+        Users.append(self.user1.text())
+        Users.append(self.user2.text())
+        Users.append(self.user3.text())
+        Users.append(self.user4.text())
+        Users.append(self.user5.text())
+        Users.append(self.user6.text())
+        Users.append(self.user7.text())
 
 class profiling(QWidget):
     def __init__(self):
