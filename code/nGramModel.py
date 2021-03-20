@@ -1,7 +1,7 @@
 import numpy as np
 import os
 class nGramModel:
-    def __init__(self, path, f, ngram_size, cut_size=500):
+    def __init__(self, path, f, ngram_size, cut_size=350):
         """initializes the frequency and ngram size"""
         self.f = f
         self.cut_size = cut_size
@@ -46,15 +46,17 @@ class nGramModel:
     def similarity(self, email):
         block_unique, block_all = self.block_ngram(email)
         numerator = len(block_unique.intersection(self.ngram_profile))
-        r_m0 = numerator / len(block_unique)
+        # TODO Figure out why it returns no unique n-grams
+        r_m0 = numerator / (len(block_unique) + 1)
         numerator = len(block_all.intersection(self.ngram_profile))
-        r_m1 = numerator / len(block_unique)
+        r_m1 = numerator / (len(block_unique) + 1) 
         return r_m0, r_m1
     
     def get_threshold(self):
         """Sets the threshold"""
         with open(self.path, 'r', encoding='ISO-8859-1') as r:
             emails = r.read()
+        print("len of emails:", len(emails))
         emails = emails[len(emails)//2:]
         simil_m0 = [] # for only unique ngrams in the email block
         simil_m1 = [] # For all ngrams in the email block

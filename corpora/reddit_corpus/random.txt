@@ -1,0 +1,225 @@
+Years ago I got, in quick succession, an offer for phone sex, viagra, and to present at a conference (one of those fake ones that are very common).
+
+I yelled across to my colleague across the hall 'hey, I just got these three offers by email, one for phone sex, one for viagra, and one to present at a conference, what should I do?'
+
+Without missing Prof here, a few things to bear in mind:
+
+Read what Hologram0110 said about 10 times. Maybe 20. Develop a plan. Be part of the team but advance your career, look for opportunities to work with different people and learn new skills. Sit in on talks in other departments, be aware of what is going on, develop contacts beyond your immediate group. 
+
+BePay attention in math. Linear algebra and a bit of calculus are a very large help in gamedev, so as you move into more advanced math in HS, pay attention. 
+
+Start a journal of ideas, sketches, critiques. I recommend doing this in something large format like an art notebook. Keep reference materials - photos of shapes, interesting things you see in That's my understanding as well.
+
+Otherwise this would probably be common.
+
+Might be a good question for the registrar's office!
+
+I googled this and poked around and found some people saying that for some programs (e.g. meds) they DO take courses after graduation into account at SOME schools. 
+
+So ... you should probably talk also to the program yoi've not directly heard, but I would say that everyone is pushing for in person labs for experiential learning opportunities. My feeling (opinion but based on going to many meetings) is that people would be happy to trade 'no lectures all term' for 'labs allowed' in a heartbeat. 
+
+The next three months are crucial. If Kingston starts blowing up becUnless things take a turn for the worst:
+
+fall courses are mostly online
+
+winter courses are online if very large, otherwise, probably in person. 
+
+that's the current thinking that we are being told. 
+
+Depending on your engineering discipline it will vary somewhat probably. Cases where online is not a huge problem will probably be encouraged to do I'm really sorry to hear about those experiences. It is not a very diverse community in a lot of ways but there is a difference between that and being bigoted. 
+
+When I was an undergrad and grad student it was a lot closer to a toxic community than now, I had several gay friends who for safety reasons were very quiet about their orientation. 
+
+TherThe one I made, which I don't think I kept, was a simple series of tiles that generated an island kind of in Inkarnate style. There was a rule sheet and we used random number (dice) to make a layout. Then I talked about PRK's then I connected the dots for an aha moment. Then I described Elite (the game) and the universe on a floppy disk.
+
+Good luckShow them how pseudorandom keys can be used with a set of rules to build all kinds of things and store them. This can be done with pen and paper. I had a class act it out once using a simple map set and it worked well. 
+
+You might also want to show them some historic stuff like demoscene and panspermia and the like, some of the original l-system stOkay, I'm looking at it. What is the part you need more material on? 
+
+Are you in the Representation part now, for example?
+
+A few things I found useful (though they probably don't exactly line up with your course) are:
+
+url
+
+url
+
+and
+
+url
+
+Though they may not line up with the level of difficulty you are having. 
+
+All are probably, uh, findable on We require (in geo) that all candidates give an undergraduate lecture at 2nd year level on a topic related to their field but that fits a current course. Then students attend and submit their views. 
+
+I agree that they have to get to that stage (based to a significant degree on research) to do that lecture, but it has made decisions easier in the pI agree with everything you've said here. I'm an adjunct prof but I'm in the category that isn't expendable (hold on, looking over my shoulder... ).
+
+I would just say that in the last 5 years the emphasis on teaching in hiring has increased significantly, and the idea of having more instructors that are focused on teaching is certainly gaining tracRead the post.
+
+The ARC wants to share me 100$ for the winter membership to sign up for virtual Zoom classes.
+
+Read it again.
+
+It doesn't mention two fees. It mentions one. There are multiple ways to interpret that sentence. One is 'they want to charge me to $100 to sign up for this class.' 
+
+It's like you can't even evaluate when something is ambiWhy are you confused. You are being charged because you want to sign up for classes. If you didn't, you wouldn't be charged. 
+
+They are allowed to charge you money for something because you want something. 
+
+Do you think that someone isn't being paid to prepare and deliver those classes? There aren't costs involved? 
+
+I'm not going to argue whetherTerragen is really ideal for mid-scale environments - like the landscape at 10x10km scale or so. It isn't really for planetary scale. 
+
+There have been many tools over the years that are fractal or hybrid for doing continent shapes but so far none that incorporate tectonics are as good as starting with fractal and modding to add tectonics in my opiThat's kinda the Holy Grail request.
+
+There are fractal generators that work well at medium scale (e.g. an area a few km by km). There are some that work well at larger scale (e.g. an area 100x100km). There are scene builders / game tools that work well at small scale (e.g. 100x100m). 
+
+None do exactly what you want. None have plate tectonics.
+
+If Depending on faculty and depending on situation you can ask to see it or even have it remarked.
+
+In 20 years of teaching I think i've had people ask 2-3 times to actually see it, and probably 10 times for a summary of where they went wrong. I'm actually shocked that the numbers are this low. When I was an undergrad I often spoke to profs afterwardsWe were told it is, but I can imagine profs getting 'special dispensation' from their department heads. 
+
+Internally (geo) we were told that it is very much a hard deadline because of students needing marks to move forwards. 
+
+I'd suggest you contact your Departmental Program Admin and ask about this issue politely. Having profs reminded that 'the Okay, a few comments on this... from the perspective of a prof, a parent, and also (... a while ago) a student.
+
+Most students marks drop somewhat coming to a 'residential' (away from home) university because there are a lot of life changes happening. Discovering who you are when your parents aren't watching. And so on. 
+
+And that's cool. My marks The Ontario Government pays a very significant part of the tuition of students through funding the universities. Foreign students don't contribute to those taxes. 
+
+The university is not saving money this year. It is losing a vast amount of money. Losing on tuition. Losing on residence fees. Losing on grant revenues as grants get deferred. Not payiFrom what was discussed in faculty board, and in the public record:
+
+1. It is direct entry with a very small number of transfer-in spots. Not 'choose a discipline.'
+
+2. The number of transfers is likely to be very low because otherwise it will tilt the whole damned AppSci program (see below). 
+
+3. The exact transfer criteria haven't been stated butGIS tools do exactly this. Not automatically, but not that hard either. They store (using data structures particular to the data) vector and image based data in coordinates, handle global coordinate systems, and so on. And yes, there are representation issues of course, which is why we have... cartography. 
+
+It is perfectly feasible for somebody toAre you wanting this on a desktop or on the web?
+
+There are probably widgets that do this if you are using Web/JS/etc. but then ... well... then you are using Web/JS/etc.
+
+If you just want to have a multi scale map that you can zoom in and out of look at QGIS (free). You can even set levels where as you zoom in you can turn on more detailed sub-mapGrants: Will vary by department, but in my department (geology) is is probably close to 50% because more or less if your average isn't anywhere near the required level they'll tell you. If it is anywhere close you'd be encouraged to try because it varies from year to year. 
+
+For SWEP I have no idea. I've used it before but the prof is somewhat distNSERC is the national science and engineering research council. They fund a lot of profs research and they also have specific undergraduate student research awards (USRAs) which is what EngStudent42 is talking about.
+
+So a prof can fund you directly or they can be partially subsidized by NSERC from a student pool. Or they can be partially subsidizeYes, but mech is not mechatronics. 
+
+Normal general admission would apply for mech, but as /u/phoebesno points out, there are differences even in first year.
+
+And cross transfers will likely be very very limited. Otherwise the obvious thing to do is get in to a lower average program and then hope to transfer.
+
+Note that most programs in Eng. are orI totally agree. That's why I feel the UofC solution is clever, because it forces students to weigh their options carefully. On the other hand it does impose a fairly stiff constraint. 
+
+I think we also need to recognize that someone in severe anxiety etc. should contact Wellness and that opens up many more options. Would not want to suggest in anyI think you have to consider why we want marks and what they mean.
+
+And I'm not against the idea, but... think about it. And this WAS discussed here a few months ago and I'm partly synthesizing things people said then.
+
+If you have a CR on your transcript and it doesn't count, then grad programs are going to have to decide what that means. If someoMost modern maps of similar content are done with GIS software like ArcGIS Pro or QGIS or similar. You could tweak the symbology of those to get the effect here. You could even make the distance rings in the water. Some careful use of textures would get the 'old' feel about right I'd guess.
+
+I've made fantasy maps with ArcGIS but it is... kind of tThis will heavily depend on how the next 6-8 weeks go, including the courses that are currently hybrid this winter that involve students isolating if they've travelled outside of Kingston. If Kingston blows up because of that... well....
+
+I strongly suspect that fall term will be hybrid even if things go well, but some departments (e.g. Chemistry) I'm not going to give you advice on your specific situation, but I'm going to pose a question.
+
+Are you applying to a generic grad program or a research specific one?
+
+If it is a research specific one, the supervisor relationship is a very strong influence on acceptance. In that case if you have a discussion with that supervisor and they understandMore than 1,000 Google employees are living in a delusional state where:
+
+Google isn't a for profit ('be evil make money') company
+
+Large corporations don't punish dissent
+
+Large corporations can't replace you
+
+Seriously, either leave or stfu. This isn't going to make a difference. 
+
+And if you think the people care, well, shocked face, they'll upvTake a look at the express bus route map. If you are on an express route (and note that they only stop at express stops, not everywhere along their route) that makes a massive difference. I'm 20 minutes by express bus away and I live on the western margin of Kingston. I live a 20 minute WALK from a 20 minute ride ... so in my case not great. But ifDepending on terrain type I'd probably use Terragen or World Creator. But realistically I'd probably use Unreal with Quixel assets (though you obviously can't) with the terrain base layer coming from WC or from Houdini. 
+
+I used to own Vue and frankly it never gelled for me. 
+
+For manual stuff I use Maya because I get it for free, but I've seen amaI agree with u/imakenosensetopeople (it kind of hurts to write that in the context of that name... :)
+
+I'd add a few things:
+
+Consume your world news from multiple sources that are at least somewhat ideologically diverse. 
+
+If something matters to you and it is controversial - for example vaccines - take the time to go to a variety of authoritativeNo, it turns out that people DO care, just not enough to move a muscle to do something about it. 
+
+I've explained this and other security issues (facebook monitoring, etc. etc. etc.) and people are horrified. Then they keep acting exactly the same.
+
+There is a complete disconnect happening. It's not like people are powerless. It's not like they donMed School admissions are a special form of hell from what I've heard. The competitiveness breeds a certain culture that isn't necessarily what you even want in a doctor. My sister in law got in as a mature applicant to one of the programs that uses experience and other criteria much more than marks and she has done very well in the 'real world' inDeciding whether a student should be admitted to grad school is time consuming and somewhat hit or miss. I agree that GPA is kind of a shame, but... 
+
+For programs where it makes sense, a portfolio is obviously a better answer. The problem is, first, that it is a poor fit to some programs and second it takes a LOT more time to look at portfolio worAs you can see from the other posts experiences are all over the map here, but in general group work and the ability to have a social overtone to learning is generally keeping people sane. 
+
+I think it depends on the nature of the work, too. An assignment crafted to be doable in modules so people have their own stake but also have to work to integrFor courses of instruction with heavy online components that's not likely to happen; they'll want to catch up on hands-on experience.
+
+For other programs, there are definitely going to be shifts to some courses online in the future. But will this cover all the courses you need to graduate? Unlikely unless we are still in the throes of COVID next faBe aware that landlords have all kinds of techniques to avoid those numbers, like reno-victions, property flips, etc. 
+
+Some of the Kingston landlords are particularly scummy. Don't ever give verbal notice (friends got f'd by d.d. for that - claimed they never gave it and they lost in court). Get everything in writing. Take pictures when you move iThe other issue of course is that if they charge him, the next time a Dem president even squints they'll be charged when they are followed by a strong Rep standing on the hill. Plus the Supreme Court plus... yeah, I just don't see it. 
+
+His people may go to jail but I very much doubt he will (for anything he did in office, and likely anything perioAs an undergraduate I had lots of unsatisfying experiences, though in person discussions were (obviously) an option. 
+
+The problem I face as a prof, and I'm speaking only for myself here, is that there is a huge issue with the whole marking system with regard to written assignments of this type. 
+
+If I provide a very detailed syllabus then I'm moreI used to have a NextDimension system on my desk in my grad school office. People were running windows 3. I was rotating 3d cubes with different video feeds playing on the faces of the cube. People thought it was recorded, but I let them manually flip the cube around and they lost their minds. This was in 1992 or so.
+
+The WYSIWYG was the biggest deI get that. Everyone is frustrated.
+
+And we have dropped the ball on some things, because there are so many things. Many decisions were made that weren't great decisions, but at the time with little information they were the best the university could do.
+
+I'm not ecstatic with some of the financial decisions - others have in my view rightfully poinTuition is largely controlled. And most of the cost of your education comes from tax dollars. 
+
+Education is not a commodity _to the student at the time_ and it is toxic to regard it as such. It is a commodity to society at large and to that student in the larger societal context.
+
+If it were a commodity then it would make perfect sense to sell degI suspect the elephant in the room here is 'do you play piano even a bit.'
+
+I could read music before I could read English. I've been playing piano since before I have ... memories :) - though I stopped playing seriously at about age 10.
+
+The issue here is that I am _completely comfortable_ at a keyboard, and _I see music structurally in terms of aI'd assume fairly cautiously.
+
+They know they can life more or less forever and they have a long long lifetime of seeing things that looked fairly innocuous turning out very badly.
+
+A 1000 year old crossing a busy road: not going to do it. Remembers hundreds and hundreds of times people were hit.
+
+A 1000 year old getting on a plane: not going to doIf you start in Google Maps (in satellite view) and pan from just north of San Francisco over to Reno and on, you'll see the colour change in the vegetation (brown-green to tan) when you hit the higher ranges that drop out the water. 
+
+You can do the same thing in eastern India, going north, to Tibet. One side wetter, one side dryer. 
+
+There are exFirst of all, nice map (despite your protestations of camera issues). I like the style a lot.
+
+Second of all, congratulations, you have none of the normal fantasy trope gotchas. 
+
+Third, I don't see anything obviously wrong with your rivers. 
+
+Fourth, as a perhaps useful thingy, in general one side of a mountain range is significantly wetter than tAs for me, I only want 23.75. I want you to have time to read Reddit. And complain about my course!
+
+I remember a discussion back in the day (when I was an undergrad) where we had 6 courses and several of the profs that term told us their course was very important so they'd be using more than the normal amount of time for a course. Was a real FML mI think there is a deeper issue. A lot of lectures don't involve interactive questioning, and I think the amount of confusion about lectures that are recorded is higher than the same content presented live. As in, there is something going on.
+
+I realize that even one question in a lecture might make a huge difference. But I'm wondering how often peYeah, I had the same reaction. But coming back years later as a prof and treating it as processes at the Earth's surface got me interested again. Not going to do research in the area but I find some of the stuff more interesting now.
+
+And going on a field trip for 3 weeks with a very very good sedimentologist/teacher through Colorado, Utah, Nevada,The answer is trivially no but yes. 
+
+The issue is that the answer depends on  whether you mean 'so I can do activity X' or you mean 'a non issue.'
+
+Let's put it this way. The ability to go to a, perhaps somewhat less crowded, bar is very different from 'totally cool dude pass that joint.' 
+
+Do I think Queen's will have in person activities next faI find the whole situation very interesting because at a tactical level the parties seem so very different - as that link points out - yet year after year, budget after budget, the situation gets worse. I'm not from the USA so I don't have any skin in the game, but the tactic of blaming the other party is kinda the whole point here - partisan microThe reason that the ultra-rich fund both the Democrats _and_ the Republicans is pretty much to say 'help make us even richer.' 
+
+The entire system is about creating and furthering inequality.
+
+The reason many ultra-rich fund organizations that promote hate is that poor people hating each other means they don't organize. 
+
+It is an oligarchy. You geMaybe at your school, but at mine if you go and say you are depressed the rules change and it is out of the professors hands. 
+
+The ones who do this - and it is still regular - always have a reason they don't want to go and ask Wellness to get them an extension. Usually that reason is you have to provide evidence and records are kept of that. 
+
+I rUnless you have a very specific program where you'd benefit even from online learning from a different set of profs there really isn't a point. 
+
+We're at least locked down like this term for next term, and if it gets bad it may... be even more so. As in, gym closed, restaurants and bars not even socially-distant-open, and so on. 
+
+The news that a Our cat goes awol when he gets out, and it has happened three times. All three times he was within 25m of our yard, hidden, and all three times he 'agreed to return' in the very early hours when he was cold and hungry and scared. 
+
+We left out food near our door each time and it wasn't touched - he was too scared to come near during the day. But haActually I really struggle with this with my grad students. A key rule of writing is 'shitty first draft.' As in, don't over manage the first draft since it is getting deleted mostly anyway. 
+
+Also, I'm a geology prof. We're... not that formal. More like a group of people who've worked together for a long time - some older and some younger, some mo

@@ -9,7 +9,7 @@ import csv
 from sklearn.preprocessing import MinMaxScaler
 from nltk.tokenize import word_tokenize
 from nltk.tokenize import sent_tokenize
-from mdlp.discretization import MDLP
+#from mdlp.discretization import MDLP
 from imblearn.over_sampling import RandomOverSampler
 from imblearn.over_sampling import SMOTE
 from EntropyDiscretization import EntropyDiscretization
@@ -23,7 +23,7 @@ class Profile:
     prep_path = '../dependencies/Prepositions.txt'
     pron_path = '../dependencies/Pronouns.txt'
     aver_path = '../dependencies/AuxiliaryVerbs.txt'
-    def __init__(self, path, email_size = 500, ngram_size = [6], f = [4]):
+    def __init__(self, path, email_size = 350, ngram_size = [5,6], f = [1,2]):
         """Initializes a profile, and initailizes the ngram model based on tuples based to ngram_size and f.
         The tuples passed should be of the same size and their positions are respective of each other, that is 
         ngram_size of (5,6), and f of (1,2) will create two ngram models one with ngram size 5 and f of 1, and
@@ -41,6 +41,8 @@ class Profile:
         self.path = path
         self.name = os.path.basename(path)
         self.other_users = [os.path.join(os.path.dirname(path), f) for f in os.listdir(os.path.dirname(path)) if f.endswith('.txt') and f != self.name]
+        #print(other_users)
+        # TODO make this not include comparison user for Authorship verification
         #self.other_test_users = [os.path.join(os.path.dirname(test_path), f) for f in os.listdir(os.path.dirname(test_path)) if f.endswith('.txt') and f != self.name]
         self.conj = self.functionWords(self.conj_path)
         self.quan = self.functionWords(self.quan_path)
@@ -246,7 +248,7 @@ class Profile:
             tmp.append(self.countFuncWords(words, self.functionWords(self.quantifiers_path)))
             tmp.append(self.countFuncWords(words, self.functionWords(self.determiners_path)))"""
             features.append(tmp)
-        df = pd.DataFrame(np.array(features), columns = range(0, len(features[0])))
+        df = pd.DataFrame(np.array(features))
         return df
     
     def countFuncWords(self, words, funcWords):
