@@ -180,7 +180,7 @@ class profiling(object):
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
+        Form.setWindowTitle(_translate("Form", "Styolometric Profiling"))
         self.username.setText(_translate("Form", "Username"))
         self.redditChecked.setText(_translate("Form", "Download Reddit Users"))
         self.twitterChecked.setText(_translate("Form", "Download Twitter Users"))
@@ -218,7 +218,7 @@ class verification(object):
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
+        Form.setWindowTitle(_translate("Form", "Stylometric Verification"))
         self.cUserOne.setText(_translate("Form", "Compare User One"))
         self.cUserTwo.setText(_translate("Form", "Compare User Two"))
         self.redditChecked.setText(_translate("Form", "Download Reddit Users"))
