@@ -11,54 +11,40 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(514, 315)
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
-        self.centralwidget.setObjectName("centralwidget")
-        self.returnButton = QtWidgets.QPushButton(self.centralwidget)
-        self.returnButton.setGeometry(QtCore.QRect(10, 10, 81, 31))
-        self.returnButton.setObjectName("returnButton")
-        self.lineEdit_8 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_8.setGeometry(QtCore.QRect(10, 50, 281, 31))
-        self.lineEdit_8.setObjectName("lineEdit_8")
-        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(10, 200, 281, 31))
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.checkBox_2 = QtWidgets.QCheckBox(self.centralwidget)
-        self.checkBox_2.setGeometry(QtCore.QRect(10, 180, 111, 16))
-        self.checkBox_2.setObjectName("checkBox_2")
-        self.checkBox = QtWidgets.QCheckBox(self.centralwidget)
-        self.checkBox.setGeometry(QtCore.QRect(10, 160, 141, 16))
-        self.checkBox.setObjectName("checkBox")
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 514, 21))
-        self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+class Ui_Form(object):
+    def setupUi(self, Form):
+        Form.setObjectName("Form")
+        Form.resize(234, 191)
+        self.username = QtWidgets.QLineEdit(Form)
+        self.username.setGeometry(QtCore.QRect(10, 20, 211, 31))
+        self.username.setObjectName("username")
+        self.redditChecked = QtWidgets.QCheckBox(Form)
+        self.redditChecked.setGeometry(QtCore.QRect(10, 70, 211, 17))
+        self.redditChecked.setObjectName("redditChecked")
+        self.twitterChecked = QtWidgets.QCheckBox(Form)
+        self.twitterChecked.setGeometry(QtCore.QRect(10, 90, 211, 17))
+        self.twitterChecked.setObjectName("twitterChecked")
+        self.profileButton = QtWidgets.QPushButton(Form)
+        self.profileButton.setGeometry(QtCore.QRect(10, 120, 211, 31))
+        self.profileButton.setObjectName("profileButton")
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(Form)
+        QtCore.QMetaObject.connectSlotsByName(Form)
 
-    def retranslateUi(self, MainWindow):
+    def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.returnButton.setText(_translate("MainWindow", "< Return"))
-        self.lineEdit_8.setText(_translate("MainWindow", "Username"))
-        self.pushButton_2.setText(_translate("MainWindow", "Test"))
-        self.checkBox_2.setText(_translate("MainWindow", "Dowload Twitter"))
-        self.checkBox.setText(_translate("MainWindow", "Download Reddit"))
+        Form.setWindowTitle(_translate("Form", "Form"))
+        self.username.setText(_translate("Form", "Username"))
+        self.redditChecked.setText(_translate("Form", "Download Reddit Users"))
+        self.twitterChecked.setText(_translate("Form", "Download Twitter Users"))
+        self.profileButton.setText(_translate("Form", "Generate Profile"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
+    Form = QtWidgets.QWidget()
+    ui = Ui_Form()
+    ui.setupUi(Form)
+    Form.show()
     sys.exit(app.exec_())
