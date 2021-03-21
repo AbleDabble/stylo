@@ -23,7 +23,7 @@ class Profile:
     prep_path = '../dependencies/Prepositions.txt'
     pron_path = '../dependencies/Pronouns.txt'
     aver_path = '../dependencies/AuxiliaryVerbs.txt'
-    def __init__(self, path, email_size = 350, ngram_size = [5,6], f = [1,2]):
+    def __init__(self, path, comparison = None, email_size = 350, ngram_size = [5,6], f = [1,2]):
         """Initializes a profile, and initailizes the ngram model based on tuples based to ngram_size and f.
         The tuples passed should be of the same size and their positions are respective of each other, that is 
         ngram_size of (5,6), and f of (1,2) will create two ngram models one with ngram size 5 and f of 1, and
@@ -36,11 +36,17 @@ class Profile:
         self.ngram_models = []
         for i in range(0, len(ngram_size)):
             self.ngram_models.append(nGramModel(path, f[i], ngram_size[i], cut_size=self.email_size))
+        if comparison:
+            self.comparison_path = comparison
+            self.comparison_name = os.path.basename(comparison)
+        else:
+            self.comparison_name = ""
+            self.comparison_path = ""
         self.path = path
         self.f = f
         self.path = path
         self.name = os.path.basename(path)
-        self.other_users = [os.path.join(os.path.dirname(path), f) for f in os.listdir(os.path.dirname(path)) if f.endswith('.txt') and f != self.name]
+        self.other_users = [os.path.join(os.path.dirname(path), f) for f in os.listdir(os.path.dirname(path)) if f.endswith('.txt') and f != self.name and f != self.comparison_name]
         #print(other_users)
         # TODO make this not include comparison user for Authorship verification
         #self.other_test_users = [os.path.join(os.path.dirname(test_path), f) for f in os.listdir(os.path.dirname(test_path)) if f.endswith('.txt') and f != self.name]
@@ -153,6 +159,22 @@ class Profile:
             tmp_df = self.extract(emails, 0)
             df = df.append(tmp_df, ignore_index = True)
         return df
+    def extract_positives(self):
+        with open(self.path, 'r', encoding='ISO-8859-1') as r:
+            emails = r.read()
+        df = self.extract(emails, 1)
+        target = df[[0]]
+        target = target.copy()
+        target = target.astype('int32')
+        df = df.drop(0, axis=1)
+        # TODO include minMaxScaler in pipeline instead of here
+        #self.scaler = MinMaxScaler()
+        #self.scaler.fit(df)
+        #df = self.scaler.transform(df)
+        df = pd.DataFrame(df)
+        #df = pd.DataFrame(df)
+        df.insert(0, "target", target)
+        return df
     def create_profile(self):
         # Remove target (y) from the dataframe
         df = self.extract_all()
@@ -169,9 +191,10 @@ class Profile:
         tf = tf.drop(0, axis=1)"""
         
         # Scale data with min max normalization
-        self.scaler = MinMaxScaler()
-        self.scaler.fit(df)
-        df = self.scaler.transform(df)
+        # TODO move minMaxScaler to Pipeline instead of here.
+        #self.scaler = MinMaxScaler()
+        #self.scaler.fit(df)
+        #df = self.scaler.transform(df)
         df = pd.DataFrame(df)
         #tf = scaler.transform(tf) # scale test frame
         # Oversample minority case
@@ -207,7 +230,7 @@ class Profile:
         target = target.copy()
         target = target.astype('int32')
         df = df.drop(0, axis=1)
-        df = self.scaler.transform(df)
+        #df = self.scaler.transform(df)
         df = pd.DataFrame(df)
         df.insert(0, "target", target)
         return df
