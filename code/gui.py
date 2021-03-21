@@ -4,7 +4,7 @@ try:
     from PyQt5 import QtCore, QtGui, QtWidgets
     from PyQt5.QtCore import pyqtSlot
     from PyQt5.QtWidgets import QWidget, QMainWindow
-    from ..EntropyDiscretization import EntropyDiscretization
+    from EntropyDiscretization import EntropyDiscretization
 except Exception as e:
     print("Some modules are missing  {}", format(e))
 
@@ -44,7 +44,7 @@ class Ui_MainWindow(QMainWindow):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Stylometry - Team Stylo"))
         #set up the 3 buttons to take user to the proper pane
         self.pushButton.setText(_translate("MainWindow", "Authorship Identification"))
         self.pushButton_2.setText(_translate("MainWindow", "Authorship Verification"))
