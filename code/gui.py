@@ -217,6 +217,11 @@ class verification(object):
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
+        self.resetC.clicked.connect(self.resetClicked)
+        self.testButton.clicked.connect(self.testClicked)
+
+
+
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Stylometric Verification"))
@@ -226,6 +231,17 @@ class verification(object):
         self.twitterChecked.setText(_translate("Form", "Download Twitter Users"))
         self.resetC.setText(_translate("Form", "Reset C"))
         self.testButton.setText(_translate("Form", "Test"))
+    
+    def resetClicked(self):
+        self.cValue.setText("1")
+        print("Reset Clicked")
+
+    def testClicked(self):
+        if (self.redditChecked.isChecked()):
+            print("downloading reddit")
+        if (self.twitterChecked.isChecked()):
+            print("downloading twitter")
+        print("Test Clicked")
 
 
 if __name__ == "__main__":
