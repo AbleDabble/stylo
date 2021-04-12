@@ -22,6 +22,12 @@ def split_x_y(df, numpy=False):
     return x, y
 
 def start_verification_reddit(user1, user2):
+  '''This method starts the user verification model, trains it and comapres the two users to
+  determine if they are the same.
+
+  Returns: True if users are the same
+  Returns: False if the user are not the same
+  '''
   curr_downloads = set([f[:-4] for f in os.listdir('../corpora/reddit_corpus/') if f.endswith('.txt')])
   if user2 not in curr_downloads:
     profile2 = Profile(download(user2, 350))
@@ -49,6 +55,12 @@ def start_verification_reddit(user1, user2):
   print(len(predictions))
   count = np.sum(predictions)
   print("The chances these two users are the same is: ", count / len(user2_x))
-  return count / len(user2_x)
+  liklihood = count / len(user2_x)
+  if liklihood < 0.6:
+    return False
+  return True 
+
+
+  # return count / len(user2_x)
 
 start_verification_reddit("Baerog", "Baerog")
