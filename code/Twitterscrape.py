@@ -1,8 +1,3 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
 # Too get tweepy to import use:
 # conda install -c conda-forge tweepy
 
@@ -17,26 +12,36 @@ consumer_secret = ''
 access_token = ''
 access_token_secret = ''
 
-
-
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
 # public_tweets = api.home_timeline()
-user_id = "TheEpic_Ace"
 # Test list of users for multiple printings at a time
 user_list = ["TheEpic_Ace", "MountainWest", "markiplier"]
 
-for user in user_list:
-    user_id = user
-    timeline1 = api.user_timeline(screen_name=user_id, count=5, tweet_mode='extended')
-    for tweet in timeline1:
-        print(user_id)
-        print(tweet.full_text)
+
+def getTweets(username):
+    timeline2 = api.user_timeline(screen_name=username, count=5, tweet_mode = 'extended')
+    for tweets in timeline2:
+        print(username)
+        print(tweets.full_text)
         print("\n")
+
+user = "TheEpic_Ace"
+getTweets(user)
+
+
+#for user in user_list:
+#    user_id = user
+#    timeline1 = api.user_timeline(screen_name=user_id, count=5, tweet_mode='extended')
+#    for tweet in timeline1:
+#        print(user_id)
+#        print(tweet.full_text)
+#        print("\n")
+
 # timeline = api.user_timeline(screen_name=user_id, count=5, tweet_mode='extended')
-#for tweet in timeline:
+# for tweet in timeline:
 #    print(user_id)
 #    print(tweet.full_text)
 #    print("\n")
