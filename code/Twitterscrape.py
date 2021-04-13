@@ -7,11 +7,11 @@ import io
 
 # Uses personal API keys to access, DONT FORGET TO CHANGE
 # BEFORE PUSHING!!
-consumer_key = ''
-consumer_secret = ''
+consumer_key = '37JjOqF68aJGabnywv5TX0EIm'
+consumer_secret = 'lyMo4D5Un2lW7Q1J5JocS8dtx7hMQDbAe3EFhD6et9knz7mvW0'
 
-access_token = ''
-access_token_secret = ''
+access_token = '1227390177317965825-23BojZ9EzoAUXi5H3tbHKcHNlPXrKl'
+access_token_secret = '8tIDpmmI0ItODDZWgfGUloaoWQFLQYBRcNZrmoZbyTOA2'
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
@@ -22,8 +22,26 @@ api = tweepy.API(auth)
 user_list = ["TheEpic_Ace", "MountainWest", "markiplier"]
 
 
+# create a stream listener
+
+class MyStreamListener(tweepy.StreamListener):
+    def on_status(self, status):
+        print(status.text)
+
+    def on_error(self, status_code):
+        if status_code == 420:
+            #returning False in on_data disconnects the stream
+            return False
+
+
+def streamTweet():
+    myStreamListener = MyStreamListener()
+    myStream = tweepy.Stream(auth=api.auth, listener=myStreamListener)
+    myStream.filter(track=['python'])
+
+
 # This Function is for adding individual users to the corpus!
-def getTweets(username):
+def getIndivTweets(username):
     path = '../corpora/twitter_corpus/'
     save_path = path + username + ".txt"
     save = ""
@@ -39,13 +57,15 @@ def getTweets(username):
         with io.open(save_path, "w", encoding="utf-8") as w:
             w.write(save)
 
-    # print(username)
-    # print(tweets.full_text)
-    # print("\n")
 
+usernames = ["BarackObama", "justinbieber", "katyperry","TheEllenShow", "YouTube",
+             "BillGates","CNN", "elonmusk", "BrunoMars", "realmadrid", "Harry_Styles"]
 
-user = "TheEpic_Ace"
-getTweets(user)
+for user in usernames:
+    getIndivTweets(user)
+# user = "TheEpic_Ace"
+# getIndivTweets(user)
+# streamTweet()
 
 # for user in user_list:
 #    user_id = user
