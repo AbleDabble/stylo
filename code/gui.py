@@ -7,10 +7,12 @@ try:
     from PyQt5.QtCore import pyqtSlot
     from PyQt5.QtWidgets import QWidget, QMainWindow
     from EntropyDiscretization import EntropyDiscretization
-    import Twitterscrape.py
+    from code import Twitterscrape
 except Exception as e:
     print("Some modules are missing  {}", format(e))
 
+
+# begin twitter scraping code, unable to import from file so far, added here for testing purposes
 consumer_key = 'xwMMqenNbrbUZlRQZfmsnovCN'
 consumer_secret = '7C0cWCPiLcB31n5BL2wFziUNeFwbhShNOroE8q0MS3JedDVKu8'
 
@@ -36,6 +38,7 @@ def getIndivTweets(username):
             break
         with io.open(save_path, "w", encoding="utf-8") as w:
             w.write(save)
+#end of twitter scraping code
 
 class Ui_MainWindow(QMainWindow):
     def __init__(self):
@@ -225,8 +228,11 @@ class profiling(object):
         if(self.twitterChecked.isChecked()):
             print(self.username.text())
             getIndivTweets(self.username.text())
+            #todo run entropy discrretization on downloaded corpus
         if(self.redditChecked.isChecked()):
             print(self.username.text())
+            #todo: import reddit scraper
+            #todo: run entropy discretization on 
 
 class verification(object):
     def setupUi(self, Form):
