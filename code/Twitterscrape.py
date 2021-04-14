@@ -7,11 +7,11 @@ import io
 
 # Uses personal API keys to access, DONT FORGET TO CHANGE
 # BEFORE PUSHING!!
-consumer_key = '37JjOqF68aJGabnywv5TX0EIm'
-consumer_secret = 'lyMo4D5Un2lW7Q1J5JocS8dtx7hMQDbAe3EFhD6et9knz7mvW0'
+consumer_key = ''
+consumer_secret = ''
 
-access_token = '1227390177317965825-23BojZ9EzoAUXi5H3tbHKcHNlPXrKl'
-access_token_secret = '8tIDpmmI0ItODDZWgfGUloaoWQFLQYBRcNZrmoZbyTOA2'
+access_token = ''
+access_token_secret = ''
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
@@ -41,28 +41,35 @@ def streamTweet():
 
 
 # This Function is for adding individual users to the corpus!
-def getIndivTweets(username):
-    path = '../corpora/twitter_corpus/'
-    save_path = path + username + ".txt"
-    save = ""
-    count = 0
+class twitScraper():
 
-    timeline2 = api.user_timeline(screen_name=username, count=60, tweet_mode='extended')
-    for tweets in timeline2:
-        save += "\n\n"
-        save += tweets.full_text
-        count += 1
-        if count >= 60:
-            break
-        with io.open(save_path, "w", encoding="utf-8") as w:
-            w.write(save)
+    def getIndivTweets(self, username):
+        path = '../corpora/twitter_corpus/'
+        save_path = path + username + ".txt"
+        save = ""
+        count = 0
+
+        timeline2 = api.user_timeline(screen_name=username, count=60, tweet_mode='extended')
+        for tweets in timeline2:
+            save += "\n\n"
+            save += tweets.full_text
+            count += 1
+            if count >= 60:
+                break
+            with io.open(save_path, "w", encoding="utf-8") as w:
+                w.write(save)
 
 
 usernames = ["BarackObama", "justinbieber", "katyperry","TheEllenShow", "YouTube",
              "BillGates","CNN", "elonmusk", "BrunoMars", "realmadrid", "Harry_Styles"]
+scraper = twitScraper()
 
-for user in usernames:
-    getIndivTweets(user)
+user = "shakira"
+scraper.getIndivTweets(user)
+# for user in usernames:
+#    scraper.getIndivTweets(user)
+
+
 # user = "TheEpic_Ace"
 # getIndivTweets(user)
 # streamTweet()
