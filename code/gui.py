@@ -7,7 +7,7 @@ try:
     from PyQt5.QtCore import pyqtSlot
     from PyQt5.QtWidgets import QWidget, QMainWindow
     from EntropyDiscretization import EntropyDiscretization
-    from code import Twitterscrape
+    from Twitterscrape import streamTweet
 except Exception as e:
     print("Some modules are missing  {}", format(e))
 
