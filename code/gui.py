@@ -143,6 +143,7 @@ class Ui_identificationForm(QWidget):
         if self.redditChecked.isChecked() == True:
             print("Downloading usernames from reddit")
         if self.twitterChecked.isChecked() == True:
+            #take username from input and run the function for reddit or twitter, download and save into text file by name, perform feature extraction with profile class.
 
             print("Downloading usernames from twitter")
         #dowload main user and user one through seven, train the model on all seven users and the main user and try to predict which user has the greatest number out of each cycle.
