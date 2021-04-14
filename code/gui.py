@@ -1,12 +1,41 @@
 try:
+    import io
     import os
     import sys
+    import tweepy
     from PyQt5 import QtCore, QtGui, QtWidgets
     from PyQt5.QtCore import pyqtSlot
     from PyQt5.QtWidgets import QWidget, QMainWindow
     from EntropyDiscretization import EntropyDiscretization
+    import Twitterscrape.py
 except Exception as e:
     print("Some modules are missing  {}", format(e))
+
+consumer_key = 'xwMMqenNbrbUZlRQZfmsnovCN'
+consumer_secret = '7C0cWCPiLcB31n5BL2wFziUNeFwbhShNOroE8q0MS3JedDVKu8'
+
+access_token = '1227390177317965825-WivPuwRbbW5OObwkTBkFBlI1PSpd9i'
+access_token_secret = 'RjU5SMSiznkNTe6fYpvxdCwZ4W8OvB5cAjSSE09MXo9n1'
+
+auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+auth.set_access_token(access_token, access_token_secret)
+api = tweepy.API(auth)
+
+def getIndivTweets(username):
+    path = '../corpora/twitter_corpus/'
+    save_path = path + username + ".txt"
+    save = ""
+    count = 0
+
+    timeline2 = api.user_timeline(screen_name=username, count=60, tweet_mode='extended')
+    for tweets in timeline2:
+        save += "\n\n"
+        save += tweets.full_text
+        count += 1
+        if count >= 60:
+            break
+        with io.open(save_path, "w", encoding="utf-8") as w:
+            w.write(save)
 
 class Ui_MainWindow(QMainWindow):
     def __init__(self):
@@ -143,7 +172,10 @@ class Ui_identificationForm(QWidget):
         if self.redditChecked.isChecked() == True:
             print("Downloading usernames from reddit")
         if self.twitterChecked.isChecked() == True:
+            #take username from input and run the function for reddit or twitter, download and save into text file by name, perform feature extraction with profile class.
+
             print("Downloading usernames from twitter")
+        #dowload main user and user one through seven, train the model on all seven users and the main user and try to predict which user has the greatest number out of each cycle.
 
     def cResetClicked(self):
         print("cReset Clicked")
@@ -179,6 +211,8 @@ class profiling(object):
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
+        self.profileButton.clicked.connect(self.profilingTestClicked)
+
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Styolometric Profiling"))
@@ -186,7 +220,13 @@ class profiling(object):
         self.redditChecked.setText(_translate("Form", "Download Reddit Users"))
         self.twitterChecked.setText(_translate("Form", "Download Twitter Users"))
         self.profileButton.setText(_translate("Form", "Generate Profile"))
-
+    
+    def profilingTestClicked(self):
+        if(self.twitterChecked.isChecked()):
+            print(self.username.text())
+            getIndivTweets(self.username.text())
+        if(self.redditChecked.isChecked()):
+            print(self.username.text())
 
 class verification(object):
     def setupUi(self, Form):
