@@ -2,42 +2,17 @@ try:
     import io
     import os
     import sys
+    sys.path.append( './' )
     import tweepy
     from PyQt5 import QtCore, QtGui, QtWidgets
     from PyQt5.QtCore import pyqtSlot
     from PyQt5.QtWidgets import QWidget, QMainWindow
     from EntropyDiscretization import EntropyDiscretization
-    from Twitterscrape import streamTweet
 except Exception as e:
     print("Some modules are missing  {}", format(e))
-
-
+from Twitterscrape import twitScrape
 # begin twitter scraping code, unable to import from file so far, added here for testing purposes
-consumer_key = 'xwMMqenNbrbUZlRQZfmsnovCN'
-consumer_secret = '7C0cWCPiLcB31n5BL2wFziUNeFwbhShNOroE8q0MS3JedDVKu8'
 
-access_token = '1227390177317965825-WivPuwRbbW5OObwkTBkFBlI1PSpd9i'
-access_token_secret = 'RjU5SMSiznkNTe6fYpvxdCwZ4W8OvB5cAjSSE09MXo9n1'
-
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-auth.set_access_token(access_token, access_token_secret)
-api = tweepy.API(auth)
-
-def getIndivTweets(username):
-    path = '../corpora/twitter_corpus/'
-    save_path = path + username + ".txt"
-    save = ""
-    count = 0
-
-    timeline2 = api.user_timeline(screen_name=username, count=60, tweet_mode='extended')
-    for tweets in timeline2:
-        save += "\n\n"
-        save += tweets.full_text
-        count += 1
-        if count >= 60:
-            break
-        with io.open(save_path, "w", encoding="utf-8") as w:
-            w.write(save)
 #end of twitter scraping code
 
 class Ui_MainWindow(QMainWindow):
@@ -137,12 +112,6 @@ class Ui_identificationForm(QWidget):
         self.mainUser = QtWidgets.QLineEdit(identificationForm)
         self.mainUser.setGeometry(QtCore.QRect(330, 100, 241, 21))
         self.mainUser.setObjectName("mainUser")
-        self.cValue = QtWidgets.QLineEdit(identificationForm)
-        self.cValue.setGeometry(QtCore.QRect(330, 160, 71, 31))
-        self.cValue.setObjectName("cValue")
-        self.cReset = QtWidgets.QPushButton(identificationForm)
-        self.cReset.setGeometry(QtCore.QRect(420, 160, 61, 31))
-        self.cReset.setObjectName("cReset")
         self.redditChecked = QtWidgets.QCheckBox(identificationForm)
         self.redditChecked.setGeometry(QtCore.QRect(330, 220, 111, 17))
         self.redditChecked.setObjectName("redditChecked")
@@ -158,7 +127,6 @@ class Ui_identificationForm(QWidget):
 
         #connect the buttons to their functions
         self.testButton.clicked.connect(self.testClicked)
-        self.cReset.clicked.connect(self.cResetClicked)
 
 
     def retranslateUi(self, identificationForm):
@@ -179,10 +147,6 @@ class Ui_identificationForm(QWidget):
 
             print("Downloading usernames from twitter")
         #dowload main user and user one through seven, train the model on all seven users and the main user and try to predict which user has the greatest number out of each cycle.
-
-    def cResetClicked(self):
-        print("cReset Clicked")
-        self.cValue.setText("1")
 
     def pullUsernames(self):
         Users = []
@@ -227,7 +191,7 @@ class profiling(object):
     def profilingTestClicked(self):
         if(self.twitterChecked.isChecked()):
             print(self.username.text())
-            getIndivTweets(self.username.text())
+            twitScrape().getIndivTweets(self.username.text())
             #todo run entropy discrretization on downloaded corpus
         if(self.redditChecked.isChecked()):
             print(self.username.text())
@@ -250,12 +214,6 @@ class verification(object):
         self.twitterChecked = QtWidgets.QCheckBox(Form)
         self.twitterChecked.setGeometry(QtCore.QRect(10, 120, 141, 17))
         self.twitterChecked.setObjectName("twitterChecked")
-        self.cValue = QtWidgets.QLineEdit(Form)
-        self.cValue.setGeometry(QtCore.QRect(180, 100, 71, 31))
-        self.cValue.setObjectName("cValue")
-        self.resetC = QtWidgets.QPushButton(Form)
-        self.resetC.setGeometry(QtCore.QRect(270, 100, 75, 31))
-        self.resetC.setObjectName("resetC")
         self.testButton = QtWidgets.QPushButton(Form)
         self.testButton.setGeometry(QtCore.QRect(10, 150, 241, 31))
         self.testButton.setObjectName("testButton")
