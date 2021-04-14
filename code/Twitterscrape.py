@@ -7,11 +7,11 @@ import io
 
 # Uses personal API keys to access, DONT FORGET TO CHANGE
 # BEFORE PUSHING!!
-consumer_key = ''
-consumer_secret = ''
+consumer_key = 'xwMMqenNbrbUZlRQZfmsnovCN'
+consumer_secret = '7C0cWCPiLcB31n5BL2wFziUNeFwbhShNOroE8q0MS3JedDVKu8'
 
-access_token = ''
-access_token_secret = ''
+access_token = '1227390177317965825-WivPuwRbbW5OObwkTBkFBlI1PSpd9i'
+access_token_secret = 'RjU5SMSiznkNTe6fYpvxdCwZ4W8OvB5cAjSSE09MXo9n1'
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
