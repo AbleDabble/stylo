@@ -143,7 +143,9 @@ class Ui_identificationForm(QWidget):
         if self.redditChecked.isChecked() == True:
             print("Downloading usernames from reddit")
         if self.twitterChecked.isChecked() == True:
+
             print("Downloading usernames from twitter")
+        #dowload main user and user one through seven, train the model on all seven users and the main user and try to predict which user has the greatest number out of each cycle.
 
     def cResetClicked(self):
         print("cReset Clicked")
