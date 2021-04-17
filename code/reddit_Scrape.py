@@ -30,7 +30,6 @@ class redditScraper():
     # Returns a 1 if successful, 0 if any errors occurred
     def writeComments(self, commentList, filename):
         path = '../corpora/reddit_corpus/'
-        print(type(filename))
         comp_name = path + filename + ".txt"
         try:
             file = open(comp_name, "w")
@@ -40,6 +39,7 @@ class redditScraper():
             return -1
         file.writelines(commentList)
         file.close()
+        return comp_name
 
     def getUserComments(self, username):
         reddit_user = self.redditInst()
@@ -70,12 +70,8 @@ class redditScraper():
         if len(user_comment) == 0:
             return 0
         else:
-            print(user_comment)
-            if self.writeComments(user_comment, username) == -1:
+            path = self.writeComments(user_comment, username)
+            if path == -1:
                 return 0
             else:
-                return 1
-
-
-new_scrape = redditScraper()
-new_scrape.getUserComments("BT89")
+                return path
