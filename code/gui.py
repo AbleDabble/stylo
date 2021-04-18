@@ -11,6 +11,7 @@ try:
 except Exception as e:
     print("Some modules are missing  {}", format(e))
 from Twitterscrape import twitScrape
+from reddit_Scrape import redditScraper
 # begin twitter scraping code, unable to import from file so far, added here for testing purposes
 
 #end of twitter scraping code
@@ -161,7 +162,7 @@ class Ui_identificationForm(QWidget):
 class profiling(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(234, 191)
+        Form.resize(300, 180)
         self.username = QtWidgets.QLineEdit(Form)
         self.username.setGeometry(QtCore.QRect(10, 20, 211, 31))
         self.username.setObjectName("username")
@@ -195,8 +196,12 @@ class profiling(object):
             #todo run entropy discrretization on downloaded corpus
         if(self.redditChecked.isChecked()):
             print(self.username.text())
-            #todo: import reddit scraper
-            #todo: run entropy discretization on 
+            redditScraper().getUserComments(self.username.text())
+            #todo: run entropy discretization on corpus based on reddit comments
+        self.window = QtWidgets.QMainWindow()
+        self.ui = ResultsMenu(self)
+        self.ui.setupUi(self.window)
+        self.window.show()
 
 class verification(object):
     def setupUi(self, Form):
@@ -221,7 +226,6 @@ class verification(object):
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
-        self.resetC.clicked.connect(self.resetClicked)
         self.testButton.clicked.connect(self.testClicked)
 
 
@@ -233,7 +237,6 @@ class verification(object):
         self.cUserTwo.setText(_translate("Form", "Compare User Two"))
         self.redditChecked.setText(_translate("Form", "Download Reddit Users"))
         self.twitterChecked.setText(_translate("Form", "Download Twitter Users"))
-        self.resetC.setText(_translate("Form", "Reset C"))
         self.testButton.setText(_translate("Form", "Test"))
     
     def resetClicked(self):
@@ -243,9 +246,44 @@ class verification(object):
     def testClicked(self):
         if (self.redditChecked.isChecked()):
             print("downloading reddit")
+            redditScraper().getUserComments(self.cUserOne.text())
+            redditScraper().getUserComments(self.cUserTwo.text())
+            
         if (self.twitterChecked.isChecked()):
             print("downloading twitter")
+            twitScrape().getIndivTweets(self.cUserOne.text())
+            twitScrape().getIndivTweets(self.cUserTwo.text())
         print("Test Clicked")
+        self.window = QtWidgets.QMainWindow()
+        self.ui = ResultsMenu()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
+class ResultsMenu(object):
+    def setupUi(self, ResultsMenu):
+        ResultsMenu.setObjectName("ResultsMenu")
+        ResultsMenu.resize(433, 569)
+        self.newTestButton = QtWidgets.QPushButton(ResultsMenu)
+        self.newTestButton.setGeometry(QtCore.QRect(90, 490, 251, 51))
+        font = QtGui.QFont()
+        font.setPointSize(16)
+        self.newTestButton.setFont(font)
+        self.newTestButton.setObjectName("newTestButton")
+        self.textEdit = QtWidgets.QTextEdit(ResultsMenu)
+        self.textEdit.setGeometry(QtCore.QRect(20, 20, 391, 451))
+        self.textEdit.setObjectName("textEdit")
+
+        self.retranslateUi(ResultsMenu)
+        QtCore.QMetaObject.connectSlotsByName(ResultsMenu)
+        self.newTestButton.clicked.connect(self.toExit())
+
+    def retranslateUi(self, ResultsMenu):
+        _translate = QtCore.QCoreApplication.translate
+        ResultsMenu.setWindowTitle(_translate("ResultsMenu", "Results Menu"))
+        self.newTestButton.setText(_translate("ResultsMenu", "New Test"))
+    
+    def toExit(self):
+        QMainWindow().hide()
 
 
 if __name__ == "__main__":

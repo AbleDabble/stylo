@@ -1,5 +1,105 @@
 
 
+@WholeMarsBlog Passive Autopilot (sometimes called active safety) comes standard on all Teslas
+
+@WholeMarsBlog Essentially, passive Autopilot (car intervenes only when crash probability is high) cuts crashes in half. 
+
+Active Autopilot (car is driving itself) cuts crashes in half again. 
+
+Doesn’t mean there are no crashes, but, on balance, Autopilot is unequivocally safer.
+
+Tesla with Autopilot engaged now approaching 10 times lower chance of accident than average vehicle https://t.co/6lGy52wVhC
+
+Dragon spacecraft &amp; Falcon 9 rocket https://t.co/A6fsNlsN9z
+
+@WhatsupFranks Great progress by Tesla team
+
+If we make life multiplanetary, there may come a day when some plants &amp; animals die out on Earth, but are still alive on Mars
+
+@neuralink @shivon Great review! Neuralink is open to working with neuroscientists to advance the field. 
+
+Short-term goal is addressing brain &amp; spine problems. 
+
+Ultimate goal is symbiosis of human &amp; machine intelligence.
+
+Everything to the moon!
+
+We are honored to be part of the @NASAArtemis team
+
+🚀🖤💫 NASA Rules!! 💫🖤🚀 https://t.co/hmeGx2peZ6
+
+👀
+
+RT @Tesla: Cybertruck at Giga Texas https://t.co/c1RuektPnN
+
+🎸🎸 Austin Rocks!! 🎸 🎸
+
+@Model3Owners Same with Berlin
+
+@Model3Owners Limited production of Model Y this year, high volume next year
+
+@Model3Owners I was just there, driving Cybertruck around the site where it will be built!
+
+Make life multiplanetary! #Mars
+
+@Erdayastronaut @thesheetztweetz Yeah, should be fully mobile later this year, so you can move it anywhere or use it on an RV or truck in motion. We need a few more satellite launches to achieve compete coverage &amp; some key software upgrades.
+
+@thesheetztweetz This is accurate. Service uptime, bandwidth &amp; latency are improving rapidly. Probably out of beta this summer.
+
+@sadiaslayy @DogecoinBets 😮
+
+@lexfridman One of many reasons that we need to make life multiplanetary!
+
+@austinbarnard45 Aiming to launch next week
+
+@billhuang688 @RationalEtienne @F9Block5 Certainly one of the largest. A company whose name rhymes with Shmoogle is pretty far ahead. 
+
+But I think we’re the leader in shallow-minded AI haha!
+
+Doge Barking at the Moon https://t.co/QFB81D7zOL
+
+@WSBChairman Doge Barking at the Moon – Miro https://t.co/1vTM2XOusy
+
+@RationalEtienne @F9Block5 While perhaps obvious in hindsight, it turns out that the only way to solve self-driving is to solve a big part of real-world AI. That is what Tesla is doing, both in hardware &amp; software.
+
+Unless a company is good at AI with tight compute, it’s hopeless. This is insanely hard.
+
+Le Petit Prince
+
+☾
+
+           🔭𖨆♡
+
+@SpaceXMR Soon it will be real
+
+@janixos @ErcXspace @SpaceX Actually, yes. And Red Rocket truck stop.
+
+@andyweedman @karpathy @DirtyTesla Stop … In the Name of Love! https://t.co/kBsTi5jz16
+
+@AustinTeslaClub @TslaCC @teslaquadcities @teslaownersvn @SjvTesla @TeslaOwnersEBay @CodingMark @billhuang688 @gailalfa1 @Tesla 🥰
+
+@Teslarati I found some footage of the drive https://t.co/TXeLQO9Spr
+
+@AstroJordy @dogeofficialceo @F9Block5 Insanely cute!
+
+@WholeMarsBlog Button timing of May is aspirational. Depends on how well limited beta of V9.0 goes, but I would be surprised if wide beta (aka button) is later than June. FSD subscription next month is a sure thing.
+
+@cliffski @F9Block5 Hopefully addressed this summer
+
+@dogeofficialceo @F9Block5 🤣🤣
+
+@BLKMDL3 @F9Block5 Same timing
+
+@F9Block5 Major improvements are being made to the vision stack every week. Beta button hopefully next month.
+
+This is a “march of 9’s” trying to get probability of no injury above 99.999999% of miles for city driving. Production Autopilot is already above that for highway driving.
+
+@jrosinski97 Will investigate
+
+@melaniemadri Probably late July
+
+Tesla AI/Autopilot engineering is awesome! Making excellent progress solving real-world AI.
+
 @ErcXspace @SpaceX 69th Raptor engine coming soon
 
 @ashleevance Maybe it’s about how you use it
@@ -33,95 +133,3 @@ The art In Cyberpunk is incredible
 @WholeMarsBlog If you don’t say anything &amp; engage Autopilot, it will soon guess based on time of day, taking you home or to work or to what’s on your calendar
 
 @DeltavPhotos @PortCanaveral That rocket is a hardcore veteran of many missions
-
-Blimps rock https://t.co/e8cu5FkNOI
-
-@engineers_feed Due to lower gravity, you can travel from surface of Mars to surface of Earth fairly easily with a single stage rocket. Earth to Mars is vastly harder.
-
-@DrPhiltill Good thread
-
-@alexellisuk Pretty much
-
-@tesla_adri @WholeMarsBlog These things are best thought of as probabilities. There are 5 forward-facing cameras. It is highly likely that at least one of them will see multiple cars ahead.
-
-@WholeMarsBlog Sensors are a bitstream and cameras have several orders of magnitude more bits/sec than radar (or lidar). 
-
-Radar must meaningfully increase signal/noise of bitstream to be worth complexity of integrating it. 
-
-As vision processing gets better, it just leaves radar far behind.
-
-@WholeMarsBlog When radar and vision disagree, which one do you believe? Vision has much more precision, so better to double down on vision than do sensor fusion.
-
-@WholeMarsBlog This is a major problem!
-
-Just needs some legs
-
-The Starship launch tower that catches the giant rocket booster is basically Mechazilla
-
-But wait how is the core of the earth lit by the sun? Stop asking questions!!
-
-Kong vs Godzilla has record for most meth ever consumed in a writer’s room
-
-@itsALLrisky 💯
-
-… going to moon very soon
-
-@Matsu_Kusarine @jagarikin Actually happened to me in Cyberpunk haha
-
-@TimBirks1 @Erdayastronaut @SpaceX Pretty much
-
-@memescryptor !
-
-Where is Shrek 5!? https://t.co/PqAZ5Mg8Es
-
-@AustinTeslaClub @OwenSparks_ @WholeMarsBlog Good point. 
-
-Next major software rev will do much better with automating wipers, seat heating &amp; defrost. 
-
-Probable seat settings just based on occupant mass distribution should be possible.
-
-@Adamklotz_ @OwenSparks_ @WholeMarsBlog Yup
-
-@teslaownersSV @neuralink Turns out 🐒 love video games &amp; snacks just like us!
-
-It’s all about the cufflinks https://t.co/elccqC0Zuf
-
-@chicago_glenn I feel like this sometimes
-
-@OwenSparks_ @WholeMarsBlog It will
-
-@OwenSparks_ @WholeMarsBlog Remove
-
-@w00ki33 @SpaceX @SuperclusterHQ Simulation is improving rendering resolution  …
-
-@cleantechnica Congrats to NIO. That is a tough milestone.
-
-@WholeMarsBlog Almost ready with FSD Beta V9.0. Step change improvement is massive, especially for weird corner cases &amp; bad weather. Pure vision, no radar.
-
-Thanks to all that helped SpaceX!
-
-Just read it. Book is accurate. https://t.co/3bI9Vw8iP1
-
-@TeslaGong Yeah
-
-@mikevanbus @TrungTPhan @neuralink Pretty much
-
-https://t.co/XeQursZpvq
-
-Soon our monkey will be on twitch &amp; discord haha
-
-@thenewsoncnbc @contessabrewer Good piece!
-
-@Kyler_Knoll @neuralink Comes with wireless charging baseball cap
-
-@TarekWaked @TechCrunch @etherington Pretty much 🤣🤣 Great episode!
-
-A monkey is literally playing a video game telepathically using a brain chip!!
-
-@lexfridman @neuralink Yes
-
-The device is implanted flush with skull &amp; charges wirelessly, so you look &amp; feel totally normal
-
-@IheartTesla Absolutely doable. Possibly as soon as Neuralink device version 2, highly likely by version 3.
-
-Later versions will be able to shunt signals from Neuralinks in brain to Neuralinks in body motor/sensory neuron clusters, thus enabling, for example, paraplegics to walk again
