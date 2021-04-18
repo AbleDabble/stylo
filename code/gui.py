@@ -12,9 +12,6 @@ except Exception as e:
     print("Some modules are missing  {}", format(e))
 from Twitterscrape import twitScrape
 from reddit_Scrape import redditScraper
-# begin twitter scraping code, unable to import from file so far, added here for testing purposes
-
-#end of twitter scraping code
 
 class Ui_MainWindow(QMainWindow):
     def __init__(self):
@@ -61,7 +58,7 @@ class Ui_MainWindow(QMainWindow):
     #opens the identification pane
     def id_click(self):
         self.window = QtWidgets.QMainWindow()
-        self.ui = Ui_identificationForm()
+        self.ui = identification()
         self.ui.setupUi(self.window)
         self.window.show()
         print("ID Clicked")
@@ -69,7 +66,7 @@ class Ui_MainWindow(QMainWindow):
     #opens the profiling pane
     def prof_click(self):
         self.window = QtWidgets.QMainWindow()
-        self.ui = profiling()
+        self.ui = profiling(self)
         self.ui.setupUi(self.window)
         self.window.show()
         print("Profiling Clicked")
@@ -82,61 +79,61 @@ class Ui_MainWindow(QMainWindow):
         self.window.show()
         print("Verification Clicked")
         
-class Ui_identificationForm(QWidget):
-    def setupUi(self, identificationForm):
-        identificationForm.setObjectName("identificationForm")
-        identificationForm.resize(604, 363)
-        self.numUsers = QtWidgets.QSpinBox(identificationForm)
+class identification(QWidget):
+    def setupUi(self, identification):
+        identification.setObjectName("identification")
+        identification.resize(604, 363)
+        self.numUsers = QtWidgets.QSpinBox(identification)
         self.numUsers.setGeometry(QtCore.QRect(270, 100, 41, 21))
         self.numUsers.setObjectName("numUsers")
-        self.user1 = QtWidgets.QLineEdit(identificationForm)
+        self.user1 = QtWidgets.QLineEdit(identification)
         self.user1.setGeometry(QtCore.QRect(20, 100, 241, 21))
         self.user1.setObjectName("user1")
-        self.user2 = QtWidgets.QLineEdit(identificationForm)
+        self.user2 = QtWidgets.QLineEdit(identification)
         self.user2.setGeometry(QtCore.QRect(20, 130, 241, 21))
         self.user2.setObjectName("user2")
-        self.user3 = QtWidgets.QLineEdit(identificationForm)
+        self.user3 = QtWidgets.QLineEdit(identification)
         self.user3.setGeometry(QtCore.QRect(20, 160, 241, 21))
         self.user3.setObjectName("user3")
-        self.user4 = QtWidgets.QLineEdit(identificationForm)
+        self.user4 = QtWidgets.QLineEdit(identification)
         self.user4.setGeometry(QtCore.QRect(20, 190, 241, 21))
         self.user4.setObjectName("user4")
-        self.user5 = QtWidgets.QLineEdit(identificationForm)
+        self.user5 = QtWidgets.QLineEdit(identification)
         self.user5.setGeometry(QtCore.QRect(20, 220, 241, 21))
         self.user5.setObjectName("user5")
-        self.user6 = QtWidgets.QLineEdit(identificationForm)
+        self.user6 = QtWidgets.QLineEdit(identification)
         self.user6.setGeometry(QtCore.QRect(20, 250, 241, 21))
         self.user6.setObjectName("user6")
-        self.user7 = QtWidgets.QLineEdit(identificationForm)
+        self.user7 = QtWidgets.QLineEdit(identification)
         self.user7.setGeometry(QtCore.QRect(20, 280, 241, 21))
         self.user7.setObjectName("user7")
-        self.mainUser = QtWidgets.QLineEdit(identificationForm)
+        self.mainUser = QtWidgets.QLineEdit(identification)
         self.mainUser.setGeometry(QtCore.QRect(330, 100, 241, 21))
         self.mainUser.setObjectName("mainUser")
-        self.redditChecked = QtWidgets.QCheckBox(identificationForm)
+        self.redditChecked = QtWidgets.QCheckBox(identification)
         self.redditChecked.setGeometry(QtCore.QRect(330, 220, 111, 17))
         self.redditChecked.setObjectName("redditChecked")
-        self.twitterChecked = QtWidgets.QCheckBox(identificationForm)
+        self.twitterChecked = QtWidgets.QCheckBox(identification)
         self.twitterChecked.setGeometry(QtCore.QRect(330, 240, 111, 17))
         self.twitterChecked.setObjectName("twitterChecked")
-        self.testButton = QtWidgets.QPushButton(identificationForm)
+        self.testButton = QtWidgets.QPushButton(identification)
         self.testButton.setGeometry(QtCore.QRect(330, 260, 241, 41))
         self.testButton.setObjectName("testButton")
 
-        self.retranslateUi(identificationForm)
-        QtCore.QMetaObject.connectSlotsByName(identificationForm)
+        self.retranslateUi(identification)
+        QtCore.QMetaObject.connectSlotsByName(identification)
 
         #connect the buttons to their functions
         self.testButton.clicked.connect(self.testClicked)
 
 
-    def retranslateUi(self, identificationForm):
+    def retranslateUi(self, identification):
         _translate = QtCore.QCoreApplication.translate
-        identificationForm.setWindowTitle(_translate("identificationForm", "Stylometric Identification"))
-        self.cReset.setText(_translate("identificationForm", "Reset C"))
-        self.redditChecked.setText(_translate("identificationForm", "Download Reddit"))
-        self.twitterChecked.setText(_translate("identificationForm", "Download Twitter"))
-        self.testButton.setText(_translate("identificationForm", "Test"))
+        identification.setWindowTitle(_translate("identification", "Stylometric Identification"))
+        self.cReset.setText(_translate("identification", "Reset C"))
+        self.redditChecked.setText(_translate("identification", "Download Reddit"))
+        self.twitterChecked.setText(_translate("identification", "Download Twitter"))
+        self.testButton.setText(_translate("identification", "Test"))
 
     def testClicked(self):
         print("testClicked")
@@ -159,7 +156,7 @@ class Ui_identificationForm(QWidget):
         Users.append(self.user6.text())
         Users.append(self.user7.text())
 
-class profiling(object):
+class profiling(QWidget):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(300, 180)
@@ -203,7 +200,7 @@ class profiling(object):
         self.ui.setupUi(self.window)
         self.window.show()
 
-class verification(object):
+class verification(QWidget):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(361, 253)
@@ -239,9 +236,6 @@ class verification(object):
         self.twitterChecked.setText(_translate("Form", "Download Twitter Users"))
         self.testButton.setText(_translate("Form", "Test"))
     
-    def resetClicked(self):
-        self.cValue.setText("1")
-        print("Reset Clicked")
 
     def testClicked(self):
         if (self.redditChecked.isChecked()):
@@ -255,11 +249,11 @@ class verification(object):
             twitScrape().getIndivTweets(self.cUserTwo.text())
         print("Test Clicked")
         self.window = QtWidgets.QMainWindow()
-        self.ui = ResultsMenu()
+        self.ui = ResultsMenu(mainWindow)
         self.ui.setupUi(self.window)
         self.window.show()
 
-class ResultsMenu(object):
+class ResultsMenu(QWidget):
     def setupUi(self, ResultsMenu):
         ResultsMenu.setObjectName("ResultsMenu")
         ResultsMenu.resize(433, 569)
@@ -275,17 +269,13 @@ class ResultsMenu(object):
 
         self.retranslateUi(ResultsMenu)
         QtCore.QMetaObject.connectSlotsByName(ResultsMenu)
-        self.newTestButton.clicked.connect(self.toExit())
+        self.newTestButton.clicked.connect(toExit(self))
 
     def retranslateUi(self, ResultsMenu):
         _translate = QtCore.QCoreApplication.translate
         ResultsMenu.setWindowTitle(_translate("ResultsMenu", "Results Menu"))
         self.newTestButton.setText(_translate("ResultsMenu", "New Test"))
-    
-    def toExit(self):
-        QMainWindow().hide()
-
-
+        
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
