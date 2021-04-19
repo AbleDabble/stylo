@@ -39,14 +39,14 @@ def start_verification_reddit(user1, user2):
         user1_comments = red_scraper.getUserComments(user1)
         if user1_comments == 0:
             Exception(f'Problem downloading user {user1}')
-        profile2 = Profile(user2_comments)
+        profile2 = Profile(user1_comments)
     else:
         profile2 = Profile(reddit_path + user2 + ".txt")
     if user1 not in curr_downloads:
         user2_comments = red_scraper.getUserComments(user2)
         if user2_comments == 0:
             Exception(f'Problem downloading user {user2}')
-        profile1 = Profile(user1_comments, reddit_path + user2 + ".txt")
+        profile1 = Profile(user2_comments, reddit_path + user2 + ".txt")
     else:
         profile1 = Profile(reddit_path + user1 + ".txt", reddit_path + user2 + ".txt")
 
