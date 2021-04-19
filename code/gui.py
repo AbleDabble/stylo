@@ -2,6 +2,7 @@ try:
     import io
     import os
     import sys
+    import nltk
     sys.path.append( './' )
     import tweepy
     from PyQt5 import QtCore, QtGui, QtWidgets
@@ -12,6 +13,7 @@ except Exception as e:
     print("Some modules are missing  {}", format(e))
 from Twitterscrape import twitScrape
 from reddit_Scrape import redditScraper
+from verifModel import start_verification_reddit
 
 class Ui_MainWindow(QMainWindow):
     def __init__(self):
@@ -141,8 +143,8 @@ class identification(QWidget):
             print("Downloading usernames from reddit")
         if self.twitterChecked.isChecked() == True:
             #take username from input and run the function for reddit or twitter, download and save into text file by name, perform feature extraction with profile class.
-
             print("Downloading usernames from twitter")
+        self.showResults()
         #dowload main user and user one through seven, train the model on all seven users and the main user and try to predict which user has the greatest number out of each cycle.
 
     def pullUsernames(self):
@@ -155,8 +157,13 @@ class identification(QWidget):
         Users.append(self.user6.text())
         Users.append(self.user7.text())
 
-class profiling(QWidget):
+    def showResults(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = ResultsMenu()
+        self.ui.setupUi(self.window)
+        self.window.show()
 
+class profiling(QWidget):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(300, 180)
@@ -194,6 +201,11 @@ class profiling(QWidget):
         if(self.redditChecked.isChecked()):
             print(self.username.text())
             redditScraper().getUserComments(self.username.text())
+        #data = get data from model trainer
+
+
+
+
         self.showResults()
             #todo: run entropy discretization on corpus based on reddit comments
 
@@ -203,9 +215,6 @@ class profiling(QWidget):
         self.ui = ResultsMenu()
         self.ui.setupUi(self.window)
         self.window.show()
-
-    def closeResults(self):
-        sys.exit(self.ui)
 
         #eventually, created window for results new test button should be able to close using a function here
     
@@ -251,22 +260,37 @@ class verification(QWidget):
     def testClicked(self):
         if (self.redditChecked.isChecked()):
             print("downloading reddit")
-            redditScraper().getUserComments(self.cUserOne.text())
-            redditScraper().getUserComments(self.cUserTwo.text())
+            nltk.download("punkt")
+            start_verification_reddit(self.cUserOne.text(), self.cUserTwo.text())
+            print("Reddit Verification Complete")
             
         if (self.twitterChecked.isChecked()):
             print("downloading twitter")
             twitScrape().getIndivTweets(self.cUserOne.text())
             twitScrape().getIndivTweets(self.cUserTwo.text())
-        print("Test Clicked")
         
-    def showResults(self):
-        self.window.show()
+        self.userArray = []
+        self.userArray.append(self.cUserOne.text())
+        self.userArray.append(self.cUserTwo.text())
 
-    def closeResults(self):
-        self.window.close()
+        #verify reddit
+
+
+
+        self.showResults(self.userArray)
+        print("Test Clicked")
+
+    def showResults(self, userArray):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = ResultsMenu(userArray)
+        self.ui.setupUi(self.window)
+        self.window.show()
+        
 
 class ResultsMenu(QWidget):
+    def __init__(self, userArray):
+        self.users = userArray
+
     def setupUi(self, ResultsMenu):
         ResultsMenu.setObjectName("ResultsMenu")
         ResultsMenu.resize(433, 569)
@@ -277,6 +301,9 @@ class ResultsMenu(QWidget):
 
         self.retranslateUi(ResultsMenu)
         QtCore.QMetaObject.connectSlotsByName(ResultsMenu)
+
+        for user in self.users:
+            self.textEdit.append(user)
 
     def retranslateUi(self, ResultsMenu):
         _translate = QtCore.QCoreApplication.translate
