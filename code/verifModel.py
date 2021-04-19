@@ -5,6 +5,7 @@ from MIFS import MIFS
 from imblearn.over_sampling import RandomOverSampler
 from imblearn.pipeline import Pipeline
 from MIFS import MIFS
+from sklearn.pipeline import Pipeline
 from reddit_Scrape import redditScraper
 from sklearn.preprocessing import MinMaxScaler
 import numpy as np
