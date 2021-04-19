@@ -76,4 +76,4 @@ def start_verification_reddit(user1, user2):
     # return count / len(user2_x)
 
 
-start_verification_reddit("Baerog", "jkdsfhkajh")
+#start_verification_reddit("Baerog", "jkdsfhkajh")
