@@ -51,4 +51,4 @@ def start_verification_reddit(user1, user2):
   print("The chances these two users are the same is: ", count / len(user2_x))
   return count / len(user2_x)
 
-start_verification_reddit("Baerog", "Baerog")
+
