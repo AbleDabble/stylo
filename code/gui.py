@@ -1,12 +1,19 @@
 try:
+    import io
     import os
     import sys
+    sys.path.append( './' )
+    import tweepy
     from PyQt5 import QtCore, QtGui, QtWidgets
     from PyQt5.QtCore import pyqtSlot
     from PyQt5.QtWidgets import QWidget, QMainWindow
     from EntropyDiscretization import EntropyDiscretization
 except Exception as e:
     print("Some modules are missing  {}", format(e))
+from Twitterscrape import twitScrape
+# begin twitter scraping code, unable to import from file so far, added here for testing purposes
+
+#end of twitter scraping code
 
 class Ui_MainWindow(QMainWindow):
     def __init__(self):
@@ -105,12 +112,6 @@ class Ui_identificationForm(QWidget):
         self.mainUser = QtWidgets.QLineEdit(identificationForm)
         self.mainUser.setGeometry(QtCore.QRect(330, 100, 241, 21))
         self.mainUser.setObjectName("mainUser")
-        self.cValue = QtWidgets.QLineEdit(identificationForm)
-        self.cValue.setGeometry(QtCore.QRect(330, 160, 71, 31))
-        self.cValue.setObjectName("cValue")
-        self.cReset = QtWidgets.QPushButton(identificationForm)
-        self.cReset.setGeometry(QtCore.QRect(420, 160, 61, 31))
-        self.cReset.setObjectName("cReset")
         self.redditChecked = QtWidgets.QCheckBox(identificationForm)
         self.redditChecked.setGeometry(QtCore.QRect(330, 220, 111, 17))
         self.redditChecked.setObjectName("redditChecked")
@@ -126,7 +127,6 @@ class Ui_identificationForm(QWidget):
 
         #connect the buttons to their functions
         self.testButton.clicked.connect(self.testClicked)
-        self.cReset.clicked.connect(self.cResetClicked)
 
 
     def retranslateUi(self, identificationForm):
@@ -143,11 +143,10 @@ class Ui_identificationForm(QWidget):
         if self.redditChecked.isChecked() == True:
             print("Downloading usernames from reddit")
         if self.twitterChecked.isChecked() == True:
-            print("Downloading usernames from twitter")
+            #take username from input and run the function for reddit or twitter, download and save into text file by name, perform feature extraction with profile class.
 
-    def cResetClicked(self):
-        print("cReset Clicked")
-        self.cValue.setText("1")
+            print("Downloading usernames from twitter")
+        #dowload main user and user one through seven, train the model on all seven users and the main user and try to predict which user has the greatest number out of each cycle.
 
     def pullUsernames(self):
         Users = []
@@ -179,6 +178,8 @@ class profiling(object):
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
+        self.profileButton.clicked.connect(self.profilingTestClicked)
+
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Styolometric Profiling"))
@@ -186,7 +187,16 @@ class profiling(object):
         self.redditChecked.setText(_translate("Form", "Download Reddit Users"))
         self.twitterChecked.setText(_translate("Form", "Download Twitter Users"))
         self.profileButton.setText(_translate("Form", "Generate Profile"))
-
+    
+    def profilingTestClicked(self):
+        if(self.twitterChecked.isChecked()):
+            print(self.username.text())
+            twitScrape().getIndivTweets(self.username.text())
+            #todo run entropy discrretization on downloaded corpus
+        if(self.redditChecked.isChecked()):
+            print(self.username.text())
+            #todo: import reddit scraper
+            #todo: run entropy discretization on 
 
 class verification(object):
     def setupUi(self, Form):
@@ -204,12 +214,6 @@ class verification(object):
         self.twitterChecked = QtWidgets.QCheckBox(Form)
         self.twitterChecked.setGeometry(QtCore.QRect(10, 120, 141, 17))
         self.twitterChecked.setObjectName("twitterChecked")
-        self.cValue = QtWidgets.QLineEdit(Form)
-        self.cValue.setGeometry(QtCore.QRect(180, 100, 71, 31))
-        self.cValue.setObjectName("cValue")
-        self.resetC = QtWidgets.QPushButton(Form)
-        self.resetC.setGeometry(QtCore.QRect(270, 100, 75, 31))
-        self.resetC.setObjectName("resetC")
         self.testButton = QtWidgets.QPushButton(Form)
         self.testButton.setGeometry(QtCore.QRect(10, 150, 241, 31))
         self.testButton.setObjectName("testButton")
