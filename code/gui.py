@@ -66,7 +66,7 @@ class Ui_MainWindow(QMainWindow):
     #opens the profiling pane
     def prof_click(self):
         self.window = QtWidgets.QMainWindow()
-        self.ui = profiling(self)
+        self.ui = profiling()
         self.ui.setupUi(self.window)
         self.window.show()
         print("Profiling Clicked")
@@ -130,7 +130,6 @@ class identification(QWidget):
     def retranslateUi(self, identification):
         _translate = QtCore.QCoreApplication.translate
         identification.setWindowTitle(_translate("identification", "Stylometric Identification"))
-        self.cReset.setText(_translate("identification", "Reset C"))
         self.redditChecked.setText(_translate("identification", "Download Reddit"))
         self.twitterChecked.setText(_translate("identification", "Download Twitter"))
         self.testButton.setText(_translate("identification", "Test"))
@@ -157,6 +156,7 @@ class identification(QWidget):
         Users.append(self.user7.text())
 
 class profiling(QWidget):
+
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(300, 180)
@@ -190,17 +190,28 @@ class profiling(QWidget):
         if(self.twitterChecked.isChecked()):
             print(self.username.text())
             twitScrape().getIndivTweets(self.username.text())
-            #todo run entropy discrretization on downloaded corpus
+            #todo run entropy discretization on downloaded corpus
         if(self.redditChecked.isChecked()):
             print(self.username.text())
             redditScraper().getUserComments(self.username.text())
+        self.showResults()
             #todo: run entropy discretization on corpus based on reddit comments
+
+        #Open display window for results
+    def showResults(self):
         self.window = QtWidgets.QMainWindow()
-        self.ui = ResultsMenu(self)
+        self.ui = ResultsMenu()
         self.ui.setupUi(self.window)
         self.window.show()
 
+    def closeResults(self):
+        sys.exit(self.ui)
+
+        #eventually, created window for results new test button should be able to close using a function here
+    
+
 class verification(QWidget):
+
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(361, 253)
@@ -248,33 +259,28 @@ class verification(QWidget):
             twitScrape().getIndivTweets(self.cUserOne.text())
             twitScrape().getIndivTweets(self.cUserTwo.text())
         print("Test Clicked")
-        self.window = QtWidgets.QMainWindow()
-        self.ui = ResultsMenu(mainWindow)
-        self.ui.setupUi(self.window)
+        
+    def showResults(self):
         self.window.show()
+
+    def closeResults(self):
+        self.window.close()
 
 class ResultsMenu(QWidget):
     def setupUi(self, ResultsMenu):
         ResultsMenu.setObjectName("ResultsMenu")
         ResultsMenu.resize(433, 569)
-        self.newTestButton = QtWidgets.QPushButton(ResultsMenu)
-        self.newTestButton.setGeometry(QtCore.QRect(90, 490, 251, 51))
-        font = QtGui.QFont()
-        font.setPointSize(16)
-        self.newTestButton.setFont(font)
-        self.newTestButton.setObjectName("newTestButton")
+
         self.textEdit = QtWidgets.QTextEdit(ResultsMenu)
-        self.textEdit.setGeometry(QtCore.QRect(20, 20, 391, 451))
+        self.textEdit.setGeometry(QtCore.QRect(20, 20, 391, 500))
         self.textEdit.setObjectName("textEdit")
 
         self.retranslateUi(ResultsMenu)
         QtCore.QMetaObject.connectSlotsByName(ResultsMenu)
-        self.newTestButton.clicked.connect(toExit(self))
 
     def retranslateUi(self, ResultsMenu):
         _translate = QtCore.QCoreApplication.translate
         ResultsMenu.setWindowTitle(_translate("ResultsMenu", "Results Menu"))
-        self.newTestButton.setText(_translate("ResultsMenu", "New Test"))
         
 if __name__ == "__main__":
     import sys
