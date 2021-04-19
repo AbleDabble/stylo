@@ -67,7 +67,7 @@ def start_verification_reddit(user1, user2):
     count = np.sum(predictions)
     print("The chances these two users are the same is: ", count / len(user2_x))
     liklihood = count / len(user2_x)
-    if liklihood < 0.6:
+    if liklihood < 0.85:
         return False
     return True
 
