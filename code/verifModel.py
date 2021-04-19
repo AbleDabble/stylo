@@ -30,21 +30,23 @@ def start_verification_reddit(user1, user2):
   Returns: False if the user are not the same
   '''
     red_scraper = redditScraper()
-    user1_comments = red_scraper.getUserComments(user1)
-    user2_comments = red_scraper.getUserComments(user2)
     '''If the users comment file cannot be genterated then return False
      TO-DO: find a better solution/return value for this
   '''
-    if user1_comments == 0 or user2_comments == 0:
-      return False
 
     curr_downloads = set([f[:-4] for f in os.listdir('../corpora/reddit_corpus/') if f.endswith('.txt')])
     if user2 not in curr_downloads:
-        profile2 = Profile(user2_comments)
+        user1_comments = red_scraper.getUserComments(user1)
+        if user1_comments == 0:
+            Exception(f'Problem downloading user {user1}')
+        profile2 = Profile(user1_comments)
     else:
         profile2 = Profile(reddit_path + user2 + ".txt")
     if user1 not in curr_downloads:
-        profile1 = Profile(user1_comments, reddit_path + user2 + ".txt")
+        user2_comments = red_scraper.getUserComments(user2)
+        if user2_comments == 0:
+            Exception(f'Problem downloading user {user2}')
+        profile1 = Profile(user2_comments, reddit_path + user2 + ".txt")
     else:
         profile1 = Profile(reddit_path + user1 + ".txt", reddit_path + user2 + ".txt")
 
