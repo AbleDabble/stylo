@@ -16,9 +16,11 @@ from reddit_Scrape import redditScraper
 from verifModel import start_verification_reddit
 
 class Ui_MainWindow(QMainWindow):
+    #initialize main window
     def __init__(self):
         super().__init__()
         self.setupUi(MainWindow)
+        #Form configuration
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(472, 340)
@@ -45,6 +47,7 @@ class Ui_MainWindow(QMainWindow):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         
+        #Link 3 buttons to their respective functions to open the panels
         self.pushButton.clicked.connect(self.id_click)
         self.pushButton_2.clicked.connect(self.ver_click)
         self.pushButton_3.clicked.connect(self.prof_click)
@@ -52,7 +55,6 @@ class Ui_MainWindow(QMainWindow):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Stylometry - Team Stylo"))
-        #set up the 3 buttons to take user to the proper pane
         self.pushButton.setText(_translate("MainWindow", "Authorship Identification"))
         self.pushButton_2.setText(_translate("MainWindow", "Authorship Verification"))
         self.pushButton_3.setText(_translate("MainWindow", "Authorship Profiling"))
@@ -82,84 +84,126 @@ class Ui_MainWindow(QMainWindow):
         print("Verification Clicked")
         
 class identification(QWidget):
-    def setupUi(self, identification):
-        identification.setObjectName("identification")
-        identification.resize(604, 363)
-        self.numUsers = QtWidgets.QSpinBox(identification)
-        self.numUsers.setGeometry(QtCore.QRect(270, 100, 41, 21))
-        self.numUsers.setObjectName("numUsers")
-        self.user1 = QtWidgets.QLineEdit(identification)
-        self.user1.setGeometry(QtCore.QRect(20, 100, 241, 21))
+    def setupUi(self, Identification):
+        Identification.setObjectName("Identification")
+        Identification.resize(469, 559)
+        self.label = QtWidgets.QLabel(Identification)
+        self.label.setGeometry(QtCore.QRect(20, 330, 261, 21))
+        font = QtGui.QFont()
+        font.setPointSize(16)
+        self.label.setFont(font)
+        self.label.setObjectName("label")
+        self.label_2 = QtWidgets.QLabel(Identification)
+        self.label_2.setGeometry(QtCore.QRect(20, 10, 321, 31))
+        font = QtGui.QFont()
+        font.setPointSize(16)
+        self.label_2.setFont(font)
+        self.label_2.setObjectName("label_2")
+        self.identificationText = QtWidgets.QPlainTextEdit(Identification)
+        self.identificationText.setGeometry(QtCore.QRect(20, 360, 431, 181))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.identificationText.setFont(font)
+        self.identificationText.setObjectName("identificationText")
+        self.user1 = QtWidgets.QTextEdit(Identification)
+        self.user1.setGeometry(QtCore.QRect(20, 40, 241, 31))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.user1.setFont(font)
         self.user1.setObjectName("user1")
-        self.user2 = QtWidgets.QLineEdit(identification)
-        self.user2.setGeometry(QtCore.QRect(20, 130, 241, 21))
+        self.user2 = QtWidgets.QTextEdit(Identification)
+        self.user2.setGeometry(QtCore.QRect(20, 80, 241, 31))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.user2.setFont(font)
         self.user2.setObjectName("user2")
-        self.user3 = QtWidgets.QLineEdit(identification)
-        self.user3.setGeometry(QtCore.QRect(20, 160, 241, 21))
+        self.user3 = QtWidgets.QTextEdit(Identification)
+        self.user3.setGeometry(QtCore.QRect(20, 120, 241, 31))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.user3.setFont(font)
         self.user3.setObjectName("user3")
-        self.user4 = QtWidgets.QLineEdit(identification)
-        self.user4.setGeometry(QtCore.QRect(20, 190, 241, 21))
+        self.user4 = QtWidgets.QTextEdit(Identification)
+        self.user4.setGeometry(QtCore.QRect(20, 160, 241, 31))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.user4.setFont(font)
         self.user4.setObjectName("user4")
-        self.user5 = QtWidgets.QLineEdit(identification)
-        self.user5.setGeometry(QtCore.QRect(20, 220, 241, 21))
+        self.user5 = QtWidgets.QTextEdit(Identification)
+        self.user5.setGeometry(QtCore.QRect(20, 200, 241, 31))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.user5.setFont(font)
         self.user5.setObjectName("user5")
-        self.user6 = QtWidgets.QLineEdit(identification)
-        self.user6.setGeometry(QtCore.QRect(20, 250, 241, 21))
+        self.user6 = QtWidgets.QTextEdit(Identification)
+        self.user6.setGeometry(QtCore.QRect(20, 240, 241, 31))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.user6.setFont(font)
         self.user6.setObjectName("user6")
-        self.user7 = QtWidgets.QLineEdit(identification)
-        self.user7.setGeometry(QtCore.QRect(20, 280, 241, 21))
+        self.user7 = QtWidgets.QTextEdit(Identification)
+        self.user7.setGeometry(QtCore.QRect(20, 280, 241, 31))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.user7.setFont(font)
         self.user7.setObjectName("user7")
-        self.mainUser = QtWidgets.QLineEdit(identification)
-        self.mainUser.setGeometry(QtCore.QRect(330, 100, 241, 21))
-        self.mainUser.setObjectName("mainUser")
-        self.redditChecked = QtWidgets.QCheckBox(identification)
-        self.redditChecked.setGeometry(QtCore.QRect(330, 220, 111, 17))
+        self.TestButton = QtWidgets.QPushButton(Identification)
+        self.TestButton.setGeometry(QtCore.QRect(330, 40, 71, 61))
+        font = QtGui.QFont()
+        font.setPointSize(16)
+        self.TestButton.setFont(font)
+        self.TestButton.setObjectName("TestButton")
+        self.redditChecked = QtWidgets.QCheckBox(Identification)
+        self.redditChecked.setGeometry(QtCore.QRect(280, 270, 181, 17))
         self.redditChecked.setObjectName("redditChecked")
-        self.twitterChecked = QtWidgets.QCheckBox(identification)
-        self.twitterChecked.setGeometry(QtCore.QRect(330, 240, 111, 17))
+        self.twitterChecked = QtWidgets.QCheckBox(Identification)
+        self.twitterChecked.setGeometry(QtCore.QRect(280, 290, 181, 17))
         self.twitterChecked.setObjectName("twitterChecked")
-        self.testButton = QtWidgets.QPushButton(identification)
-        self.testButton.setGeometry(QtCore.QRect(330, 260, 241, 41))
-        self.testButton.setObjectName("testButton")
+        self.retranslateUi(Identification)
+        QtCore.QMetaObject.connectSlotsByName(Identification)
 
-        self.retranslateUi(identification)
-        QtCore.QMetaObject.connectSlotsByName(identification)
+        self.TestButton.clicked.connect(self.testClicked)
 
-        #connect the buttons to their functions
-        self.testButton.clicked.connect(self.testClicked)
-
-
-    def retranslateUi(self, identification):
+    def retranslateUi(self, Identification):
         _translate = QtCore.QCoreApplication.translate
-        identification.setWindowTitle(_translate("identification", "Stylometric Identification"))
-        self.redditChecked.setText(_translate("identification", "Download Reddit"))
-        self.twitterChecked.setText(_translate("identification", "Download Twitter"))
-        self.testButton.setText(_translate("identification", "Test"))
+        Identification.setWindowTitle(_translate("Identification", "Form"))
+        self.label.setText(_translate("Identification", "Enter Text to Identify Here"))
+        self.label_2.setText(_translate("Identification", "Enter Probable Users Here"))
+        self.TestButton.setText(_translate("Identification", "Test"))
+        self.redditChecked.setText(_translate("Identification", "Download Usernames via Reddit"))
+        self.twitterChecked.setText(_translate("Identification", "Download Usernames via Twitter"))
+        #connect the buttons to their functions
 
     def testClicked(self):
         print("testClicked")
         #check if reddit and twitter are set to download
         if self.redditChecked.isChecked() == True:
             print("Downloading usernames from reddit")
+            self.users = self.pullUsernames()
+            #use william's function that takes array of users and a text
         if self.twitterChecked.isChecked() == True:
             #take username from input and run the function for reddit or twitter, download and save into text file by name, perform feature extraction with profile class.
             print("Downloading usernames from twitter")
-        self.showResults()
+            
+        self.showResults(self.pullUsernames())
         #dowload main user and user one through seven, train the model on all seven users and the main user and try to predict which user has the greatest number out of each cycle.
 
     def pullUsernames(self):
         Users = []
-        Users.append(self.user1.text())
-        Users.append(self.user2.text())
-        Users.append(self.user3.text())
-        Users.append(self.user4.text())
-        Users.append(self.user5.text())
-        Users.append(self.user6.text())
-        Users.append(self.user7.text())
+        Users.append(self.user1.toPlainText())
+        Users.append(self.user2.toPlainText())
+        Users.append(self.user3.toPlainText())
+        Users.append(self.user4.toPlainText())
+        Users.append(self.user5.toPlainText())
+        Users.append(self.user6.toPlainText())
+        Users.append(self.user7.toPlainText())
+        print(Users)
+        return Users
 
-    def showResults(self):
+
+    def showResults(self, userArray):
         self.window = QtWidgets.QMainWindow()
-        self.ui = ResultsMenu()
+        self.ui = ResultsMenu(userArray)
         self.ui.setupUi(self.window)
         self.window.show()
 
@@ -202,17 +246,18 @@ class profiling(QWidget):
             print(self.username.text())
             redditScraper().getUserComments(self.username.text())
         #data = get data from model trainer
+        self.profiling = []
+        self.profiling.append(self.username.text())
 
 
 
-
-        self.showResults()
+        self.showResults(self.profiling)
             #todo: run entropy discretization on corpus based on reddit comments
 
         #Open display window for results
-    def showResults(self):
+    def showResults(self, userArray):
         self.window = QtWidgets.QMainWindow()
-        self.ui = ResultsMenu()
+        self.ui = ResultsMenu(userArray)
         self.ui.setupUi(self.window)
         self.window.show()
 
@@ -295,7 +340,8 @@ class verification(QWidget):
 
 class ResultsMenu(QWidget):
     def __init__(self, userArray):
-        self.users = userArray
+        print("Constructed Results Menu")
+        self.array = userArray
 
     def setupUi(self, ResultsMenu):
         ResultsMenu.setObjectName("ResultsMenu")
@@ -307,13 +353,17 @@ class ResultsMenu(QWidget):
 
         self.retranslateUi(ResultsMenu)
         QtCore.QMetaObject.connectSlotsByName(ResultsMenu)
-
-        for user in self.users:
-            self.textEdit.append(user)
+        self.printData(self.array)
 
     def retranslateUi(self, ResultsMenu):
         _translate = QtCore.QCoreApplication.translate
         ResultsMenu.setWindowTitle(_translate("ResultsMenu", "Results Menu"))
+
+    def printData(self, dataArray):
+        array = dataArray
+        for item in array:
+            self.textEdit.append(item)
+
         
 if __name__ == "__main__":
     import sys
