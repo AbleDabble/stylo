@@ -5,6 +5,7 @@ from MIFS import MIFS
 from imblearn.over_sampling import RandomOverSampler
 from imblearn.pipeline import Pipeline
 from MIFS import MIFS
+from sklearn.pipeline import Pipeline
 from reddit_Scrape import redditScraper
 from sklearn.preprocessing import MinMaxScaler
 import numpy as np
@@ -24,17 +25,17 @@ def split_x_y(df, numpy=False):
 
 def start_verification_reddit(user1, user2):
     '''This method starts the user verification model, trains it and comapres the two users to
-  determine if they are the same.
+    determine if they are the same.
 
-  Returns: True if users are the same
-  Returns: False if the user are not the same
-  '''
+    Returns: True if users are the same
+    Returns: False if the user are not the same
+    '''
     red_scraper = redditScraper()
     user1_comments = red_scraper.getUserComments(user1)
     user2_comments = red_scraper.getUserComments(user2)
     '''If the users comment file cannot be genterated then return False
      TO-DO: find a better solution/return value for this
-  '''
+    '''
     if user1_comments == 0 or user2_comments == 0:
       return False
 
@@ -70,8 +71,5 @@ def start_verification_reddit(user1, user2):
     if liklihood < 0.6:
         return False
     return True
-
     # return count / len(user2_x)
-
-
 start_verification_reddit("Baerog", "jkdsfhkajh")
