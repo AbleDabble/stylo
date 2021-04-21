@@ -168,7 +168,7 @@ class identification(QWidget):
     def retranslateUi(self, Identification):
         _translate = QtCore.QCoreApplication.translate
         Identification.setWindowTitle(_translate("Identification", "Form"))
-        self.label.setText(_translate("Identification", "Enter Text to Identify Here"))
+        self.label.setText(_translate("Identification", "Enter Text to Identify Here (>350 Characters Only"))
         self.label_2.setText(_translate("Identification", "Enter Probable Users Here"))
         self.TestButton.setText(_translate("Identification", "Test"))
         self.redditChecked.setText(_translate("Identification", "Download Usernames via Reddit"))
@@ -182,19 +182,16 @@ class identification(QWidget):
             print("Downloading usernames from reddit")
             self.usersList = self.pullUsernames()
             self.textToCompare = self.identificationText.toPlainText()
-            for user in self.usersList:
-                if (user != ""):
-                    redditScraper().getUserComments(user)
             print(self.textToCompare)
+            print(self.usersList)
+            # change to twitter self.stringMatch = start_identification_reddit(self.usersList, self.textToCompare)
             #use william's function that takes array of users and a text
         if self.twitterChecked.isChecked() == True:
             #take username from input and run the function for reddit or twitter, download and save into text file by name, perform feature extraction with profile class.
             print("Downloading usernames from twitter")
             self.usersList = self.pullUsernames()
-            for user in self.usersList:
-                if (user != ""):
-                    twitScrape().getIndivTweets(user)
-        start_identification_reddit(self.usersList, self.textToCompare)
+        self.stringMatch = start_identification_reddit(self.usersList, self.textToCompare)
+        self.showResults(self.stringMatch)
         #dowload main user and user one through seven, train the model on all seven users and the main user and try to predict which user has the greatest number out of each cycle.
 
     def pullUsernames(self):
