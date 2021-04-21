@@ -37,7 +37,7 @@ def start_identification_reddit(user_list, text):
         
     # check if downloaded and if not download
     for user in user_list:
-        if user in downloaded_users:
+        if user in downloaded_users or len(user) == 0:
             continue
         try:
             path = rs.getUserComments(user)
