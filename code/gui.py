@@ -14,6 +14,7 @@ except Exception as e:
 from Twitterscrape import twitScrape
 from reddit_Scrape import redditScraper
 from verifModel import start_verification_reddit
+from IdentModel import start_identification_reddit
 
 class Ui_MainWindow(QMainWindow):
     #initialize main window
@@ -193,6 +194,7 @@ class identification(QWidget):
             for user in self.usersList:
                 if (user != ""):
                     twitScrape().getIndivTweets(user)
+        start_identification_reddit(self.usersList, self.textToCompare)
         #dowload main user and user one through seven, train the model on all seven users and the main user and try to predict which user has the greatest number out of each cycle.
 
     def pullUsernames(self):
