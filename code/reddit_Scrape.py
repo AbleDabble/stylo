@@ -1,17 +1,20 @@
 import praw
 import prawcore.exceptions
-
+import json
 
 class redditScraper():
 
     # Start reddit Instance
     def redditInst(self):
         try:
-            reddit = praw.Reddit(client_id="IKj8CIYn9x5MGA",
-                                 client_secret="LnkdvmTfJiS0iJFKLc3q1CuWtRo0aQ",
-                                 password="Hopihop1",
-                                 user_agent="Auth_Id",
-                                 username="what_database")
+            with open('../config/config.json', 'r') as f:
+                config = json.load(f)
+            config = config['reddit']
+            reddit = praw.Reddit(client_id=config['client_id'],
+                                 client_secret=config['client_secret'],
+                                 password=config['password'],
+                                 user_agent=config['user_agent'],
+                                 username=config['username'])
         except prawcore.OAuthException as e:
             return -1
         return reddit
