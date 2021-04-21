@@ -31,9 +31,9 @@ def start_identification_reddit(user_list, text):
     downloaded_users = [user[:-4] for user in os.listdir(PATH) if user.endswith('.csv')]
 
     # Read and add users from already downloaded
-    for user in downloaded_users[:10]:
-        path = PATH + user + '.csv'
-        user_profiles.append(pd.read_csv(path))
+    #for user in downloaded_users[:10]:
+    #    path = PATH + user + '.csv'
+    #    user_profiles.append(pd.read_csv(path))
         
     # check if downloaded and if not download
     for user in user_list:
