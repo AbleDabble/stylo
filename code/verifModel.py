@@ -74,5 +74,4 @@ def start_verification_reddit(user1, user2):
     if liklihood < 0.85:
         return False
     return True
-    # return count / len(user2_x)
-start_verification_reddit("Baerog", "jkdsfhkajh")
+
