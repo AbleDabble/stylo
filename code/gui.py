@@ -180,6 +180,11 @@ class identification(QWidget):
         if self.redditChecked.isChecked() == True:
             print("Downloading usernames from reddit")
             self.users = self.pullUsernames()
+            self.textToCompare = self.identificationText.toPlainText()
+            for user in self.users:
+                if (user != ""):
+                    print(user)
+            print(self.textToCompare)
             #use william's function that takes array of users and a text
         if self.twitterChecked.isChecked() == True:
             #take username from input and run the function for reddit or twitter, download and save into text file by name, perform feature extraction with profile class.
@@ -203,66 +208,9 @@ class identification(QWidget):
 
     def showResults(self, userArray):
         self.window = QtWidgets.QMainWindow()
-        self.ui = ResultsMenu(userArray)
+        self.ui = ResultsMenu(userArray, 1)
         self.ui.setupUi(self.window)
         self.window.show()
-
-class profiling(QWidget):
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(300, 180)
-        self.username = QtWidgets.QLineEdit(Form)
-        self.username.setGeometry(QtCore.QRect(10, 20, 211, 31))
-        self.username.setObjectName("username")
-        self.redditChecked = QtWidgets.QCheckBox(Form)
-        self.redditChecked.setGeometry(QtCore.QRect(10, 70, 211, 17))
-        self.redditChecked.setObjectName("redditChecked")
-        self.twitterChecked = QtWidgets.QCheckBox(Form)
-        self.twitterChecked.setGeometry(QtCore.QRect(10, 90, 211, 17))
-        self.twitterChecked.setObjectName("twitterChecked")
-        self.profileButton = QtWidgets.QPushButton(Form)
-        self.profileButton.setGeometry(QtCore.QRect(10, 120, 211, 31))
-        self.profileButton.setObjectName("profileButton")
-
-        self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(Form)
-
-        self.profileButton.clicked.connect(self.profilingTestClicked)
-
-    def retranslateUi(self, Form):
-        _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Styolometric Profiling"))
-        self.username.setText(_translate("Form", "Username"))
-        self.redditChecked.setText(_translate("Form", "Download Reddit Users"))
-        self.twitterChecked.setText(_translate("Form", "Download Twitter Users"))
-        self.profileButton.setText(_translate("Form", "Generate Profile"))
-    
-    def profilingTestClicked(self):
-        if(self.twitterChecked.isChecked()):
-            print(self.username.text())
-            twitScrape().getIndivTweets(self.username.text())
-            #todo run entropy discretization on downloaded corpus
-        if(self.redditChecked.isChecked()):
-            print(self.username.text())
-            redditScraper().getUserComments(self.username.text())
-        #data = get data from model trainer
-        self.profiling = []
-        self.profiling.append(self.username.text())
-
-
-
-        self.showResults(self.profiling)
-            #todo: run entropy discretization on corpus based on reddit comments
-
-        #Open display window for results
-    def showResults(self, userArray):
-        self.window = QtWidgets.QMainWindow()
-        self.ui = ResultsMenu(userArray)
-        self.ui.setupUi(self.window)
-        self.window.show()
-
-        #eventually, created window for results new test button should be able to close using a function here
-    
 
 class verification(QWidget):
 
@@ -333,15 +281,71 @@ class verification(QWidget):
 
     def showResults(self, userArray):
         self.window = QtWidgets.QMainWindow()
-        self.ui = ResultsMenu(userArray)
+        self.ui = ResultsMenu(userArray, 2)
         self.ui.setupUi(self.window)
         self.window.show()
-        
 
+class profiling(QWidget):
+    def setupUi(self, Form):
+        Form.setObjectName("Form")
+        Form.resize(300, 180)
+        self.username = QtWidgets.QLineEdit(Form)
+        self.username.setGeometry(QtCore.QRect(10, 20, 211, 31))
+        self.username.setObjectName("username")
+        self.redditChecked = QtWidgets.QCheckBox(Form)
+        self.redditChecked.setGeometry(QtCore.QRect(10, 70, 211, 17))
+        self.redditChecked.setObjectName("redditChecked")
+        self.twitterChecked = QtWidgets.QCheckBox(Form)
+        self.twitterChecked.setGeometry(QtCore.QRect(10, 90, 211, 17))
+        self.twitterChecked.setObjectName("twitterChecked")
+        self.profileButton = QtWidgets.QPushButton(Form)
+        self.profileButton.setGeometry(QtCore.QRect(10, 120, 211, 31))
+        self.profileButton.setObjectName("profileButton")
+
+        self.retranslateUi(Form)
+        QtCore.QMetaObject.connectSlotsByName(Form)
+
+        self.profileButton.clicked.connect(self.profilingTestClicked)
+
+    def retranslateUi(self, Form):
+        _translate = QtCore.QCoreApplication.translate
+        Form.setWindowTitle(_translate("Form", "Styolometric Profiling"))
+        self.username.setText(_translate("Form", "Username"))
+        self.redditChecked.setText(_translate("Form", "Download Reddit Users"))
+        self.twitterChecked.setText(_translate("Form", "Download Twitter Users"))
+        self.profileButton.setText(_translate("Form", "Generate Profile"))
+    
+    def profilingTestClicked(self):
+        if(self.twitterChecked.isChecked()):
+            print(self.username.text())
+            twitScrape().getIndivTweets(self.username.text())
+            #todo run entropy discretization on downloaded corpus
+        if(self.redditChecked.isChecked()):
+            print(self.username.text())
+            redditScraper().getUserComments(self.username.text())
+        #data = get data from model trainer
+        self.profiling = []
+        self.profiling.append(self.username.text())
+
+
+
+        self.showResults(self.profiling)
+            #todo: run entropy discretization on corpus based on reddit comments
+
+        #Open display window for results
+    def showResults(self, userArray):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = ResultsMenu(userArray, 3)
+        self.ui.setupUi(self.window)
+        self.window.show()
+
+        #eventually, created window for results new test button should be able to close using a function here
+    
 class ResultsMenu(QWidget):
-    def __init__(self, userArray):
+    def __init__(self, userArray, useCase):
         print("Constructed Results Menu")
         self.array = userArray
+        self.useCase = useCase
 
     def setupUi(self, ResultsMenu):
         ResultsMenu.setObjectName("ResultsMenu")
@@ -353,16 +357,36 @@ class ResultsMenu(QWidget):
 
         self.retranslateUi(ResultsMenu)
         QtCore.QMetaObject.connectSlotsByName(ResultsMenu)
-        self.printData(self.array)
+        if(self.useCase == 1):
+            self.printDataIdentification(self.array)
+        elif(self.useCase == 2):
+            self.printDataVerification(self.array)
+        elif(self.useCase == 3):
+            self.printDataProfiling(self.array)
+        else:
+            print("Improper model input to print function")
 
     def retranslateUi(self, ResultsMenu):
         _translate = QtCore.QCoreApplication.translate
         ResultsMenu.setWindowTitle(_translate("ResultsMenu", "Results Menu"))
 
-    def printData(self, dataArray):
-        array = dataArray
-        for item in array:
-            self.textEdit.append(item)
+    def printDataIdentification(self, dataArray):
+        for user in dataArray:
+            print(user)
+    
+    def printDataVerification(self, dataArray):
+        for user in dataArray:
+            print(user)
+
+    def printDataProfiling(self, dataArray):
+        statement = "User profile added to corpus folder for: "
+        for user in dataArray:
+            print(statement + user)
+        self.textEdit.append(statement + user)
+        
+
+        
+        #Probably add an integer input for case switch to differentiate ident/verif/prof outputs
 
         
 if __name__ == "__main__":
