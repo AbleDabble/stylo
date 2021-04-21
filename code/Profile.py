@@ -47,7 +47,6 @@ class Profile:
         self.path = path
         self.name = os.path.basename(path)
         self.other_users = [os.path.join(os.path.dirname(path), f) for f in os.listdir(os.path.dirname(path)) if f.endswith('.txt') and f != self.name and f != self.comparison_name]
-        #print(other_users)
         # TODO make this not include comparison user for Authorship verification
         #self.other_test_users = [os.path.join(os.path.dirname(test_path), f) for f in os.listdir(os.path.dirname(test_path)) if f.endswith('.txt') and f != self.name]
         self.conj = self.functionWords(self.conj_path)
