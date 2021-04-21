@@ -8,6 +8,8 @@ Using machine learning techniques Stylo aims to provide investigators with autho
 
 ## Status Updates
 
+## Status Update 1
+
 ## The plan for the last 3 weeks 
 
 * Ian: Downloaded Python QT designer and created rough layouts for the visual portion of the software.
@@ -98,7 +100,7 @@ Authorization code to access reddit instances. Also attended meetings via zoom a
 
 
 
-
+## Status Update 2
 
 # The Plan for the Last 3 Weeks
 
@@ -175,6 +177,8 @@ Sam - Managed to get the base functions of the comment gathering program working
 William - Developed a reasonable and working model with many features from the texts and was able to achieve a decent EER of 20%.
 
 
+
+## Status Update 3
 
 
 ## The Plan for the Last 3 Weeks
