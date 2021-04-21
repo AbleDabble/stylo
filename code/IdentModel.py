@@ -52,7 +52,6 @@ def start_identification_reddit(user_list, text):
             print(f'Failed to download user: {user}')   
     with open('../config/labels.json', 'w') as f:
         json.dump(labels, f)
-    print(user_profiles)
 
     # Train the model on the users
     df = pd.concat(user_profiles, ignore_index=True)
@@ -68,14 +67,12 @@ def start_identification_reddit(user_list, text):
     # Create a dataframe of the text
     ip = IdentText('', text)
     text_df = ip.create_profile()
-    print(text_df)
     x_test  = text_df.to_numpy()
     prediction = pipe.predict(x_test)
-    
+    prediction = prediction[0]
     # determine which label corresponds to the prediction
-    choice = labels['labels'][prediction]
-    print(choice)
-
+    choice = labels['labels'][str(prediction)]
+    print('Best candidate', choice)
     return choice
 
 
