@@ -33,8 +33,6 @@ def start_verification_reddit(user1, user2):
     red_scraper = redditScraper()
     '''If the users comment file cannot be genterated then return False
      TO-DO: find a better solution/return value for this'''
-    if user1_comments == 0 or user2_comments == 0:
-      return False
 
     curr_downloads = set([f[:-4] for f in os.listdir('../corpora/reddit_corpus/') if f.endswith('.txt')])
     if user2 not in curr_downloads:
