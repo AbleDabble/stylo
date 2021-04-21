@@ -179,18 +179,20 @@ class identification(QWidget):
         #check if reddit and twitter are set to download
         if self.redditChecked.isChecked() == True:
             print("Downloading usernames from reddit")
-            self.users = self.pullUsernames()
+            self.usersList = self.pullUsernames()
             self.textToCompare = self.identificationText.toPlainText()
-            for user in self.users:
+            for user in self.usersList:
                 if (user != ""):
-                    print(user)
+                    redditScraper().getUserComments(user)
             print(self.textToCompare)
             #use william's function that takes array of users and a text
         if self.twitterChecked.isChecked() == True:
             #take username from input and run the function for reddit or twitter, download and save into text file by name, perform feature extraction with profile class.
             print("Downloading usernames from twitter")
-            
-        self.showResults(self.pullUsernames())
+            self.usersList = self.pullUsernames()
+            for user in self.usersList:
+                if (user != ""):
+                    twitScrape().getIndivTweets(user)
         #dowload main user and user one through seven, train the model on all seven users and the main user and try to predict which user has the greatest number out of each cycle.
 
     def pullUsernames(self):
@@ -204,6 +206,7 @@ class identification(QWidget):
         Users.append(self.user7.toPlainText())
         print(Users)
         return Users
+        #handle edge case of missing/blank users
 
 
     def showResults(self, userArray):
