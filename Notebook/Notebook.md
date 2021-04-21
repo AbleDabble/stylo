@@ -8,6 +8,262 @@ Using machine learning techniques Stylo aims to provide investigators with autho
 
 ## Status Updates
 
+## The plan for the last 3 weeks 
+
+* Ian: Downloaded Python QT designer and created rough layouts for the visual portion of the software.
+
+
+
+* Sam: Created a reddit developer application to use in praw web scraping corpus generation and started to lay out the framework for implementation.
+
+
+
+* Andy: Created a Twitter developer account that will give me the tokens to properly access the Twitter API. Started working on python and Tweepy integration in version 3.8. Attended zoom meetings For project discussion.
+
+* William: Research methods for authorship profiling, and the use of an embedding space as classification method when dealing with large amounts of data. 
+
+
+
+
+
+
+
+## Recap of what was planned for the last 3 weeks
+
+
+
+So far we have written out a rough sketch of general design features such as: Graphical interface
+
+ * Three modes of stylometry with tiles and general planning for qt creator.
+
+
+
+ * Twitter and Reddit Corpus Gathering
+
+
+
+ * Andy was able to get the Tweepy package installed and imported into a python project
+
+
+
+ * Research for how to create a classification algorithm that doesn’t need to be completely re-trained at the
+
+
+
+ * introduction of a new user
+
+
+
+## What was done during the last 3 weeks (by whom):
+
+Ian: Downloaded Python QT designer and created rough layouts for the visual portion of the software.
+
+
+
+Sam: Created a reddit developer application to use in praw web scraping corpus generation and started to lay out the framework for implementation. 
+
+
+
+Andy: Created a Twitter developer account that will give me the tokens to properly access the Twitter API. Started working on python and Tweepy integration in version 3.8. Attended zoom meetings
+
+For project discussion. 
+
+
+
+William: Research methods for authorship profiling, and the use of an embedding space for extreme classification methods.
+
+
+
+
+
+## Description of tasks completed
+
+
+
+* Ian: I spent 3 hours working on rough layout along with an additional 4 attending meetings on zoom/discord.
+
+
+
+* Sam: Spent 4 hours reading PRAW documentation, setting up developer account, and implementing
+
+Authorization code to access reddit instances. Also attended meetings via zoom and discord.
+
+
+
+* Andy: I spent 3 hours figuring out how to get Tweepy to be found through the interpreter to be able to get imported. Attended 4 meetings held across Zoom and Discord.
+
+
+
+* William: I spent 4 hours reading papers about about recommendation algorithms in search of a method to create a classification method that won’t involve completely retraining the machine learning algorithm every time a new class is added.
+
+
+
+
+
+# The Plan for the Last 3 Weeks
+
+
+
+Andy - Was to fix any bugs with Twitter authentication codes. Read into OAUTH protocols and how it actually works with twitter. Created a small demo that can print out tweets from a specific users timeline. The basic program contains a list of names that is iterated through to get x amount of tweets for each user name in the list.
+
+
+
+
+
+Sam- Fix any bugs in the Reddit comment gathering code. Get the comments to write to a corpus and format appropriately and filter out any comments that did not match the correct size.
+
+
+
+
+
+William - Create and explore model for authorship authentication system. Completed with sk-learn and a support vector machine model. 
+
+
+
+
+
+Ian - Create layouts for software gui windows using PyQt designer.
+
+
+
+
+
+# What was Done During Last 3 Weeks
+
+
+
+Andy - Created a small demo that can print out tweets from a specific users timeline. The basic program contains a list of names that is iterated through to get x amount of tweets for each user name in the list. Read more into OAUTH protocols to better understand how they work with the twitter API. Turns out though, all you actually need are the keys and the rest is if the application is a web app.
+
+
+
+
+
+Sam: Created the base functions to instantiate reddit, get comments based on username, and write them to a file. Fix some bugs inside of those functions.
+
+
+
+
+
+Ian - Used pyqt designer to create general layouts for software windows.
+
+
+
+
+
+Willliam - Created and explored the model for authorship authentication system completed with sk-learn and a support vector machine model. 
+
+
+
+
+
+# Successes
+
+
+
+Andy - Got around any set-up bugs with Tweepy that were present. Then created a demo with Tweepy that also allowed for me to practice fundamentals.
+
+
+
+
+
+Sam - Managed to get the base functions of the comment gathering program working for the most part.
+
+
+
+
+
+William - Developed a reasonable and working model with many features from the texts and was able to achieve a decent EER of 20%.
+
+
+
+
+## The Plan for the Last 3 Weeks
+
+
+
+* Ian - Write functions for the GUI that interface with the backend scraping and twitter scrapers.* 
+
+
+
+* William - Build model for authorship authentication and supporting classes and methods
+
+
+
+
+
+* Sam - Write reddit scraping functions for user profiling
+
+
+
+
+
+* Andy- Attempted a different method other than streamlistener to ge access to the twitter Public Sample. Ended up not working, next going to try using the streamlistener class to get the correct data.
+
+
+
+
+
+## What was Done During Last 3 Weeks
+
+
+
+* Ian - Wrote basic dummy methods that will be used with the backend python files.
+
+
+
+* William - Finished Authorship authentication model, trained all necessary classes and found best class weights i.e. where FAR and FRR intersect.
+
+
+
+
+
+* Sam - Wrote functions for reddit scraping data collection which appends and formats data correctly to the files in the format needed for the corpus. Ended not needing these bits of code however as a different method was used that did not need a reddit account to function.
+
+
+
+
+
+* Andy- Trial and error with a different method of pulling Twitter tweets in a mass quantity. Figured out that it won’t work and now going to try the streamlistener class. 
+
+
+
+ 
+
+
+
+## Successes
+
+
+
+* Ian - Finished the basic gui mock-up excluding the functionality.
+
+
+
+
+
+* Andy- No success, just trial and error
+
+
+
+
+
+* William - Completed authorship authentication model, and the supporting classes for feature extraction, preprocessing and feature selection. Performed testing to find optimal class weight.
+
+
+
+* Sam- No successes, but gained a good understanding of reading and writing to files and the scraping workflow.
+
+
+
+
+
+## Roadblocks Challenges
+
+
+
+* Ian- Waiting on team to finish their side so functions can be used as part of the GUI
+
+
 
 
 
