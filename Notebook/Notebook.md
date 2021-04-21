@@ -142,7 +142,6 @@ Where source is either a 1 or a 2 representing Reddit, or Twitter respectively w
 
 The authorship profiling menu only takes one user. The test button does the same as above.
 
-
 **Test Button**
 
 The test button should be able to call the function:
@@ -151,67 +150,30 @@ startProf(user: string, source: int = 1)
 
 Where source is an integer from 1, 2 and represents whether the text data should come from Reddit or Twitter respectively.
 
-
 **Results menu**
-
 
 The results menu displays the results returned once testing is completed. The results returned will be formatted as a string to be displayed in the text box in this menu. At the bottom of the menu is a button that will return the user to the opening GUI, saving the results before closing. 
 
-
 **Automatic user scraping**
-
 
 Scraping system. The function to call in order to scrape data will be:
 
-
 **autoCollect(userList: List, source: int = 1) -> List**
 
-    userList: The list of users to download text data/include data for.
-
-    
-
-Source: either 1 or 2 referring to Reddit or Twitter, respectively.
-
-    
+userList: The list of users to download text data/include data for.
+Source: either 1 or 2 referring to Reddit or Twitter, respectively.    
 
 Error handling:
-
-    
-
+```
     In the case where it was not able to find a specific user:
-
-    
-
         Pop-up box issuing warning with message: “Not able to find user <user>”
-
-    
-
     In the case where it was not able to find enough text data for the specific user:
-
-    
-
-        Pop-up box issuing warning with message: “Not able to gather enough     
-
-
-data for user: <user>”
-
-    
-
-Users successfully downloaded will be added to the json file: corpora/users.json
-
-    
-
-    Two categories inside json: Reddit and Twitter saving users to their respective 
-
-
-category depending on the source value.  
-
-    
-
+        Pop-up box issuing warning with message: “Not able to gather enough data for user: <user>”
+        Users successfully downloaded will be added to the json file: corpora/users.json
+Two categories inside json: Reddit and Twitter saving users to their respective category depending on the source value.  
 If a user is already present inside of users.json then it will not download data for them
-
-
 Returns a list of users it was successfully able to collect data for.
+```
 
 
 **scrapeReddit(user: string) -> int**
@@ -219,44 +181,26 @@ Returns a list of users it was successfully able to collect data for.
 
 This function will scrape reddit for the user’s text data saving comments that are more than 350 characters long. Comments that are greater than 350 characters long will be cut-off after 350 characters. Save the file to corpora/reddit_corpus/<username>.txt
 
-    
-
 User: the user to scrape
-
-    
 
 Returns -1 if it can’t find the user
 
-    
-
 Returns -2 if it there is not enough data available
 
-    
-
 Returns  0 if successful
-
 
 **scrapeTwitter(user: string) -> int**
 
 
 This function will scrape Twitter for user’s text data saving tweets until the character count of 50 * 240 is reached. Save the file to corpora/twitter_corpus/<username>.txt
-
-    
-
+ 
 User: The user to scrape
-
-    
 
 Returns -1 if it can’t find the user
 
-    
-
 Returns -2 if it there is not enough data available
 
-    
-
 Returns  0 if successful
-
 
 **Profile generation**
 
@@ -273,26 +217,17 @@ This will create the profile for the specific user saving it to a csv file. Depe
 
 Source: either 1 or 2 referring to Reddit or Twitter respectively
 
-    
-
 User: the user name from which to draw text data and to name the saved the csv file
-
 
 **modelTrain(userList: List, source: int = 1, t: int = 1)**
 
 This takes all the csv files created by profCreate and then trains and then tests the model. Returning as a string the results. 
 
-    
-
 userList: the list of users to include in the training and testing.
-
-    
 
 Source: whether to draw from reddit corpus or Twitter corpus for negatively labelled text 
 
-
 Data
-
 
 T: the type of data. The type of model to train where 1 = authorship identification, 2= 
 
