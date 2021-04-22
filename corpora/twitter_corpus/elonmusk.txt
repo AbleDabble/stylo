@@ -1,5 +1,47 @@
 
 
+RT @xprize: Elon Musk and Peter Diamandis LIVE on $100M XPRIZE Carbon Removal https://t.co/M2ruxS0Zxt
+
+🌍🌎🌏 Happy Earth Day 🌍🌎🌏
+
+@hnshah Haha
+
+@jhall 🤣🤣
+
+RT @SpaceX: All systems and weather are looking good for Falcon 9’s launch of Dragon with four astronauts on board. Webcast will go live to…
+
+@AstroJordy I’m staying at a friend’s place in Florida that is 85% powered by Tesla Solar Roof + Powerwall. 
+
+When grid power goes down, air-conditioning automatically turns off in some of the house. Computers &amp; lights don’t even flicker. Owner says he doesn’t notice.
+
+@28delayslater Does seem a little weird
+
+@OwenSparks_ @AstroJordy @neuralink 🤣
+
+@JohnnaCrider1 @WholeMarsBlog If Tesla owners are “conspiracy theorists”, then it would be fair to call them “advertising salespeople masquerading as truthtellers”. 
+
+If that’s an unfair criticism, a simple rebuttal would be to show their articles per fatality for all automakers. Tesla is  ~0.02% of deaths …
+
+Tesla Solar + Powerwall battery enables consumers to be their own utility
+
+@jack True
+
+@ValaAfshar Very important. Most people don’t know this. Wind is also super cheap, especially when paired with batteries.
+
+@annerajb Newest units can probably do as much as 10kW continuous &amp; double that in peak power at 30C ambient temp.
+
+In house power vernacular, this translates to ~80LRA (soft start of 3.5 ton HVAC). Two Powerwalls would double this, three would triple, etc.
+
+Powerwall 2 peak &amp; steady power capability is better than advertised. 
+
+Now that we have lots of operational data, Tesla can unlock higher capabilities for free via software update next month. 
+
+Depending on production date, power increase power may be &gt;50% at 30C ambient temp.
+
+Solar power will feed exclusively to Powerwall. Powerwall will interface only between utility meter &amp; house main breaker panel, enabling super simple install &amp; seamless whole house backup during utility dropouts.
+
+Starting next week, Tesla Solar Panels &amp; Solar Roof will only be sold as an integrated product *with* Tesla Powerwall battery
+
 @wintonARK Did you buy a Powerwall? Utility permission is required for flowing electricity back to grid, but usually not if stored in our battery. This also enables 24/7 electricity security for your home.
 
 Utility permission is still needed for when Powerwall is full &amp; can stabilize grid.
@@ -101,41 +143,3 @@ But I think we’re the leader in shallow-minded AI haha!
 Doge Barking at the Moon https://t.co/QFB81D7zOL
 
 @WSBChairman Doge Barking at the Moon – Miro https://t.co/1vTM2XOusy
-
-@RationalEtienne @F9Block5 While perhaps obvious in hindsight, it turns out that the only way to solve self-driving is to solve a big part of real-world AI. That is what Tesla is doing, both in hardware &amp; software.
-
-Unless a company is good at AI with tight compute, it’s hopeless. This is insanely hard.
-
-Le Petit Prince
-
-☾
-
-           🔭𖨆♡
-
-@SpaceXMR Soon it will be real
-
-@janixos @ErcXspace @SpaceX Actually, yes. And Red Rocket truck stop.
-
-@andyweedman @karpathy @DirtyTesla Stop … In the Name of Love! https://t.co/kBsTi5jz16
-
-@AustinTeslaClub @TslaCC @teslaquadcities @teslaownersvn @SjvTesla @TeslaOwnersEBay @CodingMark @billhuang688 @gailalfa1 @Tesla 🥰
-
-@Teslarati I found some footage of the drive https://t.co/TXeLQO9Spr
-
-@AstroJordy @dogeofficialceo @F9Block5 Insanely cute!
-
-@WholeMarsBlog Button timing of May is aspirational. Depends on how well limited beta of V9.0 goes, but I would be surprised if wide beta (aka button) is later than June. FSD subscription next month is a sure thing.
-
-@cliffski @F9Block5 Hopefully addressed this summer
-
-@dogeofficialceo @F9Block5 🤣🤣
-
-@BLKMDL3 @F9Block5 Same timing
-
-@F9Block5 Major improvements are being made to the vision stack every week. Beta button hopefully next month.
-
-This is a “march of 9’s” trying to get probability of no injury above 99.999999% of miles for city driving. Production Autopilot is already above that for highway driving.
-
-@jrosinski97 Will investigate
-
-@melaniemadri Probably late July

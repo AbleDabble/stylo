@@ -258,15 +258,16 @@ class verification(QWidget):
         if (self.redditChecked.isChecked()):
             print("downloading reddit")
             nltk.download("punkt")
-            result = start_verification_reddit(self.cUserOne.text(), self.cUserTwo.text())
+            self.result = start_verification_reddit(self.cUserOne.text(), self.cUserTwo.text())
                     
         self.userArray.append(self.cUserOne.text())
         self.userArray.append(self.cUserTwo.text())
-        if result == True:
+        if self.result == True:
             self.userArray.append("Users Match")
         else:
             self.userArray.append("Users do not Match")
         print(self.userArray)
+        
             
         if (self.twitterChecked.isChecked()):
             print("downloading twitter")
@@ -276,15 +277,12 @@ class verification(QWidget):
 
 
         #verify reddit
-
-
-
         self.showResults(self.userArray)
         print("Test Clicked")
 
     def showResults(self, userArray):
         self.window = QtWidgets.QMainWindow()
-        self.ui = ResultsMenu(userArray, 2)
+        self.ui = ResultsMenu(self.userArray, 2)
         self.ui.setupUi(self.window)
         self.window.show()
 
@@ -379,7 +377,7 @@ class ResultsMenu(QWidget):
     
     def printDataVerification(self, dataArray):
         for user in dataArray:
-            print(user)
+            self.textEdit.append(user)
 
     def printDataProfiling(self, dataArray):
         statement = "User profile added to corpus folder for: "
