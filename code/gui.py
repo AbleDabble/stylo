@@ -259,20 +259,21 @@ class verification(QWidget):
             print("downloading reddit")
             nltk.download("punkt")
             result = start_verification_reddit(self.cUserOne.text(), self.cUserTwo.text())
-            if result == True:
-                self.userArray.append("Users Match")
-            else:
-                self.userArray.append("Users do not Match")
-            print("Reddit Verification Complete")
+                    
+        self.userArray.append(self.cUserOne.text())
+        self.userArray.append(self.cUserTwo.text())
+        if result == True:
+            self.userArray.append("Users Match")
+        else:
+            self.userArray.append("Users do not Match")
+        print(self.userArray)
             
         if (self.twitterChecked.isChecked()):
             print("downloading twitter")
             twitScrape().getIndivTweets(self.cUserOne.text())
             twitScrape().getIndivTweets(self.cUserTwo.text())
             #todo start verification from twitter
-        
-        self.userArray.append(self.cUserOne.text())
-        self.userArray.append(self.cUserTwo.text())
+
 
         #verify reddit
 
