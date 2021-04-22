@@ -18,7 +18,7 @@ api = tweepy.API(auth)
 
 # public_tweets = api.home_timeline()
 # Test list of users for multiple printings at a time
-user_list = ["TheEpic_Ace", "MountainWest", "markiplier"]
+user_list = ["Username"]
 
 
 # create a stream listener
@@ -47,16 +47,23 @@ class twitScrape():
         save_path = path + username + ".txt"
         save = ""
         count = 0
+        usercheck = True
 
-        timeline2 = api.user_timeline(screen_name=username, count=60, tweet_mode='extended')
-        for tweets in timeline2:
-            save += "\n\n"
-            save += tweets.full_text
-            count += 1
-            if count >= 60:
-                break
-            with io.open(save_path, "w", encoding="utf-8") as w:
-                w.write(save)
+        try:
+            timeline2 = api.user_timeline(screen_name=username, count=60, tweet_mode='extended')
+            for tweets in timeline2:
+                save += "\n\n"
+                save += tweets.full_text
+                count += 1
+                if count >= 60:
+                    break
+                with io.open(save_path, "w", encoding="utf-8") as w:
+                     w.write(save)
+        except Exception:
+            usercheck = False
+            print("User not found or Tweets don't exist")
+            pass
+        # add code here to work with GUI pop-up
 
 
 scraper = twitScrape()
@@ -68,7 +75,7 @@ usernames = ["BarackObama", "justinbieber", "katyperry","TheEllenShow", "YouTube
 
 
 
-for user in usernames:
+for user in user_list:
     scraper.getIndivTweets(user)
 # user = "TheEpic_Ace"
 # getIndivTweets(user)
