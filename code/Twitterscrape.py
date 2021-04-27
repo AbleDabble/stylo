@@ -61,7 +61,7 @@ class twitScrape():
                      w.write(save)
         except Exception:
             usercheck = False
-            print("User not found or Tweets don't exist")
+            print("User " + username + " not found or Tweets don't exist")
             pass
         # add code here to work with GUI pop-up
 
@@ -71,12 +71,26 @@ usrname = "shakira"
 scraper.getIndivTweets(usrname)
 print('No errors')
 usernames = ["BarackObama", "justinbieber", "katyperry","TheEllenShow", "YouTube",
-             "BillGates","CNN", "elonmusk", "BrunoMars", "realmadrid", "Harry_Styles"]
+             "BillGates","CNN", "elonmusk", "BrunoMars", "realmadrid", "Harry_Styles",
+             "TheTattedNative", "MountainWest", "1matree", "Markiplier", "pixlpit",
+             "LordMinion777", "Twitch", "DeadByBHVR", "MatPatGT", "Jack_Septic_Eye",
+             "taylorswift13", "Cristiano",  "YouTube", "jimmyfallon", "NASA",  "NBA",
+             "Adele", "NFL", "ShawnMendes", "ActuallyNPH", "NatGeo",
+             "TheEconomist", "danieltosh", "Google", "MariahCarey", "garyvee",
+             "GuyKawasaki", "richardbranson", "ariannahuff", "tferriss", "TonyRobbins",
+             "mcuban", "BillGates", "PatFlynn", "ericries", "TheSharkDaymond",
+             "LizAnnSonders", "morganhousel", "DaveRamsey", "jimcramer", "WarrenBuffett",
+             "TheRetailDoctor", "Shopify", "BarcodeAndrew", "beeemapp", "FierceRetail",
+             "Walmart", "HomeDepot", "amazon", "Target", "BBYNews",
+             "YouTubeGaming", "QuarterJade", "IGN", "Valkyrae", "peterparkTV"]
+
+
+#THIS FUNCTION CREATES/UPDATES THE STARTING DATASET
+#for user in usernames:
+ #   scraper.getIndivTweets(user)
 
 
 
-for user in user_list:
-    scraper.getIndivTweets(user)
 # user = "TheEpic_Ace"
 # getIndivTweets(user)
 # streamTweet()
