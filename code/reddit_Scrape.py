@@ -1,6 +1,8 @@
+import re
 import praw
 import prawcore.exceptions
 import json
+
 
 class redditScraper():
 
@@ -28,6 +30,10 @@ class redditScraper():
         else:
             return True
 
+    def remove_url(self, comment):
+        return re.sub('(https?://)?(([a-zA-Z0-9]+)\.)+[a-zA-Z]{2,}(/[a-zA-Z0-9;/+\-%@,!^*&?:}{_=\\\]+)?(\.[a-zA-Z]+)?',
+                      'url', comment)
+
     # Writes an array of comments to a file and saves a txt file
     # to the reddit corpus with the username as the title.
     # Returns a 1 if successful, 0 if any errors occurred
@@ -46,6 +52,7 @@ class redditScraper():
 
     def getUserComments(self, username):
         reddit_user = self.redditInst()
+        size = 1
         if reddit_user == -1:
             return -1
         try:
@@ -56,25 +63,39 @@ class redditScraper():
         user_comment = []
         user = reddit_user.redditor(username)
 
-        while len(user_comment) <= 100:
+        while len(user_comment) <= 50 and size < 17500:
             try:
                 for comment in user.comments.new(limit=None):
                     cur_comment = comment.body
-                    if len(cur_comment) > 350 and self.is_english(cur_comment):
-                        user_comment.append(cur_comment)
+                    cur_comment = self.remove_url(cur_comment)
+                    print(len(cur_comment))
+                    if size <= 17500:
+                        if len(cur_comment) > 350 and self.is_english(cur_comment):
+                            #print("Should be a vaild comment", len(cur_comment))
+                            size = size + len(cur_comment)
+                            print(size)
+                            user_comment.append(cur_comment)
+                    else:
+                        break
             except prawcore.exceptions.NotFound as e:
                 print("\nCould not find user", username)
                 print(e)
-                break
+                return -1
             except prawcore.exceptions.OAuthException as e:
                 print("\nAuthentication Error: Check reddit account credentials\n", e)
+                return -1
+            if len(user_comment) == 0:
                 break
 
         if len(user_comment) == 0:
+            print("No comments found for user")
             return 0
         else:
             path = self.writeComments(user_comment, username)
             if path == -1:
                 return 0
             else:
+                print(user_comment)
+                print(len(user_comment))
+                print(size)
                 return path
