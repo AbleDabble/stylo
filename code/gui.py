@@ -182,6 +182,8 @@ class identification(QWidget):
             print("Downloading usernames from reddit")
             self.usersList = self.pullUsernames()
             self.textToCompare = self.identificationText.toPlainText()
+            if (countWords(self.textToCompare) < 350):
+                self.showDialogue("Must have >350 words")
             print(self.textToCompare)
             print(self.usersList)
             self.stringMatch = start_identification_reddit(self.usersList, self.textToCompare)  
@@ -212,6 +214,11 @@ class identification(QWidget):
         print(Users)
         return Users
         #handle edge case of missing/blank users
+
+    def countWords(self, words):
+        count = 0
+        for word in words:
+            count += 1
 
 
     def showResults(self, userArray):
