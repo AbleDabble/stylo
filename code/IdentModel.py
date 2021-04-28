@@ -3,7 +3,7 @@ import pandas as pd
 from IdentProfile import IdentProfile, IdentText
 from reddit_Scrape import redditScraper
 import os
-from sklearn.svm import SVC
+from sklearn.svm import LinearSVC
 from EntropyDiscretization import EntropyDiscretization as ED
 from MIFS import MIFS
 from imblearn.pipeline import Pipeline
@@ -29,15 +29,16 @@ def start_identification_reddit(user_list, text):
     
     # Create a list of already downloaded users
     downloaded_users = [user[:-4] for user in os.listdir(PATH) if user.endswith('.csv')]
-
+    #print('Downloaded_users', downloaded_users)
     # Read and add users from already downloaded
-    for user in downloaded_users[:10]:
-        path = PATH + user + '.csv'
-        user_profiles.append(pd.read_csv(path))
+    #for user in downloaded_users[:10]:
+    #    path = PATH + user + '.csv'
+    #    user_profiles.append(pd.read_csv(path))
         
     # check if downloaded and if not download
     for user in user_list:
-        if user in downloaded_users:
+        if user in downloaded_users or len(user) == 0:
+            user_profiles.append(pd.read_csv(f'../corpora/reddit_corpus_csv/{user}.csv'))
             continue
         try:
             path = rs.getUserComments(user)
@@ -47,7 +48,7 @@ def start_identification_reddit(user_list, text):
             df = ip.create_profile()
             df.to_csv(f'../corpora/reddit_corpus_csv/{user}.csv', index=False)
             user_profiles.append(df.copy())
-            print('created new user profile', user)
+            print('created new user profile for ', user)
         except:
             print(f'Failed to download user: {user}')   
     with open('../config/labels.json', 'w') as f:
@@ -58,9 +59,9 @@ def start_identification_reddit(user_list, text):
     x, y = split_x_y(df, numpy=True)
     pipe = Pipeline([
         ("MinMaxScaler", MinMaxScaler()),
-        ('ED', ED()),
-        ('MIFS', MIFS()),
-        ('SVC', SVC(kernel='poly', degree=3))]) # type: ignore
+        #('ED', ED()),
+        #('MIFS', MIFS(low=0)),
+        ('SVC', LinearSVC(C=0.5, penalty='l2',dual=True))]) # type: ignore
     print('beginning training')
     pipe.fit(x, y)
 
@@ -70,6 +71,7 @@ def start_identification_reddit(user_list, text):
     x_test  = text_df.to_numpy()
     prediction = pipe.predict(x_test)
     prediction = prediction[0]
+    print('prediction = ', prediction)
     # determine which label corresponds to the prediction
     choice = labels['labels'][str(prediction)]
     print('Best candidate', choice)
@@ -77,4 +79,4 @@ def start_identification_reddit(user_list, text):
 
 
 
-start_identification_reddit(['Baerog'],"This is a text block. This should be about 350 characters and probably will not be that large. Therefor it will be probably be smaller or maybe even bigger I don't know. It is hard to tell if this is 350 characters. More words and more text and more and more and more. This is the way things are go go. Power puff girls. There is more letters to add. Now we will continue to add more letters. This will have more letters and characters. There need to be a lot of fucking characters. How about that. There is this thing and it works so well. IT works GREAT. IT WORKS AMAZING.")
+#start_identification_reddit(['Baerog', '4Darco', 'ScrotumTotums', 'OrionLax'],"This is a text block. This should be about 350 characters and probably will not be that large. Therefor it will be probably be smaller or maybe even bigger I don't know. It is hard to tell if this is 350 characters. More words and more text and more and more and more. This is the way things are go go. Power puff girls. There is more letters to add. Now we will continue to add more letters. This will have more letters and characters. There need to be a lot of fucking characters. How about that. There is this thing and it works so well. IT works GREAT. IT WORKS AMAZING.")

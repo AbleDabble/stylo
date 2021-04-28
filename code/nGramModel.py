@@ -56,7 +56,6 @@ class nGramModel:
         """Sets the threshold"""
         with open(self.path, 'r', encoding='ISO-8859-1') as r:
             emails = r.read()
-        print("len of emails:", len(emails))
         emails = emails[len(emails)//2:]
         simil_m0 = [] # for only unique ngrams in the email block
         simil_m1 = [] # For all ngrams in the email block
