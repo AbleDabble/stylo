@@ -184,14 +184,20 @@ class identification(QWidget):
             self.textToCompare = self.identificationText.toPlainText()
             print(self.textToCompare)
             print(self.usersList)
+            self.stringMatch = start_identification_reddit(self.usersList, self.textToCompare)  
+            self.showResults(self.stringMatch)
             # change to twitter self.stringMatch = start_identification_reddit(self.usersList, self.textToCompare)
             #use william's function that takes array of users and a text
         if self.twitterChecked.isChecked() == True:
             #take username from input and run the function for reddit or twitter, download and save into text file by name, perform feature extraction with profile class.
-            print("Downloading usernames from twitter")
             self.usersList = self.pullUsernames()
-        self.stringMatch = start_identification_reddit(self.usersList, self.textToCompare)
-        self.showResults(self.stringMatch)
+            self.textToCompare = self.identificationText.toPlainText()
+            print("Downloading usernames from twitter")
+        elif (self.redditChecked.isChecked() == False and self.twitterChecked.isChecked() == False):
+            self.userArray = ["Must select from Twitter or Reddit usernames"]
+            self.showResults(self.userArray)
+        
+
         #dowload main user and user one through seven, train the model on all seven users and the main user and try to predict which user has the greatest number out of each cycle.
 
     def pullUsernames(self):
@@ -373,6 +379,7 @@ class ResultsMenu(QWidget):
 
     def printDataIdentification(self, dataArray):
         for user in dataArray:
+            self.textEdit.append(user)
             print(user)
     
     def printDataVerification(self, dataArray):
