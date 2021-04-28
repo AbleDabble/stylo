@@ -99,8 +99,8 @@ testData = ["MountainWest", "1matree", "Markiplier", "pixlpit",
              "taylorswift13", "Cristiano", "YouTube", "jimmyfallon", "NASA", "NBA"]
 
 # THIS FUNCTION CREATES/UPDATES THE STARTING DATASET
-for user in usernames:
-    scraper.getIndivTweets(user)
+#for user in usernames:
+ #   scraper.getIndivTweets(user)
 
 # user = "TheEpic_Ace"
 # getIndivTweets(user)
