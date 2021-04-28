@@ -226,6 +226,12 @@ class identification(QWidget):
         self.ui = ResultsMenu(userArray, 1)
         self.ui.setupUi(self.window)
         self.window.show()
+    
+    def showDialogue(self, message):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = dialogue(message)
+        self.ui.setupUi(self.window)
+        self.window.show()
 
 class verification(QWidget):
 
@@ -353,6 +359,12 @@ class profiling(QWidget):
         self.ui.setupUi(self.window)
         self.window.show()
 
+    def showDialogue(self, message):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = dialogue(message)
+        self.ui.setupUi(self.window)
+        self.window.show()
+
         #eventually, created window for results new test button should be able to close using a function here
     
 class ResultsMenu(QWidget):
@@ -403,6 +415,32 @@ class ResultsMenu(QWidget):
         
         #Probably add an integer input for case switch to differentiate ident/verif/prof outputs
 
+class dialogue(object):
+    def __init__(self, message):
+        print("Constructed Dialogue")
+        self.text = message
+    def setupUi(self, Form):
+        Form.setObjectName("Form")
+        Form.resize(287, 162)
+        self.label = QtWidgets.QLabel(Form)
+        self.label.setGeometry(QtCore.QRect(10, 40, 271, 61))
+        font = QtGui.QFont()
+        font.setPointSize(16)
+        self.label.setFont(font)
+        self.label.setObjectName("label")
+
+        self.retranslateUi(Form)
+        QtCore.QMetaObject.connectSlotsByName(Form)
+        printMessage(self.message)
+
+    def retranslateUi(self, Form):
+        _translate = QtCore.QCoreApplication.translate
+        Form.setWindowTitle(_translate("Form", "Form"))
+        self.label.setText(_translate("Form", "TextLabel"))
+
+    def printMessage(self, message):
+        self.text = message
+        self.label.setText(self.text)
         
 if __name__ == "__main__":
     import sys
