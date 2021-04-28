@@ -38,15 +38,15 @@ def start_verification_reddit(user1, user2):
     curr_downloads = set([f[:-4] for f in os.listdir('../corpora/reddit_corpus/') if f.endswith('.txt')])
     if user2 not in curr_downloads:
         user1_comments = red_scraper.getUserComments(user1)
-        if user1_comments == 0:
-            Exception(f'Problem downloading user {user1}')
+        if user1_comments == -1:
+            return -1
         profile2 = Profile(user1_comments)
     else:
         profile2 = Profile(reddit_path + user2 + ".txt")
     if user1 not in curr_downloads:
         user2_comments = red_scraper.getUserComments(user2)
-        if user2_comments == 0:
-            Exception(f'Problem downloading user {user2}')
+        if user2_comments == -1:
+            return -1
         profile1 = Profile(user2_comments, reddit_path + user2 + ".txt")
     else:
         profile1 = Profile(reddit_path + user1 + ".txt", reddit_path + user2 + ".txt")
@@ -89,14 +89,14 @@ def start_verification_twitter(user1, user2):
     curr_downloads = set([f[:-4] for f in os.listdir('../corpora/twitter_corpus/') if f.endswith('.txt')])
     if user2 not in curr_downloads:
         user1_comments = twitScrape.getIndivTweets(user1)
-        if user1_comments == 0:
+        if user1_comments == -1:
             Exception(f'Problem downloading user {user1}')
         profile2 = Profile(user1_comments, email_size=240)
     else:
         profile2 = Profile(reddit_path + user2 + ".txt")
     if user1 not in curr_downloads:
         user2_comments = twitScrape.getIndivTweets(user2)
-        if user2_comments == 0:
+        if user2_comments == -1:
             Exception(f'Problem downloading user {user2}')
         profile1 = Profile(user2_comments, reddit_path + user2 + ".txt",email_size=240)
     else:
