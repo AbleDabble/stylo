@@ -146,3 +146,4 @@ config/config.json
 
 corpora/reddit_corpus_csv/*
 corpora/reddit_corpus/*
+corpora/*
