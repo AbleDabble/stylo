@@ -63,19 +63,20 @@ class redditScraper():
         user_comment = []
         user = reddit_user.redditor(username)
 
-        while len(user_comment) <= 50 and size < 17500:
+        while size < 17500:
             try:
                 for comment in user.comments.new(limit=None):
                     cur_comment = comment.body
                     cur_comment = self.remove_url(cur_comment)
-                    print(len(cur_comment))
                     if size <= 17500:
                         if len(cur_comment) > 350 and self.is_english(cur_comment):
                             #print("Should be a vaild comment", len(cur_comment))
                             size = size + len(cur_comment)
-                            print(size)
+                            print("Current Size of comment array", size)
                             user_comment.append(cur_comment)
                     else:
+                        print(size)
+                        print(len(user_comment))
                         break
             except prawcore.exceptions.NotFound as e:
                 print("\nCould not find user", username)
