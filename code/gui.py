@@ -89,9 +89,9 @@ class identification(QWidget):
         Identification.setObjectName("Identification")
         Identification.resize(469, 559)
         self.label = QtWidgets.QLabel(Identification)
-        self.label.setGeometry(QtCore.QRect(20, 330, 450, 21))
+        self.label.setGeometry(QtCore.QRect(20, 330, 261, 21))
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setPointSize(16)
         self.label.setFont(font)
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(Identification)
@@ -168,7 +168,7 @@ class identification(QWidget):
     def retranslateUi(self, Identification):
         _translate = QtCore.QCoreApplication.translate
         Identification.setWindowTitle(_translate("Identification", "Form"))
-        self.label.setText(_translate("Identification", "Enter Text to Identify Here (>350 Characters)"))
+        self.label.setText(_translate("Identification", "Enter Text to Identify Here (>350 Characters Only"))
         self.label_2.setText(_translate("Identification", "Enter Probable Users Here"))
         self.TestButton.setText(_translate("Identification", "Test"))
         self.redditChecked.setText(_translate("Identification", "Download Usernames via Reddit"))
@@ -186,8 +186,7 @@ class identification(QWidget):
                 self.showDialogue("Must have >350 words")
             print(self.textToCompare)
             print(self.usersList)
-            self.stringMatch = start_identification_reddit(self.usersList, self.textToCompare)
-            print(self.stringMatch)
+            self.stringMatch = start_identification_reddit(self.usersList, self.textToCompare)  
             self.showResults(self.stringMatch)
             # change to twitter self.stringMatch = start_identification_reddit(self.usersList, self.textToCompare)
             #use william's function that takes array of users and a text
@@ -197,8 +196,8 @@ class identification(QWidget):
             self.textToCompare = self.identificationText.toPlainText()
             print("Downloading usernames from twitter")
         elif (self.redditChecked.isChecked() == False and self.twitterChecked.isChecked() == False):
-            self.userArray = ["Select from Twitter/Reddit"]
-            self.showDialogue(self.userArray)
+            self.userArray = ["Must select from Twitter or Reddit usernames"]
+            self.showResults(self.userArray)
         
 
         #dowload main user and user one through seven, train the model on all seven users and the main user and try to predict which user has the greatest number out of each cycle.
@@ -225,12 +224,6 @@ class identification(QWidget):
     def showResults(self, userArray):
         self.window = QtWidgets.QMainWindow()
         self.ui = ResultsMenu(userArray, 1)
-        self.ui.setupUi(self.window)
-        self.window.show()
-    
-    def showDialogue(self, message):
-        self.window = QtWidgets.QMainWindow()
-        self.ui = Dialog(message)
         self.ui.setupUi(self.window)
         self.window.show()
 
@@ -305,12 +298,6 @@ class verification(QWidget):
         self.ui = ResultsMenu(self.userArray, 2)
         self.ui.setupUi(self.window)
         self.window.show()
-    
-    def showDialogue(self, message):
-        self.window = QtWidgets.QMainWindow()
-        self.ui = Dialog(message)
-        self.ui.setupUi(self.window)
-        self.window.show()
 
 class profiling(QWidget):
     def setupUi(self, Form):
@@ -365,12 +352,6 @@ class profiling(QWidget):
         self.ui = ResultsMenu(userArray, 3)
         self.ui.setupUi(self.window)
         self.window.show()
-    
-    def showDialogue(self, message):
-        self.window = QtWidgets.QMainWindow()
-        self.ui = Dialog(message)
-        self.ui.setupUi(self.window)
-        self.window.show()
 
         #eventually, created window for results new test button should be able to close using a function here
     
@@ -404,8 +385,9 @@ class ResultsMenu(QWidget):
         ResultsMenu.setWindowTitle(_translate("ResultsMenu", "Results Menu"))
 
     def printDataIdentification(self, dataArray):
-            self.user = dataArray
-            self.textEdit.append(self.user)
+        for user in dataArray:
+            self.textEdit.append(user)
+            print(user)
     
     def printDataVerification(self, dataArray):
         for user in dataArray:
@@ -420,40 +402,6 @@ class ResultsMenu(QWidget):
 
         
         #Probably add an integer input for case switch to differentiate ident/verif/prof outputs
-class Dialog(object):
-
-    def __init__(self, message):
-        print("Constructed Dialog")
-        self.message = message
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(400, 190)
-        self.label = QtWidgets.QLabel(Form)
-        self.label.setGeometry(QtCore.QRect(30, 50, 350, 61))
-        font = QtGui.QFont()
-        font.setPointSize(16)
-        self.label.setFont(font)
-        self.label.setObjectName("label")
-
-        self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(Form)
-        self.setTextMsg(self.message)
-
-    def retranslateUi(self, Form):
-        _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
-        self.label.setText(_translate("Form", "TextLabel"))
-    
-    def setTextMsg(self, message):
-        self.text = message
-        self.string = self.listToString(self.text)
-        self.label.setText(self.string)
-
-    def listToString(self, s): 
-        str1 = "" 
-        for ele in s: 
-            str1 += ele  
-        return str1
 
         
 if __name__ == "__main__":
