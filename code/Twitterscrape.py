@@ -20,25 +20,6 @@ api = tweepy.API(auth)
 # Test list of users for multiple printings at a time
 user_list = ["Username"]
 
-
-# create a stream listener
-
-class MyStreamListener(tweepy.StreamListener):
-    def on_status(self, status):
-        print(status.text)
-
-    def on_error(self, status_code):
-        if status_code == 420:
-            # returning False in on_data disconnects the stream
-            return False
-
-
-def streamTweet():
-    myStreamListener = MyStreamListener()
-    myStream = tweepy.Stream(auth=api.auth, listener=myStreamListener)
-    myStream.filter(track=['python'])
-
-
 def remove_url(comment):
     return re.sub('(https?://)?(([a-zA-Z0-9]+)\.)+[a-zA-Z]{2,}(/[a-zA-Z0-9;/+\-%@,!^*&?:}{_=\\\]+)?(\.[a-zA-Z]+)?',
                   'url', comment)
@@ -74,11 +55,6 @@ class twitScrape():
             return -1
         # add code here to work with GUI pop-up
 
-
-scraper = twitScrape()
-usrname = "shakira"
-# scraper.getIndivTweets(usrname)
-print('No errors')
 usernames = ["BarackObama", "justinbieber", "katyperry", "TheEllenShow", "YouTube",
              "BillGates", "CNN", "elonmusk", "BrunoMars", "realmadrid", "Harry_Styles",
              "TheTattedNative", "MountainWest", "1matree", "Markiplier", "pixlpit",
@@ -102,20 +78,4 @@ testData = ["MountainWest", "1matree", "Markiplier", "pixlpit",
 #for user in usernames:
  #   scraper.getIndivTweets(user)
 
-# user = "TheEpic_Ace"
-# getIndivTweets(user)
-# streamTweet()
 
-# for user in user_list:
-#    user_id = user
-#    timeline1 = api.user_timeline(screen_name=user_id, count=5, tweet_mode='extended')
-#    for tweet in timeline1:
-#        print(user_id)
-#        print(tweet.full_text)
-#        print("\n")
-
-# timeline = api.user_timeline(screen_name=user_id, count=5, tweet_mode='extended')
-# for tweet in timeline:
-#    print(user_id)
-#    print(tweet.full_text)
-#    print("\n")
