@@ -36,6 +36,8 @@ def start_identification_reddit(user_list, text):
     #    user_profiles.append(pd.read_csv(path))
         
     # check if downloaded and if not download
+    user_list = [user for user in user_list if len(user) > 0]
+    print('userlist')
     for user in user_list:
         if user in downloaded_users or len(user) == 0:
             user_profiles.append(pd.read_csv(f'../corpora/reddit_corpus_csv/{user}.csv'))
