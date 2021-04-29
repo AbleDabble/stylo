@@ -268,8 +268,8 @@ class verification(QWidget):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Stylometric Verification"))
-        self.cUserOne.setText(_translate("Form", "Compare User One"))
-        self.cUserTwo.setText(_translate("Form", "Compare User Two"))
+        self.cUserOne.setText(_translate("Form", ""))
+        self.cUserTwo.setText(_translate("Form", ""))
         self.redditChecked.setText(_translate("Form", "Download Reddit Users"))
         self.twitterChecked.setText(_translate("Form", "Download Twitter Users"))
         self.testButton.setText(_translate("Form", "Test"))
@@ -277,7 +277,9 @@ class verification(QWidget):
 
     def testClicked(self):
         self.userArray = []
-
+        if (len(self.cUserOne.text()) == 0 or len(self.cUserTwo.text()) == 0):
+            self.showDialogue("Enter Two Usernames")
+            return 0
         if (self.redditChecked.isChecked()):
             print("downloading reddit")
             nltk.download("punkt")
@@ -306,6 +308,12 @@ class verification(QWidget):
     def showResults(self, userArray):
         self.window = QtWidgets.QMainWindow()
         self.ui = ResultsMenu(self.userArray, 2)
+        self.ui.setupUi(self.window)
+        self.window.show()
+    
+    def showDialogue(self, message):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = dialogue(message)
         self.ui.setupUi(self.window)
         self.window.show()
 
