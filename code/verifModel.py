@@ -38,6 +38,7 @@ def start_verification_reddit(user1, user2):
     curr_downloads = set([f[:-4] for f in os.listdir('../corpora/reddit_corpus/') if f.endswith('.txt')])
     if user2 not in curr_downloads:
         user1_comments = red_scraper.getUserComments(user1)
+        print('user1_comments type:', type(user1_comments))
         if type(user1_comments) == int:
             if user1_comments <= 0:
                 return user1_comments
@@ -46,6 +47,7 @@ def start_verification_reddit(user1, user2):
         profile2 = Profile(reddit_path + user2 + ".txt")
     if user1 not in curr_downloads:
         user2_comments = red_scraper.getUserComments(user2)
+        print('user2_comments type:', type(user2_comments))
         if type(user2_comments) == int:
             if user2_comments <= 0:
                 return user2_comments
