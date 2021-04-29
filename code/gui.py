@@ -13,7 +13,7 @@ except Exception as e:
     print("Some modules are missing  {}", format(e))
 from Twitterscrape import twitScrape
 from reddit_Scrape import redditScraper
-from verifModel import start_verification_reddit
+from verifModel import start_verification_reddit, start_verification_twitter
 from IdentModel import start_identification_reddit
 
 class Ui_MainWindow(QMainWindow):
@@ -280,11 +280,21 @@ class verification(QWidget):
         if (len(self.cUserOne.text()) == 0 or len(self.cUserTwo.text()) == 0):
             self.showDialogue("Enter Two Usernames")
             return 0
+
+        if(self.redditChecked.isChecked() and self.twitterChecked.isChecked()):
+            self.showDialogue("Select Reddit or Twitter")
+            return 0
+
         if (self.redditChecked.isChecked()):
             print("downloading reddit")
             nltk.download("punkt")
             self.result = start_verification_reddit(self.cUserOne.text(), self.cUserTwo.text())
-                    
+        
+        if (self.twitterChecked.isChecked()):
+            print("downloading twitter")
+            self.result = start_verification_twitter(self.cUserOne.text(), self.cUserTwo.text())
+            #todo start verification from twitter
+
         self.userArray.append(self.cUserOne.text())
         self.userArray.append(self.cUserTwo.text())
         if self.result == True:
@@ -292,14 +302,6 @@ class verification(QWidget):
         else:
             self.userArray.append("Users do not Match")
         print(self.userArray)
-        
-            
-        if (self.twitterChecked.isChecked()):
-            print("downloading twitter")
-            twitScrape().getIndivTweets(self.cUserOne.text())
-            twitScrape().getIndivTweets(self.cUserTwo.text())
-            #todo start verification from twitter
-
 
         #verify reddit
         self.showResults(self.userArray)
