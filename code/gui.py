@@ -182,8 +182,9 @@ class identification(QWidget):
             print("Downloading usernames from reddit")
             self.usersList = self.pullUsernames()
             self.textToCompare = self.identificationText.toPlainText()
-            if (countWords(self.textToCompare) < 350):
+            if (self.countWords(self.textToCompare) < 350):
                 self.showDialogue("Must have >350 words")
+            return 0
             print(self.textToCompare)
             print(self.usersList)
             self.stringMatch = start_identification_reddit(self.usersList, self.textToCompare)  
@@ -194,10 +195,12 @@ class identification(QWidget):
             #take username from input and run the function for reddit or twitter, download and save into text file by name, perform feature extraction with profile class.
             self.usersList = self.pullUsernames()
             self.textToCompare = self.identificationText.toPlainText()
+            if (self.countWords(self.textToCompare) < 350):
+                self.showDialogue("Must have >350 words")
+            return 0
             print("Downloading usernames from twitter")
         elif (self.redditChecked.isChecked() == False and self.twitterChecked.isChecked() == False):
-            self.userArray = ["Must select from Twitter or Reddit usernames"]
-            self.showResults(self.userArray)
+            self.showDialogue("Select Twitter/Reddit")
         
 
         #dowload main user and user one through seven, train the model on all seven users and the main user and try to predict which user has the greatest number out of each cycle.
@@ -219,6 +222,7 @@ class identification(QWidget):
         count = 0
         for word in words:
             count += 1
+        return count
 
 
     def showResults(self, userArray):
@@ -245,10 +249,10 @@ class verification(QWidget):
         self.cUserTwo.setGeometry(QtCore.QRect(10, 60, 241, 31))
         self.cUserTwo.setObjectName("cUserTwo")
         self.redditChecked = QtWidgets.QCheckBox(Form)
-        self.redditChecked.setGeometry(QtCore.QRect(10, 100, 131, 16))
+        self.redditChecked.setGeometry(QtCore.QRect(10, 100, 200, 16))
         self.redditChecked.setObjectName("redditChecked")
         self.twitterChecked = QtWidgets.QCheckBox(Form)
-        self.twitterChecked.setGeometry(QtCore.QRect(10, 120, 141, 17))
+        self.twitterChecked.setGeometry(QtCore.QRect(10, 120, 200, 17))
         self.twitterChecked.setObjectName("twitterChecked")
         self.testButton = QtWidgets.QPushButton(Form)
         self.testButton.setGeometry(QtCore.QRect(10, 150, 241, 31))
@@ -431,7 +435,7 @@ class dialogue(object):
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
-        printMessage(self.message)
+        self.printMessage(self.text)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
