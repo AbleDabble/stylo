@@ -13,7 +13,7 @@ import numpy as np
 import os
 
 reddit_path = "../corpora/reddit_corpus/"
-
+twitter_path = '../corpora/twitter_corpus/'
 
 def split_x_y(df, numpy=False):
     y = df["target"].copy()
@@ -36,20 +36,20 @@ def start_verification_reddit(user1, user2):
      TO-DO: find a better solution/return value for this'''
 
     curr_downloads = set([f[:-4] for f in os.listdir('../corpora/reddit_corpus/') if f.endswith('.txt')])
-    if user2 not in curr_downloads:
+    if user1 not in curr_downloads:
         user1_comments = red_scraper.getUserComments(user1)
         if user1_comments == 0:
             Exception(f'Problem downloading user {user1}')
         profile2 = Profile(user1_comments)
     else:
-        profile2 = Profile(reddit_path + user2 + ".txt")
-    if user1 not in curr_downloads:
+        profile2 = Profile(reddit_path + user1 + ".txt")
+    if user2 not in curr_downloads:
         user2_comments = red_scraper.getUserComments(user2)
         if user2_comments == 0:
             Exception(f'Problem downloading user {user2}')
-        profile1 = Profile(user2_comments, reddit_path + user2 + ".txt")
+        profile1 = Profile(user2_comments, reddit_path + user1 + ".txt")
     else:
-        profile1 = Profile(reddit_path + user1 + ".txt", reddit_path + user2 + ".txt")
+        profile1 = Profile(reddit_path + user2 + ".txt", reddit_path + user1 + ".txt")
 
     print("Creating Profile for user: ", user1)
     df_user1 = profile1.create_profile()
@@ -63,7 +63,6 @@ def start_verification_reddit(user1, user2):
     pipe.fit(x, y)
     user2_x, user2_y = split_x_y(df_user2, numpy=True)
     count = 0
-    print("Making up results")
     # for sample in user2_x:
     predictions = pipe.predict(user2_x)
     print(len(predictions))
@@ -91,16 +90,12 @@ def start_verification_twitter(user1, user2):
         user1_comments = twitScrape.getIndivTweets(user1)
         if user1_comments == 0:
             Exception(f'Problem downloading user {user1}')
-        profile2 = Profile(user1_comments, email_size=240)
-    else:
-        profile2 = Profile(reddit_path + user2 + ".txt")
+    profile2 = Profile(twitter_path + user1 + ".txt",email_size=240)
     if user1 not in curr_downloads:
         user2_comments = twitScrape.getIndivTweets(user2)
         if user2_comments == 0:
             Exception(f'Problem downloading user {user2}')
-        profile1 = Profile(user2_comments, reddit_path + user2 + ".txt",email_size=240)
-    else:
-        profile1 = Profile(reddit_path + user1 + ".txt", reddit_path + user2 + ".txt", email_size=240)
+    profile1 = Profile(twitter_path + user2 + ".txt", twitter_path + user1 + ".txt", email_size=240)
 
     print("Creating Profile for user: ", user1)
     df_user1 = profile1.create_profile()
@@ -114,7 +109,6 @@ def start_verification_twitter(user1, user2):
     pipe.fit(x, y)
     user2_x, user2_y = split_x_y(df_user2, numpy=True)
     count = 0
-    print("Making up results")
     # for sample in user2_x:
     predictions = pipe.predict(user2_x)
     print(len(predictions))
