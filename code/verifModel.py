@@ -86,14 +86,14 @@ def start_verification_twitter(user1, user2):
      TO-DO: find a better solution/return value for this'''
 
     curr_downloads = set([f[:-4] for f in os.listdir('../corpora/twitter_corpus/') if f.endswith('.txt')])
-    if user2 not in curr_downloads:
-        user1_comments = twitScrape.getIndivTweets(user1)
-        if user1_comments == 0:
+    if user1 not in curr_downloads:
+        user1_comments = tw.getIndivTweets(user1)
+        if user1_comments == -1:
             Exception(f'Problem downloading user {user1}')
     profile2 = Profile(twitter_path + user1 + ".txt",email_size=240)
-    if user1 not in curr_downloads:
-        user2_comments = twitScrape.getIndivTweets(user2)
-        if user2_comments == 0:
+    if user2 not in curr_downloads:
+        user2_comments = tw.getIndivTweets(user2)
+        if user2_comments == -1:
             Exception(f'Problem downloading user {user2}')
     profile1 = Profile(twitter_path + user2 + ".txt", twitter_path + user1 + ".txt", email_size=240)
 
