@@ -89,12 +89,12 @@ def start_verification_twitter(user1, user2):
     if user1 not in curr_downloads:
         user1_comments = tw.getIndivTweets(user1)
         if user1_comments == -1:
-            Exception(f'Problem downloading user {user1}')
+            return -1
     profile2 = Profile(twitter_path + user1 + ".txt",email_size=240)
     if user2 not in curr_downloads:
         user2_comments = tw.getIndivTweets(user2)
         if user2_comments == -1:
-            Exception(f'Problem downloading user {user2}')
+            return -1
     profile1 = Profile(twitter_path + user2 + ".txt", twitter_path + user1 + ".txt", email_size=240)
 
     print("Creating Profile for user: ", user1)
