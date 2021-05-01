@@ -34,6 +34,12 @@ class redditScraper():
         return re.sub('(https?://)?(([a-zA-Z0-9]+)\.)+[a-zA-Z]{2,}(/[a-zA-Z0-9;/+\-%@,!^*&?:}{_=\\\]+)?(\.[a-zA-Z]+)?',
                       'url', comment)
 
+    def slice_to_size(self, array, size):
+        a = 0
+        for i in range(len(array)):
+            a = a + len(array[i])
+        return array
+
     # Writes an array of comments to a file and saves a txt file
     # to the reddit corpus with the username as the title.
     # Returns a 1 if successful, 0 if any errors occurred
@@ -59,43 +65,38 @@ class redditScraper():
             reddit_user.redditor(username)
         except prawcore.exceptions.NotFound as e:
             print(e)
-
-        user_comment = []
+        # Need to split string at 17500 make sure nothing breaks
+        user_comment = ""
         user = reddit_user.redditor(username)
-
-        while len(user_comment) <= 50 and size < 17500:
-            try:
-                for comment in user.comments.new(limit=None):
-                    cur_comment = comment.body
-                    cur_comment = self.remove_url(cur_comment)
-                    #print(len(cur_comment))
-                    if size <= 17500:
-                        if len(cur_comment) > 350 and self.is_english(cur_comment):
-                            #print("Should be a vaild comment", len(cur_comment))
-                            size = size + len(cur_comment)
-                            user_comment.append(cur_comment)
-                    else:
-                        print('size', size)
-                        break
-            except prawcore.exceptions.NotFound as e:
-                print("\nCould not find user", username)
-                print(e)
-                return -1
-            except prawcore.exceptions.OAuthException as e:
-                print("\nAuthentication Error: Check reddit account credentials\n", e)
-                return -1
-            if len(user_comment) == 0:
-                break
+        try:
+            for comment in user.comments.new(limit=None):
+                cur_comment = comment.body
+                cur_comment = self.remove_url(cur_comment)
+                if len(user_comment) < 17500:
+                    if len(cur_comment) > 350 and self.is_english(cur_comment):
+                        print("Found Comment :\n", cur_comment)
+                        user_comment = user_comment + cur_comment
+                elif len(user_comment) > 17500:
+                    break;
+        except prawcore.exceptions.NotFound as e:
+            print("\nCould not find user", username)
+            print(e)
+            return -1
+        except prawcore.exceptions.OAuthException as e:
+            print("\nAuthentication Error: Check reddit account credentials\n", e)
+            return -1
 
         if len(user_comment) == 0:
             print("No comments found for user")
             return 0
         else:
-            path = self.writeComments(user_comment, username)
+            if len(user_comment) > 17500:
+                slice_user_comments = user_comment[:17500]
+                print("Sliced Array size: ", len(slice_user_comments))
+                path = self.writeComments(slice_user_comments, username)
+            else:
+                path = self.writeComments(user_comment, username)
             if path == -1:
                 return 0
             else:
-                print(user_comment)
-                print(len(user_comment))
-                print(size)
                 return path
