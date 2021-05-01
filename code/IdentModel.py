@@ -8,9 +8,11 @@ from EntropyDiscretization import EntropyDiscretization as ED
 from MIFS import MIFS
 from imblearn.pipeline import Pipeline
 from sklearn.preprocessing import MinMaxScaler
+from Twitterscrape import twitScrape
 import json
 
-PATH = '../corpora/reddit_corpus_csv/'
+REDDIT_PATH = '../corpora/reddit_corpus_csv/'
+TWITTER_PATH = '../corpora/twitter_corpus_csv'
 
 def split_x_y(df, numpy=False):
     y = df["target"].copy()
@@ -28,7 +30,7 @@ def start_identification_reddit(user_list, text):
         labels = json.load(f)
     
     # Create a list of already downloaded users
-    downloaded_users = [user[:-4] for user in os.listdir(PATH) if user.endswith('.csv')]
+    downloaded_users = [user[:-4] for user in os.listdir(REDDIT_PATH) if user.endswith('.csv')]
     #print('Downloaded_users', downloaded_users)
     # Read and add users from already downloaded
     #for user in downloaded_users[:10]:
@@ -78,6 +80,48 @@ def start_identification_reddit(user_list, text):
     choice = labels['labels'][str(prediction)]
     print('Best candidate', choice)
     return choice
+
+def start_identification_twitter(user_list, text):
+    tw = twitScrape()
+    user_profiles = []
+    with open('../config/labels_twitter.json', 'r') as f: # TODO create json for twitter
+        labels = json.load(f)
+    downloaded_users = [user[:-4] for user in os.listdir(TWITTER_PATH) if user.endswith('.csv')]
+    user_list = [user for user in user_list if len(user) > 0]
+    for user in user_list:
+        if user in downloaded_users:
+            user_profiles.append(pd.read_csv(f'{TWITTER_PATH}{user}.csv'))
+            continue
+        tw.getIndivTweets(user)
+        user_path = TWITTER_PATH + user + '.txt'
+        ip = IdentProfile(user_path, labels['new_label'], email_size=240)
+        labels['labels'][labels['new_label']] = user
+        labels['new_label'] += 1
+        df = ip.create_profile()
+        df.to_csv(f'../corpora/twitter_corpus_csv/{user}.csv', index=False)
+        user_profiles.append(df.copy())
+        print('created new user profile for ', user)
+    with open('../config/labels_twitter.json', 'w') as f:
+        json.dump(labels, f)
+    df = pd.concat(user_profiles, ignore_index=True)
+    x, y = split_x_y(df, numpy=True)
+    pipe = Pipeline([
+            ('MinMaxScaler', MinMaxScaler()),
+            ('SVC', LinearSVC(C=0.5, penalty='l2', dual=True))
+            ]) # type: ignore
+    print('Beginning Training')
+    ip = IdentText('', text, email_size=240)
+    text_df = ip.create_profile()
+    x_test = text_df.to_numpy()
+    prediction = pipe.predict(x_test)
+    predition = prediction[0]
+    print('prediction', prediction)
+    choice = labels['labels'][str(prediction)]
+    print('Best candidate', choice)
+    return choice
+
+
+        
 
 
 
