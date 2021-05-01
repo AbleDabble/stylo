@@ -163,6 +163,7 @@ class identification(QWidget):
         self.retranslateUi(Identification)
         QtCore.QMetaObject.connectSlotsByName(Identification)
 
+        #Link the Test Button with appropriate function
         self.TestButton.clicked.connect(self.testClicked)
 
     def retranslateUi(self, Identification):
@@ -176,7 +177,8 @@ class identification(QWidget):
         #connect the buttons to their functions
 
     def testClicked(self):
-        print("testClicked")
+        print("Test Clicked")
+
         #check if reddit and twitter are set to download
         if self.redditChecked.isChecked() == True:
             print("Downloading usernames from reddit")
@@ -199,8 +201,8 @@ class identification(QWidget):
                 self.showDialogue("Must have >350 words")
             return 0
             print("Downloading usernames from twitter")
-        elif (self.redditChecked.isChecked() == False and self.twitterChecked.isChecked() == False):
-            self.showDialogue("Select Twitter/Reddit")
+        elif ((self.redditChecked.isChecked() == False and self.twitterChecked.isChecked() == False) or (self.redditChecked.isChecked() and self.twitterChecked.isChecked())):
+            self.showDialogue("Select Twitter or Reddit")
         
 
         #dowload main user and user one through seven, train the model on all seven users and the main user and try to predict which user has the greatest number out of each cycle.
@@ -277,11 +279,12 @@ class verification(QWidget):
 
     def testClicked(self):
         self.userArray = []
+        self.result = -1
         if (len(self.cUserOne.text()) == 0 or len(self.cUserTwo.text()) == 0):
             self.showDialogue("Enter Two Usernames")
             return 0
 
-        if(self.redditChecked.isChecked() and self.twitterChecked.isChecked()):
+        if((self.redditChecked.isChecked() and self.twitterChecked.isChecked()) or (self.redditChecked.isChecked() == False and self.twitterChecked.isChecked() == False)):
             self.showDialogue("Select Reddit or Twitter")
             return 0
 
