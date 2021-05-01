@@ -47,6 +47,9 @@ def start_identification_reddit(user_list, text):
             continue
         try:
             path = rs.getUserComments(user)
+            if type(path) == int:
+                print('problem downloading user', user)
+                continue
             ip = IdentProfile(path, labels['new_label'])
             labels['labels'][labels['new_label']]= user
             labels['new_label'] += 1
@@ -96,7 +99,10 @@ def start_identification_twitter(user_list, text):
         if user in downloaded_users:
             user_profiles.append(pd.read_csv(f'{TWITTER_PATH}{user}.csv'))
             continue
-        tw.getIndivTweets(user)
+        r = tw.getIndivTweets(user)
+        if r <= -1:
+            continue
+
         user_path = TWITTER_PATH + user + '.txt'
         ip = IdentProfile(user_path, labels['new_label'], email_size=240)
         labels['labels'][labels['new_label']] = user
