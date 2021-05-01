@@ -12,7 +12,7 @@ from Twitterscrape import twitScrape
 import json
 
 REDDIT_PATH = '../corpora/reddit_corpus_csv/'
-TWITTER_PATH = '../corpora/twitter_corpus_csv'
+TWITTER_PATH = '../corpora/twitter_corpus_csv/'
 
 def split_x_y(df, numpy=False):
     y = df["target"].copy()
@@ -24,6 +24,8 @@ def split_x_y(df, numpy=False):
 
 
 def start_identification_reddit(user_list, text):
+    if len(text) < 350:
+        print('Text Length must be 350 characters. Currently:', len(text))
     rs = redditScraper()
     user_profiles = []
     with open('../config/labels.json', 'r') as f:
@@ -39,7 +41,6 @@ def start_identification_reddit(user_list, text):
         
     # check if downloaded and if not download
     user_list = [user for user in user_list if len(user) > 0]
-    print('userlist')
     for user in user_list:
         if user in downloaded_users or len(user) == 0:
             user_profiles.append(pd.read_csv(f'../corpora/reddit_corpus_csv/{user}.csv'))
@@ -82,9 +83,12 @@ def start_identification_reddit(user_list, text):
     return choice
 
 def start_identification_twitter(user_list, text):
+    if len(text) < 240:
+        print('Text Length must be 240 characters. Currently:', len(text))
+        return -1
     tw = twitScrape()
     user_profiles = []
-    with open('../config/labels_twitter.json', 'r') as f: # TODO create json for twitter
+    with open('../config/labels_twitter.json', 'r') as f:
         labels = json.load(f)
     downloaded_users = [user[:-4] for user in os.listdir(TWITTER_PATH) if user.endswith('.csv')]
     user_list = [user for user in user_list if len(user) > 0]
@@ -110,11 +114,12 @@ def start_identification_twitter(user_list, text):
             ('SVC', LinearSVC(C=0.5, penalty='l2', dual=True))
             ]) # type: ignore
     print('Beginning Training')
+    pipe.fit(x, y)
     ip = IdentText('', text, email_size=240)
     text_df = ip.create_profile()
     x_test = text_df.to_numpy()
     prediction = pipe.predict(x_test)
-    predition = prediction[0]
+    prediction = prediction[0]
     print('prediction', prediction)
     choice = labels['labels'][str(prediction)]
     print('Best candidate', choice)
