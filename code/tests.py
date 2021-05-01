@@ -12,6 +12,23 @@ with open(reddit_config_path, 'r') as f:
     reddit_config = json.load(f)
 
 
+
+print('IDENTIFICATION TWITTER')
+
+text = 'I am staring down the empty abyss of life and have lost all meaning. Penniless and at the end of my supply of the drug which alone gives life meaning, I will casy myself from this garret window to the squalid street below. More words and characters. I think this is more than enoguh by to be sure I am going to continue to write more characters. Until I have a lot of characters. '
+
+start_identification_twitter(['CNN', 'Adele', 'garyvee', 'jimcramer'], text)
+
+print('REDDIT IDENTIFICATION')
+
+
+text = 'I am staring down the empty abyss of life and have lost all meaning. Penniless and at the end of my supply of the drug which alone gives life meaning, I will casy myself from this garret window to the squalid street below. Do not judge me for my addiction to morphine. It is my hope that after these hastily scrawled pages that you understand. Need more characters holy shit. '
+
+start_identification_reddit(['Baerog', '4Darco','artchang','externality'], text)
+
+
+
+
 print('TWITTER VERIFICATION')
 start_verification_twitter('CNN', 'jimcramer')
 
@@ -44,20 +61,5 @@ except OSError:
 
 with open(reddit_config_path, 'w') as f:
     json.dump(reddit_config, f)
-
-
-print('IDENTIFICATION TWITTER')
-
-text = 'I am staring down the empty abyss of life and have lost all meaning. Penniless and at the end of my supply of the drug which alone gives life meaning, I will casy myself from this garret window to the squalid street below'
-
-start_identification_twitter(['CNN', 'Adele', 'garyvee', 'jimcramer'], text)
-
-print('REDDIT IDENTIFICATION')
-
-
-text = 'I am staring down the empty abyss of life and have lost all meaning. Penniless and at the end of my supply of the drug which alone gives life meaning, I will casy myself from this garret window to the squalid street below. Do not judge me for my addiction to morphine. It is my hope that after these hastily scrawled pages that you understand'
-
-start_identification_reddit(['Baerog', '4Darco','artchang','externality'], text)
-
 
 

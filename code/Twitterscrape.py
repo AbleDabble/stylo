@@ -49,7 +49,7 @@ class twitScrape():
                     break
                 with io.open(save_path, "w", encoding="utf-8") as w:
                     w.write(all_tweets[:240*50])
-        except Exception:
+        except:
             usercheck = False
             print("User " + username + " not found or Tweets don't exist")
             return -1
