@@ -89,7 +89,7 @@ class identification(QWidget):
         Identification.setObjectName("Identification")
         Identification.resize(469, 559)
         self.label = QtWidgets.QLabel(Identification)
-        self.label.setGeometry(QtCore.QRect(20, 330, 261, 21))
+        self.label.setGeometry(QtCore.QRect(20, 330, 400, 21))
         font = QtGui.QFont()
         font.setPointSize(16)
         self.label.setFont(font)
@@ -168,7 +168,7 @@ class identification(QWidget):
     def retranslateUi(self, Identification):
         _translate = QtCore.QCoreApplication.translate
         Identification.setWindowTitle(_translate("Identification", "Form"))
-        self.label.setText(_translate("Identification", "Enter Text to Identify Here (>350 Characters Only"))
+        self.label.setText(_translate("Identification", "Enter Text to Identify (>350 Characters)"))
         self.label_2.setText(_translate("Identification", "Enter Probable Users Here"))
         self.TestButton.setText(_translate("Identification", "Test"))
         self.redditChecked.setText(_translate("Identification", "Download Usernames via Reddit"))
