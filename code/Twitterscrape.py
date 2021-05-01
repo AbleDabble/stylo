@@ -36,6 +36,26 @@ class twitScrape():
         usercheck = True
 
         try:
+            timeline = api.user_timeline(screen_name=username, count=50, tweet_mode='extended')
+            user_tweets = ''
+            while len(user_tweets) < 240 * 50:
+                if len(timeline) == 0:
+                    print('not enough tweets')
+                    return -1
+                for tweet in timeline:
+                    user_tweets += remove_url(tweet.full_text + ' ')
+                    last_tweet = tweet.id - 1
+                timeline = api.user_timeline(screen_name=username, count=50, tweet_mode='extended', max_id=last_tweet)
+            with io.open(save_path, 'w', encoding='utf-8') as w:
+                w.write(user_tweets[:240:50])
+            return
+        except:
+            print('Failed to find user')
+            return -1
+                    
+'''
+
+        try:
             timeline2 = api.user_timeline(screen_name=username, count=50, tweet_mode='extended')
             all_tweets = ''
             while len(all_tweets) < 250 * 50:
@@ -47,8 +67,8 @@ class twitScrape():
                 #save += tweets.full_text
                 if count >= 60:
                     break
-                with io.open(save_path, "w", encoding="utf-8") as w:
-                    w.write(all_tweets[:240*50])
+            with io.open(save_path, "w", encoding="utf-8") as w:
+                w.write(all_tweets[:240*50])
         except:
             usercheck = False
             print("User " + username + " not found or Tweets don't exist")
@@ -78,4 +98,4 @@ testData = ["MountainWest", "1matree", "Markiplier", "pixlpit",
 #for user in usernames:
  #   scraper.getIndivTweets(user)
 
-
+'''
