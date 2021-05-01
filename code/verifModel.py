@@ -142,14 +142,14 @@ def start_verification_twitter(user1, user2):
             Exception(f'Problem downloading user {user1}')
         profile2 = Profile(user1_comments, email_size=240)
     else:
-        profile2 = Profile(reddit_path + user2 + ".txt")
+        profile2 = Profile(twitter_path + user2 + ".txt")
     if user1 not in curr_downloads:
         user2_comments = twitScrape.getIndivTweets(user2)
         if user2_comments == -1:
             Exception(f'Problem downloading user {user2}')
-        profile1 = Profile(user2_comments, reddit_path + user2 + ".txt",email_size=240)
+        profile1 = Profile(user2_comments, twitter_path + user2 + ".txt",email_size=240)
     else:
-        profile1 = Profile(reddit_path + user1 + ".txt", reddit_path + user2 + ".txt", email_size=240)
+        profile1 = Profile(twitter_path + user1 + ".txt", twitter_path + user2 + ".txt", email_size=240)
 
     print("Creating Profile for user: ", user1)
     df_user1 = profile1.create_profile()
