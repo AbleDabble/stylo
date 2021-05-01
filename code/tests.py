@@ -17,7 +17,7 @@ print('IDENTIFICATION TWITTER')
 
 text = 'I am staring down the empty abyss of life and have lost all meaning. Penniless and at the end of my supply of the drug which alone gives life meaning, I will casy myself from this garret window to the squalid street below. More words and characters. I think this is more than enoguh by to be sure I am going to continue to write more characters. Until I have a lot of characters. '
 
-start_identification_twitter(['CNN', 'Adele', 'garyvee', 'jimcramer'], text)
+start_identification_twitter(['CNN', 'Adele', 'garyvee', 'jimkramer'], text)
 
 print('REDDIT IDENTIFICATION')
 
