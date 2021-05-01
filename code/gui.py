@@ -187,7 +187,7 @@ class identification(QWidget):
             return 0
             print(self.textToCompare)
             print(self.usersList)
-            self.stringMatch = start_identification_reddit(self.usersList, self.textToCompare)  
+            self.stringMatch = start_identification_reddit(self.usersList, self.textToCompare)
             self.showResults(self.stringMatch)
             # change to twitter self.stringMatch = start_identification_reddit(self.usersList, self.textToCompare)
             #use william's function that takes array of users and a text
@@ -297,9 +297,11 @@ class verification(QWidget):
 
         self.userArray.append(self.cUserOne.text())
         self.userArray.append(self.cUserTwo.text())
-        if self.result == True:
+        if type(self.result) == int:
+            self.userArray.append("The user doesn't exist, or there is not enough data for the user")
+        elif (self.result == True):
             self.userArray.append("Users Match")
-        else:
+        elif (self.result == False):
             self.userArray.append("Users do not Match")
         print(self.userArray)
 
