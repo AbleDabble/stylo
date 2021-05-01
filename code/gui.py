@@ -13,7 +13,7 @@ except Exception as e:
     print("Some modules are missing  {}", format(e))
 from Twitterscrape import twitScrape
 from reddit_Scrape import redditScraper
-from verifModel import start_verification_reddit
+from verifModel import start_verification_reddit, start_verification_twitter
 from IdentModel import start_identification_reddit
 
 class Ui_MainWindow(QMainWindow):
@@ -89,7 +89,7 @@ class identification(QWidget):
         Identification.setObjectName("Identification")
         Identification.resize(469, 559)
         self.label = QtWidgets.QLabel(Identification)
-        self.label.setGeometry(QtCore.QRect(20, 330, 261, 21))
+        self.label.setGeometry(QtCore.QRect(20, 330, 400, 21))
         font = QtGui.QFont()
         font.setPointSize(16)
         self.label.setFont(font)
@@ -163,12 +163,13 @@ class identification(QWidget):
         self.retranslateUi(Identification)
         QtCore.QMetaObject.connectSlotsByName(Identification)
 
+        #Link the Test Button with appropriate function
         self.TestButton.clicked.connect(self.testClicked)
 
     def retranslateUi(self, Identification):
         _translate = QtCore.QCoreApplication.translate
         Identification.setWindowTitle(_translate("Identification", "Form"))
-        self.label.setText(_translate("Identification", "Enter Text to Identify Here (>350 Characters Only"))
+        self.label.setText(_translate("Identification", "Enter Text to Identify (>350 Characters)"))
         self.label_2.setText(_translate("Identification", "Enter Probable Users Here"))
         self.TestButton.setText(_translate("Identification", "Test"))
         self.redditChecked.setText(_translate("Identification", "Download Usernames via Reddit"))
@@ -176,7 +177,8 @@ class identification(QWidget):
         #connect the buttons to their functions
 
     def testClicked(self):
-        print("testClicked")
+        print("Test Clicked")
+
         #check if reddit and twitter are set to download
         if self.redditChecked.isChecked() == True:
             print("Downloading usernames from reddit")
@@ -187,7 +189,7 @@ class identification(QWidget):
             return 0
             print(self.textToCompare)
             print(self.usersList)
-            self.stringMatch = start_identification_reddit(self.usersList, self.textToCompare)  
+            self.stringMatch = start_identification_reddit(self.usersList, self.textToCompare)
             self.showResults(self.stringMatch)
             # change to twitter self.stringMatch = start_identification_reddit(self.usersList, self.textToCompare)
             #use william's function that takes array of users and a text
@@ -199,8 +201,8 @@ class identification(QWidget):
                 self.showDialogue("Must have >350 words")
             return 0
             print("Downloading usernames from twitter")
-        elif (self.redditChecked.isChecked() == False and self.twitterChecked.isChecked() == False):
-            self.showDialogue("Select Twitter/Reddit")
+        elif ((self.redditChecked.isChecked() == False and self.twitterChecked.isChecked() == False) or (self.redditChecked.isChecked() and self.twitterChecked.isChecked())):
+            self.showDialogue("Select Twitter or Reddit")
         
 
         #dowload main user and user one through seven, train the model on all seven users and the main user and try to predict which user has the greatest number out of each cycle.
@@ -268,8 +270,8 @@ class verification(QWidget):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Stylometric Verification"))
-        self.cUserOne.setText(_translate("Form", "Compare User One"))
-        self.cUserTwo.setText(_translate("Form", "Compare User Two"))
+        self.cUserOne.setText(_translate("Form", ""))
+        self.cUserTwo.setText(_translate("Form", ""))
         self.redditChecked.setText(_translate("Form", "Download Reddit Users"))
         self.twitterChecked.setText(_translate("Form", "Download Twitter Users"))
         self.testButton.setText(_translate("Form", "Test"))
@@ -277,27 +279,34 @@ class verification(QWidget):
 
     def testClicked(self):
         self.userArray = []
+        self.result = -1
+        if (len(self.cUserOne.text()) == 0 or len(self.cUserTwo.text()) == 0):
+            self.showDialogue("Enter Two Usernames")
+            return 0
+
+        if((self.redditChecked.isChecked() and self.twitterChecked.isChecked()) or (self.redditChecked.isChecked() == False and self.twitterChecked.isChecked() == False)):
+            self.showDialogue("Select Reddit or Twitter")
+            return 0
 
         if (self.redditChecked.isChecked()):
             print("downloading reddit")
             nltk.download("punkt")
             self.result = start_verification_reddit(self.cUserOne.text(), self.cUserTwo.text())
-                    
-        self.userArray.append(self.cUserOne.text())
-        self.userArray.append(self.cUserTwo.text())
-        if self.result == True:
-            self.userArray.append("Users Match")
-        else:
-            self.userArray.append("Users do not Match")
-        print(self.userArray)
         
-            
         if (self.twitterChecked.isChecked()):
             print("downloading twitter")
-            twitScrape().getIndivTweets(self.cUserOne.text())
-            twitScrape().getIndivTweets(self.cUserTwo.text())
+            self.result = start_verification_twitter(self.cUserOne.text(), self.cUserTwo.text())
             #todo start verification from twitter
 
+        self.userArray.append(self.cUserOne.text())
+        self.userArray.append(self.cUserTwo.text())
+        if type(self.result) == int:
+            self.userArray.append("The user doesn't exist, or there is not enough data for the user")
+        elif (self.result == True):
+            self.userArray.append("Users Match")
+        elif (self.result == False):
+            self.userArray.append("Users do not Match")
+        print(self.userArray)
 
         #verify reddit
         self.showResults(self.userArray)
@@ -306,6 +315,12 @@ class verification(QWidget):
     def showResults(self, userArray):
         self.window = QtWidgets.QMainWindow()
         self.ui = ResultsMenu(self.userArray, 2)
+        self.ui.setupUi(self.window)
+        self.window.show()
+    
+    def showDialogue(self, message):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = dialogue(message)
         self.ui.setupUi(self.window)
         self.window.show()
 
