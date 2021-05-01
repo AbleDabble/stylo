@@ -14,7 +14,7 @@ except Exception as e:
 from Twitterscrape import twitScrape
 from reddit_Scrape import redditScraper
 from verifModel import start_verification_reddit, start_verification_twitter
-from IdentModel import start_identification_reddit
+from IdentModel import start_identification_reddit, start_identification_twitter
 
 class Ui_MainWindow(QMainWindow):
     #initialize main window
@@ -89,7 +89,7 @@ class identification(QWidget):
         Identification.setObjectName("Identification")
         Identification.resize(469, 559)
         self.label = QtWidgets.QLabel(Identification)
-        self.label.setGeometry(QtCore.QRect(20, 330, 400, 21))
+        self.label.setGeometry(QtCore.QRect(20, 330, 450, 21))
         font = QtGui.QFont()
         font.setPointSize(16)
         self.label.setFont(font)
@@ -155,10 +155,10 @@ class identification(QWidget):
         self.TestButton.setFont(font)
         self.TestButton.setObjectName("TestButton")
         self.redditChecked = QtWidgets.QCheckBox(Identification)
-        self.redditChecked.setGeometry(QtCore.QRect(280, 270, 181, 17))
+        self.redditChecked.setGeometry(QtCore.QRect(280, 270, 250, 17))
         self.redditChecked.setObjectName("redditChecked")
         self.twitterChecked = QtWidgets.QCheckBox(Identification)
-        self.twitterChecked.setGeometry(QtCore.QRect(280, 290, 181, 17))
+        self.twitterChecked.setGeometry(QtCore.QRect(280, 290, 250, 17))
         self.twitterChecked.setObjectName("twitterChecked")
         self.retranslateUi(Identification)
         QtCore.QMetaObject.connectSlotsByName(Identification)
@@ -174,19 +174,21 @@ class identification(QWidget):
         self.TestButton.setText(_translate("Identification", "Test"))
         self.redditChecked.setText(_translate("Identification", "Download Usernames via Reddit"))
         self.twitterChecked.setText(_translate("Identification", "Download Usernames via Twitter"))
-        #connect the buttons to their functions
 
     def testClicked(self):
         print("Test Clicked")
 
         #check if reddit and twitter are set to download
+        if ((self.redditChecked.isChecked() == False and self.twitterChecked.isChecked() == False) or (self.redditChecked.isChecked() and self.twitterChecked.isChecked())):
+            self.showDialogue("Select Twitter or Reddit")
+            return 0
         if self.redditChecked.isChecked() == True:
             print("Downloading usernames from reddit")
             self.usersList = self.pullUsernames()
             self.textToCompare = self.identificationText.toPlainText()
             if (self.countWords(self.textToCompare) < 350):
                 self.showDialogue("Must have >350 words")
-            return 0
+                return 0
             print(self.textToCompare)
             print(self.usersList)
             self.stringMatch = start_identification_reddit(self.usersList, self.textToCompare)
@@ -199,10 +201,13 @@ class identification(QWidget):
             self.textToCompare = self.identificationText.toPlainText()
             if (self.countWords(self.textToCompare) < 350):
                 self.showDialogue("Must have >350 words")
-            return 0
+                return 0
+            print(self.textToCompare)
+            print(self.usersList)
+            self.stringMatch = start_identification_twitter(self.usersList, self.textToCompare)
+            self.showResults(self.stringMatch)
             print("Downloading usernames from twitter")
-        elif ((self.redditChecked.isChecked() == False and self.twitterChecked.isChecked() == False) or (self.redditChecked.isChecked() and self.twitterChecked.isChecked())):
-            self.showDialogue("Select Twitter or Reddit")
+    
         
 
         #dowload main user and user one through seven, train the model on all seven users and the main user and try to predict which user has the greatest number out of each cycle.
@@ -216,6 +221,7 @@ class identification(QWidget):
         Users.append(self.user5.toPlainText())
         Users.append(self.user6.toPlainText())
         Users.append(self.user7.toPlainText())
+        Users = [u for u in Users if len(u) > 0]
         print(Users)
         return Users
         #handle edge case of missing/blank users
@@ -355,6 +361,9 @@ class profiling(QWidget):
         self.profileButton.setText(_translate("Form", "Generate Profile"))
     
     def profilingTestClicked(self):
+        if ((self.redditChecked.isChecked() == False and self.twitterChecked.isChecked() == False) or (self.redditChecked.isChecked() and self.twitterChecked.isChecked())):
+            self.showDialogue("Select Twitter or Reddit")
+            return 0
         if(self.twitterChecked.isChecked()):
             print(self.username.text())
             twitScrape().getIndivTweets(self.username.text())
@@ -416,9 +425,10 @@ class ResultsMenu(QWidget):
         ResultsMenu.setWindowTitle(_translate("ResultsMenu", "Results Menu"))
 
     def printDataIdentification(self, dataArray):
-        for user in dataArray:
-            self.textEdit.append(user)
-            print(user)
+        statement = "The most likely match is: "
+        self.user = dataArray
+        self.textEdit.append(statement + self.user)
+        print(self.user)
     
     def printDataVerification(self, dataArray):
         for user in dataArray:
