@@ -147,4 +147,4 @@ corpora/reddit_corpus/*.csv
 corpora/twitter_corpus/*.csv
 corpora/twitter_corpus/*.txt
 
-code/gui-ux/
+code/gui-ux/*
