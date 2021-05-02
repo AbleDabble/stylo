@@ -24,8 +24,7 @@ sdist/
 var/
 wheels/
 share/python-wheels/
-*.egg-info/
-.installed.cfg
+*.egg-info/ .installed.cfg
 *.egg
 MANIFEST
 
@@ -44,9 +43,7 @@ htmlcov/
 .tox/
 .nox/
 .coverage
-.coverage.*
-.cache
-nosetests.xml
+.coverage.* .cache nosetests.xml
 coverage.xml
 *.cover
 *.py,cover
@@ -144,8 +141,10 @@ cython_debug/
 # Ignore config file with secret tokens
 config/config.json
 config/labels_twitter.json
-corpora/reddit_corpus_csv/*
-corpora/reddit_corpus/*
-corpora/*
+config/labels.json
+corpora/reddit_corpus_csv/*.csv
+corpora/reddit_corpus/*.csv
+corpora/twitter_corpus/*.csv
+corpora/twitter_corpus/*.txt
 
 code/gui-ux/
