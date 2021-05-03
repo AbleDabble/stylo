@@ -26,6 +26,7 @@ def split_x_y(df, numpy=False):
 def start_identification_reddit(user_list, text):
     if len(text) < 350:
         print('Text Length must be 350 characters. Currently:', len(text))
+        return -1
     rs = redditScraper()
     user_profiles = []
     with open('../config/labels.json', 'r') as f:
@@ -33,12 +34,7 @@ def start_identification_reddit(user_list, text):
     
     # Create a list of already downloaded users
     downloaded_users = [user[:-4] for user in os.listdir(REDDIT_PATH) if user.endswith('.csv')]
-    #print('Downloaded_users', downloaded_users)
-    # Read and add users from already downloaded
-    #for user in downloaded_users[:10]:
-    #    path = PATH + user + '.csv'
-    #    user_profiles.append(pd.read_csv(path))
-        
+       
     # check if downloaded and if not download
     user_list = [user for user in user_list if len(user) > 0]
     for user in user_list:
@@ -132,9 +128,3 @@ def start_identification_twitter(user_list, text):
     print('Best candidate', choice)
     return choice
 
-
-        
-
-
-
-#start_identification_reddit(['Baerog', '4Darco', 'ScrotumTotums', 'OrionLax'],"This is a text block. This should be about 350 characters and probably will not be that large. Therefor it will be probably be smaller or maybe even bigger I don't know. It is hard to tell if this is 350 characters. More words and more text and more and more and more. This is the way things are go go. Power puff girls. There is more letters to add. Now we will continue to add more letters. This will have more letters and characters. There need to be a lot of fucking characters. How about that. There is this thing and it works so well. IT works GREAT. IT WORKS AMAZING.")
