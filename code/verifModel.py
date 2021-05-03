@@ -93,16 +93,16 @@ def start_verification_twitter(user1, user2):
     curr_downloads = set([f[:-4] for f in os.listdir('../corpora/twitter_corpus/') if f.endswith('.txt')])
     if user2 not in curr_downloads:
         print('downloading user', user2)
-        user1_comments = tw.getIndivTweets(user2)
-        if user1_comments == -1:
+        user2_comments = tw.getIndivTweets(user2)
+        if user2_comments == -1:
             return -1
         profile2 = Profile(twitter_path + user2 + '.txt', email_size=240)
     else:
         profile2 = Profile(twitter_path + user2 + ".txt", email_size=240)
     if user1 not in curr_downloads:
         print('downloading user', user1)
-        user2_comments = tw.getIndivTweets(user1)
-        if user2_comments == -1:
+        user1_comments = tw.getIndivTweets(user1)
+        if user1_comments == -1:
             return -1
         profile1 = Profile(twitter_path + user1 + '.txt', twitter_path + user2 + ".txt",email_size=240)
     else:

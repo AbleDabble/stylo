@@ -95,6 +95,7 @@ def start_identification_twitter(user_list, text):
         labels = json.load(f)
     downloaded_users = [user[:-4] for user in os.listdir(TWITTER_PATH) if user.endswith('.csv')]
     user_list = [user for user in user_list if len(user) > 0]
+    print('checking user_profiles for downloaded users')
     for user in user_list:
         if user in downloaded_users:
             user_profiles.append(pd.read_csv(f'{TWITTER_PATH}{user}.csv'))

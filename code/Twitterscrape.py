@@ -47,7 +47,7 @@ class twitScrape():
                     last_tweet = tweet.id - 1
                 timeline = api.user_timeline(screen_name=username, count=50, tweet_mode='extended', max_id=last_tweet)
             with io.open(save_path, 'w', encoding='utf-8') as w:
-                w.write(user_tweets[:240:50])
+                w.write(user_tweets[:240*50])
             return
         except:
             print('Failed to find user')
