@@ -3,12 +3,12 @@ from sklearn.svm import LinearSVC, SVC
 from EntropyDiscretization import EntropyDiscretization as ED
 from MIFS import MIFS
 from imblearn.over_sampling import RandomOverSampler
-from imblearn.pipeline import Pipeline
 from MIFS import MIFS
 from sklearn.pipeline import Pipeline
 from reddit_Scrape import redditScraper
 from sklearn.preprocessing import MinMaxScaler
 from Twitterscrape import twitScrape
+from VerifProfile import VerifProfile
 import numpy as np
 import os
 
@@ -23,110 +23,78 @@ def split_x_y(df, numpy=False):
         y = y.to_numpy()
     return x, y
 
+def print_progress(stage, message, num_stages=4):
+    out = '[' + '=' * stage + ' ' * (num_stages - stage) + '] ' + message
+    print(' ' * 80, end='\r')
+    if stage == num_stages: print(out, end='\r')
+    else: print(out)
+
+def start_verification(user1, user2, downloader, root_corpus, comment_size):
+    '''This method starts the user verification model, trains it and comapres the two users to
+    determine if they are the same.
+
+    Returns: True if users are the same
+    Returns: False if the user are not the same
+    '''
+    print_progress(0, '')
+    curr_downloads = set([f[:-4] for f in os.listdir(root_corpus) if f.endswith('.txt')])
+    def download_user(user):
+        if user not in curr_downloads:
+            print_progress(0, f'Downloading User {user}')
+            r = downloader(user)
+            if type(r) == int and r < 1:
+                print(f'Download for user {user} failed')
+                return r
+            return 1
+        else: return 1
+
+    if download_user(user1) < 1: return -1
+    if download_user(user2) < 1: return -1
+
+    user1_path = root_corpus + user1 + ".txt"
+    user2_path = root_corpus + user2 + ".txt"
+
+    print_progress(1, f'Generating Profiles for users {user1} and {user2}')
+
+    verifier = VerifProfile(user1_path, user2_path, email_size=comment_size)
+    train_df, test_df = verifier.create_profile()
+    x_train, y_train = split_x_y(train_df, numpy=True)
+    
+    # Create the pipeline for the data
+    pipe = Pipeline([
+        ("MinMaxScaler", MinMaxScaler()),
+        ('ED', ED()),
+        ('MIFS', MIFS()),
+        ('SVC', SVC(kernel='poly', class_weight={0: 1, 1: 40}, degree=3))
+        ]) #type: ignore
+    # Train the data
+    print_progress(2, 'Training Model')
+    pipe.fit(x_train, y_train)
+    x_test = test_df.to_numpy()
+
+    print_progress(3, 'Comparing Users')
+
+    predictions = pipe.predict(x_test)
+    count = np.count_nonzero(predictions)
+
+    likelihood = count/len(predictions)
+    print_progress(4, f'Proportion of comments that match: {likelihood}')
+
+    if likelihood < 0.85:
+        return False
+    else:
+        return True
 
 def start_verification_reddit(user1, user2):
-    '''This method starts the user verification model, trains it and comapres the two users to
-    determine if they are the same.
-
-    Returns: True if users are the same
-    Returns: False if the user are not the same
-    '''
-    red_scraper = redditScraper()
-    '''If the users comment file cannot be genterated then return False
-     TO-DO: find a better solution/return value for this'''
-
-    curr_downloads = set([f[:-4] for f in os.listdir('../corpora/reddit_corpus/') if f.endswith('.txt')])
-    if user1 not in curr_downloads:
-        user1_comments = red_scraper.getUserComments(user1)
-        print('user1_comments type:', type(user1_comments))
-        if type(user1_comments) == int:
-            if user1_comments <= 0:
-                return user1_comments
-        profile2 = Profile(user1_comments)
-    else:
-        profile2 = Profile(reddit_path + user1 + ".txt")
-    if user2 not in curr_downloads:
-        user2_comments = red_scraper.getUserComments(user2)
-        print('user2_comments type:', type(user2_comments))
-        if type(user2_comments) == int:
-            if user2_comments <= 0:
-                return user2_comments
-        profile1 = Profile(user2_comments, reddit_path + user2 + ".txt")
-    else:
-        profile1 = Profile(reddit_path + user2 + ".txt", reddit_path + user1 + ".txt")
-
-    print("Creating Profile for user: ", user1)
-    df_user1 = profile1.create_profile()
-    print("Creating Profile for user: ", user2)
-    df_user2 = profile2.extract_positives()
-    print("Done")
-    x, y = split_x_y(df_user1, numpy=True)
-    pipe = Pipeline([("MinMaxScaler", MinMaxScaler()), ('ED', ED()), ('MIFS', MIFS()),
-                     ('SVC', SVC(kernel='poly', class_weight={0: 1, 1: 100}, degree=3))])
-    print("Beginning Training")
-    pipe.fit(x, y)
-    user2_x, user2_y = split_x_y(df_user2, numpy=True)
-    count = 0
-    # for sample in user2_x:
-    predictions = pipe.predict(user2_x)
-    print(len(predictions))
-    count = np.sum(predictions)
-    print("Proportion of comments classified as same user", count / len(user2_x))
-    liklihood = count / len(user2_x)
-    if liklihood < 0.85:
-        return False
-    return True
-
-
+    def downloader(user):
+        rs = redditScraper()
+        return rs.getUserComments(user)
+    return start_verification(user1, user2, downloader, reddit_path, 350)
 
 def start_verification_twitter(user1, user2):
-    '''This method starts the user verification model, trains it and comapres the two users to
-    determine if they are the same.
+    def downloader(user):
+        tw = twitScrape()
+        return tw.getIndivTweets(user)
+    return start_verification(user1, user2, downloader, twitter_path, 240)
 
-    Returns: True if users are the same
-    Returns: False if the user are not the same
-    '''
-    tw = twitScrape()
-    '''If the users comment file cannot be genterated then return False
-     TO-DO: find a better solution/return value for this'''
-
-    curr_downloads = set([f[:-4] for f in os.listdir('../corpora/twitter_corpus/') if f.endswith('.txt')])
-    if user2 not in curr_downloads:
-        print('downloading user', user2)
-        user2_comments = tw.getIndivTweets(user2)
-        if user2_comments == -1:
-            return -1
-        profile2 = Profile(twitter_path + user2 + '.txt', email_size=240)
-    else:
-        profile2 = Profile(twitter_path + user2 + ".txt", email_size=240)
-    if user1 not in curr_downloads:
-        print('downloading user', user1)
-        user1_comments = tw.getIndivTweets(user1)
-        if user1_comments == -1:
-            return -1
-        profile1 = Profile(twitter_path + user1 + '.txt', twitter_path + user2 + ".txt",email_size=240)
-    else:
-        profile1 = Profile(twitter_path + user1 + ".txt", twitter_path + user2 + ".txt", email_size=240)
-
-    print("Creating Profile for user: ", user1)
-    df_user1 = profile1.create_profile()
-    print("Creating Profile for user: ", user2)
-    df_user2 = profile2.extract_positives()
-    print("Done")
-    x, y = split_x_y(df_user1, numpy=True)
-    pipe = Pipeline([("MinMaxScaler", MinMaxScaler()), ('ED', ED()), ('MIFS', MIFS()),
-                     ('SVC', SVC(kernel='poly', class_weight={0: 1, 1: 100}, degree=3))])
-    print("Beginning Training")
-    pipe.fit(x, y)
-    user2_x, user2_y = split_x_y(df_user2, numpy=True)
-    count = 0
-    # for sample in user2_x:
-    predictions = pipe.predict(user2_x)
-    print(len(predictions))
-    count = np.sum(predictions)
-    print("Proportion of comments identified as the same: ", count / len(user2_x))
-    liklihood = count / len(user2_x)
-    if liklihood < 0.85:
-        return False
-    return True
 
