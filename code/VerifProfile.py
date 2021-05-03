@@ -9,14 +9,7 @@ class VerifProfile(Profile):
     def __init__(self, path, comparison: str, email_size = 350, ngram_size = [5,6], f = [1,2]):
         super().__init__(path, comparison, email_size, ngram_size, f)
         self.comparison = comparison
-
-    def punctuation(self, email):
-        punc = [':', ',', '.', '?', '!', '\'', '"']
-        punc_count = []
-        for p in punc:
-            punc_count.append(email.count(p))
-        return punc_count
-   
+  
     def create_profile(self):
         # Create create csv for user
         with open(self.path, 'r', encoding='ISO-8859-1') as r:

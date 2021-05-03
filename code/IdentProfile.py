@@ -107,7 +107,7 @@ class IdentText(Profile):
             tmp.append(dis)
             tmp.append(self.specialCharacters(email))
             tmp.append(self.vowels(email))
-            tmp += self.punctuation(email)
+            tmp.append(self.punctuation(email))
             tmp.append(self.shortWords(words)/len(words))
             tmp.append(self.longWords(words)/len(words))
             tmp.append(self.func_word_type(words, self.conj)/len(words))
