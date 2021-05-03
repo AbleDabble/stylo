@@ -2,9 +2,9 @@ from Profile import Profile
 from sklearn.svm import LinearSVC, SVC
 from EntropyDiscretization import EntropyDiscretization as ED
 from MIFS import MIFS
-from imblearn.over_sampling import RandomOverSampler
 from MIFS import MIFS
-from sklearn.pipeline import Pipeline
+#from sklearn.pipeline import Pipeline
+from imblearn.pipeline import Pipeline
 from reddit_Scrape import redditScraper
 from sklearn.preprocessing import MinMaxScaler
 from Twitterscrape import twitScrape
@@ -26,7 +26,7 @@ def split_x_y(df, numpy=False):
 def print_progress(stage, message, num_stages=4):
     out = '[' + '=' * stage + ' ' * (num_stages - stage) + '] ' + message
     print(' ' * 80, end='\r')
-    if stage == num_stages: print(out, end='\r')
+    if stage != num_stages: print(out, end='\r')
     else: print(out)
 
 def start_verification(user1, user2, downloader, root_corpus, comment_size):
