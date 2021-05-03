@@ -161,56 +161,29 @@ class Profile:
     def extract_positives(self):
         with open(self.path, 'r', encoding='ISO-8859-1') as r:
             emails = r.read()
+        
         df = self.extract(emails, 1)
         target = df[[0]]
         target = target.copy()
         target = target.astype('int32')
         df = df.drop(0, axis=1)
-        # TODO include minMaxScaler in pipeline instead of here
-        #self.scaler = MinMaxScaler()
-        #self.scaler.fit(df)
-        #df = self.scaler.transform(df)
         df = pd.DataFrame(df)
-        #df = pd.DataFrame(df)
+        
         df.insert(0, "target", target)
         return df
     def create_profile(self):
-        # Remove target (y) from the dataframe
         df = self.extract_all()
-        #tf = self.extract_all(training=False)
+        
         target = df[[0]]
         target = target.copy()
         target = target.astype('int32')
         df = df.drop(0, axis=1)
         
-        # Do for test frame
-        """test_target = tf[[0]]
-        test_target = test_target.copy()
-        test_target = test_target.astype('int32')
-        tf = tf.drop(0, axis=1)"""
-        
-        # Scale data with min max normalization
-        # TODO move minMaxScaler to Pipeline instead of here.
-        #self.scaler = MinMaxScaler()
-        #self.scaler.fit(df)
-        #df = self.scaler.transform(df)
         df = pd.DataFrame(df)
-        #tf = scaler.transform(tf) # scale test frame
-        # Oversample minority case
-        # sm = SMOTE(random_state=0)
-        # x_resampled, y_resampled = sm.fit_resample(df, target)
-        # ros = RandomOverSampler(random_state = 0)
-        #x_resampled, y_resampled = ros.fit_resample(df, target)
-        # transform dataset with mdlp
-        #discretizer = EntropyDiscretization()
-        #conv_x = discretizer.fit_transform(df.to_numpy(), target.to_numpy())
-        #test_conv_x = discretizer.transform(tf)
-        
+                
         df = pd.DataFrame(df)
         df.insert(0, "target", target)
         
-        #tf = pd.DataFrame(tf)
-        #tf.insert(0, "target", test_target)
         
         return df
     
