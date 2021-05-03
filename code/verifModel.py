@@ -62,7 +62,7 @@ def start_verification_reddit(user1, user2):
     print("Done")
     x, y = split_x_y(df_user1, numpy=True)
     pipe = Pipeline([("MinMaxScaler", MinMaxScaler()), ('ED', ED()), ('MIFS', MIFS()),
-                     ('SVC', SVC(kernel='poly', class_weight={0: 1, 1: 40}, degree=3))])
+                     ('SVC', SVC(kernel='poly', class_weight={0: 1, 1: 100}, degree=3))])
     print("Beginning Training")
     pipe.fit(x, y)
     user2_x, user2_y = split_x_y(df_user2, numpy=True)
@@ -71,7 +71,7 @@ def start_verification_reddit(user1, user2):
     predictions = pipe.predict(user2_x)
     print(len(predictions))
     count = np.sum(predictions)
-    print("The chances these two users are the same is: ", count / len(user2_x))
+    print("Proportion of comments classified as same user", count / len(user2_x))
     liklihood = count / len(user2_x)
     if liklihood < 0.85:
         return False
@@ -124,7 +124,7 @@ def start_verification_twitter(user1, user2):
     predictions = pipe.predict(user2_x)
     print(len(predictions))
     count = np.sum(predictions)
-    print("The chances these two users are the same is: ", count / len(user2_x))
+    print("Proportion of comments identified as the same: ", count / len(user2_x))
     liklihood = count / len(user2_x)
     if liklihood < 0.85:
         return False
