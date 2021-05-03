@@ -11,27 +11,35 @@ with open(twitter_config_path, 'r') as f:
 with open(reddit_config_path, 'r') as f:
     reddit_config = json.load(f)
 
+# REDDIT VERIFICATION TEST
+print('REDDIT VERIFICATION')
+start_verification_reddit('Baerog', 'chafedogg')
+start_verification_reddit('Baerog', 'Baerog')
+print('TEST COMPLETE')
 
+# REDDIT DOWNLOADING TEST
+print('DOWNLOADING TEST')
+print('\tAttempting to download luncheroo')
+start_verification_reddit('Baerog', 'luncheroo')
 
-print('IDENTIFICATION TWITTER')
+try:
+    print('File size:', os.path.getsize('../corpora/reddit_corpus/luncheroo.txt'))
+    os.remove('../corpora/reddit_corpus/luncheroo.txt')
+except OSError:
+    print('ERROR: file does not exist or could not be found')
+print('TEST COMPLETE')
 
-text = 'I am staring down the empty abyss of life and have lost all meaning. Penniless and at the end of my supply of the drug which alone gives life meaning, I will casy myself from this garret window to the squalid street below. More words and characters. I think this is more than enoguh by to be sure I am going to continue to write more characters. Until I have a lot of characters. '
+# reset config file
+with open(reddit_config_path, 'w') as f:
+    json.dump(reddit_config, f)
 
-start_identification_twitter(['CNN', 'Adele', 'garyvee', 'jimcramer'], text)
-
-print('REDDIT IDENTIFICATION')
-
-
-text = 'I am staring down the empty abyss of life and have lost all meaning. Penniless and at the end of my supply of the drug which alone gives life meaning, I will casy myself from this garret window to the squalid street below. Do not judge me for my addiction to morphine. It is my hope that after these hastily scrawled pages that you understand. Need more characters holy shit. '
-
-start_identification_reddit(['Baerog', '4Darco','artchang','externality'], text)
-
-
-
-
+# TWITTER VERIFICATION TEST
 print('TWITTER VERIFICATION')
 start_verification_twitter('CNN', 'jimcramer')
+start_verification_twitter('CNN', 'CNN')
+print('TEST COMPLETE')
 
+# TWITTER DOWNLOADING TEST
 print('DOWNLOADING TEST')
 print('\tAttempting to download Michael Malice')
 
@@ -45,21 +53,25 @@ except OSError:
 
 with open(twitter_config_path, 'w') as f:
     json.dump(twitter_config, f)
+print('TEST COMPLETE')
 
-print('REDDIT VERIFICATION')
-start_verification_reddit('Baerog', 'chafedogg')
+# IDENTIFICATION TEST
+print('IDENTIFICATION TWITTER')
 
-print('DOWNLOADING TEST')
-print('\tAttempting to download luncheroo')
-start_verification_reddit('Baerog', 'luncheroo')
+text = 'I am staring down the empty abyss of life and have lost all meaning. Penniless and at the end of my supply of the drug which alone gives life meaning, I will casy myself from this garret window to the squalid street below. More words and characters. I think this is more than enoguh by to be sure I am going to continue to write more characters. Until I have a lot of characters. '
 
-try:
-    print('File size:', os.path.getsize('../corpora/reddit_corpus/luncheroo.txt'))
-    os.remove('../corpora/reddit_corpus/luncheroo.txt')
-except OSError:
-    print('ERROR: file does not exist or could not be found')
+start_identification_twitter(['CNN', 'Adele', 'garyvee', 'jimcramer'], text)
+print('TEST COMPLETE')
 
-with open(reddit_config_path, 'w') as f:
-    json.dump(reddit_config, f)
+# REDDIT VERIFICATION
+print('REDDIT IDENTIFICATION')
+
+
+text = 'I am staring down the empty abyss of life and have lost all meaning. Penniless and at the end of my supply of the drug which alone gives life meaning, I will casy myself from this garret window to the squalid street below. Do not judge me for my addiction to morphine. It is my hope that after these hastily scrawled pages that you understand. Need more characters holy shit. '
+
+start_identification_reddit(['Baerog', '4Darco','artchang','externality'], text)
+print('TEST COMPLETE')
+
+
 
 

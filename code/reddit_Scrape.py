@@ -74,7 +74,6 @@ class redditScraper():
                 cur_comment = self.remove_url(cur_comment)
                 if len(user_comment) < 17500:
                     if len(cur_comment) > 350 and self.is_english(cur_comment):
-                        print("Found Comment :\n", cur_comment)
                         user_comment = user_comment + cur_comment
                 elif len(user_comment) > 17500:
                     break;
