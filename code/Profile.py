@@ -119,11 +119,7 @@ class Profile:
     def vowels(self, email):
         return len(re.findall('[aeiou]', email))
     def punctuation(self, email):
-        punc = [':', ',', '.', '?', '!', '\'', '"']
-        punc_count = []
-        for p in punc:
-            punc_count.append(email.count(p))
-        return punc_count
+        return len(re.findall('[:,.?!\'"]', email)) 
         #return len(re.findall('[.,\'?":!]', email))
     def shortWords(self, words):
         return sum(1 for word in words if len(word) <=3)
