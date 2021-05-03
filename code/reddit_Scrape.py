@@ -91,7 +91,6 @@ class redditScraper():
         else:
             if len(user_comment) > 17500:
                 slice_user_comments = user_comment[:17500]
-                print("Sliced Array size: ", len(slice_user_comments))
                 path = self.writeComments(slice_user_comments, username)
             else:
                 path = self.writeComments(user_comment, username)
