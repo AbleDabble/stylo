@@ -269,6 +269,94 @@ William - Developed a reasonable and working model with many features from the t
 
 
 
+# The Plan for the Last 3 Weeks
+
+
+
+Ian - Write functions for the GUI that link the verification/id/profiling models to the frontend display.
+
+
+
+
+
+William - Build model for authorship identification and supporting classes and methods
+
+
+
+
+
+Sam - Update the reddit scraper to handle errors and update model functions to work with the new scrapper.
+
+
+
+
+
+Andy- Complete the twitter scraper and add error checking functionality.
+
+
+
+
+
+# What was Done During Last 3 Weeks
+
+
+
+Ian - Wrote methods that can activate the models and display basic results to the user.
+
+
+
+
+
+William - Finished Authorship identification model. Began finding the best hyper-parameters to for authorship identification
+
+
+
+
+
+Sam - Added error checking to the reddit scrapper which makes the function exit smoothly on an error, and returns appropriate values based on the error.
+
+
+
+
+
+Andy- Completed the Twitter scraper so it can pull individual users or a list of users through a for loop. Added basic error checking to prevent the program from crashing on error.
+
+
+
+ 
+
+
+
+# Successes
+
+
+
+Ian - Finished the basic gui mock-up excluding the functionality.
+
+
+
+
+
+Andy- Was able to complete the  Twitter Scraper and its functionality 
+
+
+
+
+
+William - Completed the authorship identification model. Began integrating the identification and authentication models with the frontend.
+
+
+
+Sam- Completed error handling and updating the verification function to use the new function.
+
+
+
+
+
+# Roadblocks Challenges
+
+None
+
 
 
 ## Videos
