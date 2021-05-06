@@ -1,4 +1,6 @@
-# The Plan for the Last 3 Weeks
+### Status 4
+
+### The Plan for the Last 3 Weeks
 
 Ian - Write functions for the GUI that link the verification/id/profiling models to the frontend display.
 
@@ -12,7 +14,7 @@ Sam - Update the reddit scraper to handle errors and update model functions to w
 Andy- Complete the twitter scraper and add error checking functionality.
 
 
-# What was Done During Last 3 Weeks
+### What was Done During Last 3 Weeks
 
 Ian - Wrote methods that can activate the models and display basic results to the user.
 
@@ -27,7 +29,7 @@ Andy- Completed the Twitter scraper so it can pull individual users or a list of
 
  
 
-# Successes
+### Successes
 
 Ian - Finished the basic gui mock-up excluding the functionality.
 
@@ -40,7 +42,7 @@ William - Completed the authorship identification model. Began integrating the i
 Sam- Completed error handling and updating the verification function to use the new function.
 
 
-# Roadblocks Challenges
+### Roadblocks Challenges
 
 Ian- Writing a display class that can show the results from the functions to the user.
 
@@ -54,7 +56,7 @@ William - Organizing the data for efficient retrieval, and finding the best hype
 Sam - PRAW documentation does not have clear return values which makes error handling difficult. Ran into an infinite loop issue caused by users having no viable comments
 
 
-# Changes/Deviations from the Plan (if Applicable)
+### Changes/Deviations from the Plan (if Applicable)
 
 Ian - None
 
@@ -65,7 +67,7 @@ Sam - None
 Andy - None
 
 
-# Description of Goals for Next 3 Weeks
+### Description of Goals for Next 3 Weeks
 
 Ian - Continue working with the team to link the GUI back-end with the front-end display.
 
@@ -79,7 +81,7 @@ Sam - Continue error handling and tying up the finished program.
 William - Complete authorship profiling model
 
 
-# Confidence on Completion from each Team Member
+### Confidence on Completion from each Team Member
 
 Ian - 5
 
