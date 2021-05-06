@@ -34,6 +34,7 @@ class PrimaryWindow(QWidget):
     
     def initUI(self):
         self.verificationButton = QPushButton("Authorship Verification")
+        self.setFont(QFont('Arial', 14))
         self.verificationButton.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
         self.identificationButton = QPushButton("Authorship Identification")
         self.identificationButton.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
@@ -73,6 +74,7 @@ class Identification(QWidget):
         self.initUI()
 
     def initUI(self):
+        self.setFont(QFont('Arial', 14))
         outerLayout = QVBoxLayout()
         self.topLayout = QFormLayout()
         self.users = []
@@ -154,6 +156,7 @@ class Profiling(QWidget):
         self.initUI()
     
     def initUI(self):
+        self.setFont(QFont('Arial', 14))
         outerLayout = QVBoxLayout()
         formLayout = QFormLayout()
 
@@ -201,6 +204,7 @@ class Verification(QWidget):
         self.site = "reddit"
 
     def initUI(self):
+        self.setFont(QFont('Arial', 14))
         outerLayout = QVBoxLayout()
         topLayout = QFormLayout()
         self.userOne = QLineEdit()
@@ -256,9 +260,9 @@ class Verification(QWidget):
 class Results(QWidget):
     def __init__(self, message):
         super().__init__()
+        self.setFont(QFont('Arial', 14))
         layout = QVBoxLayout()
         label = QLabel(message)
-        label.setFont(QFont('Arial', 18))
         layout.addWidget(QLabel(message))
         self.setLayout(layout)
 

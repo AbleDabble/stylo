@@ -65,7 +65,7 @@ def start_verification(user1, user2, downloader, root_corpus, comment_size):
         ("MinMaxScaler", MinMaxScaler()),
         ('ED', ED()),
         ('MIFS', MIFS()),
-        ('SVC', SVC(kernel='poly', class_weight={0: 1, 1: 40}, degree=3))
+        ('SVC', SVC(kernel='poly', class_weight={0:0.21, 1: 1}, degree=3))
         ]) #type: ignore
     # Train the data
     print_progress(2, 'Training Model')
