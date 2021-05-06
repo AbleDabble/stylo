@@ -50,7 +50,7 @@ class IdentProfile(Profile):
             tmp.append(dis)
             tmp.append(self.specialCharacters(email))
             tmp.append(self.vowels(email))
-            tmp += self.punctuation(email)
+            tmp.append(self.punctuation(email))
             tmp.append(self.shortWords(words)/len(words))
             tmp.append(self.longWords(words)/len(words))
             tmp.append(self.func_word_type(words, self.conj)/len(words))
@@ -66,7 +66,6 @@ class IdentProfile(Profile):
             tmp.append(self.countFuncWords(words, self.functionWords(self.quantifiers_path)))
             tmp.append(self.countFuncWords(words, self.functionWords(self.determiners_path)))"""
             features.append(tmp)
-            print(tmp)
         df = pd.DataFrame(np.array(features))
         return df
 
