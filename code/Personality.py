@@ -64,6 +64,10 @@ class Personality:
             is_result = self.isu.predict(tokenized)
             io_result = self.io.predict(tokenized)
         result = ''
+        print(ds_result)
+        print(do_result)
+        print(is_result)
+        print(io_result)
         # convert to binary values
         if do_result < 0.5:
             result += 'I'
