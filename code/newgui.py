@@ -242,7 +242,7 @@ class Verification(QWidget):
     def start(self):
         r = -1
         if self.site == 'twitter':
-            r = start_verification_twitter(self.userOne.text().strip(), self.usertwo.text().strip())
+            r = start_verification_twitter(self.userOne.text().strip(), self.userTwo.text().strip())
         if self.site == 'reddit':
             r = start_verification_reddit(self.userOne.text().strip(), self.userTwo.text().strip())
         if type(r) == int:
