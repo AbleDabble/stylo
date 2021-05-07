@@ -126,7 +126,7 @@ class Identification(QWidget):
         if self.site == 'reddit':
             r = start_identification_reddit(usernames, self.textInput.toPlainText().strip())
         if self.site == 'twitter':
-            r = start_verification_reddit(usernames, self.textInput.toPlainText().strip())
+            r = start_identification_twitter(usernames, self.textInput.toPlainText().strip())
         if type(r) == int:
             self._new_window = Results("Error downloading users")
             self._new_window.show()
