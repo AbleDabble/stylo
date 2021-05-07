@@ -6,6 +6,49 @@
 Using machine learning techniques Stylo aims to provide investigators with authorship verification, identification and profiling tools. Capable of automatically retrieving text data from sites such as twitter and reddit, an investigator will be able to compare two or more users against each other to determine if they are the same person, or provide information that may narrow down the search for an anonymous user’s identity by detailing possible author traits such as gender, age, place of origin first or second language speaker. 
 
 
+
+
+
+## Videos
+
+
+
+Status #1: https://www.youtube.com/watch?v=wO9pK9ZcS_k
+
+
+
+Status #2:  https://www.youtube.com/watch?v=HEP5GPddDvI
+
+
+
+Status #3: https://www.youtube.com/watch?v=sdiI3Oz0_UU
+
+Status #4: https://youtu.be/XgwZfehoJzc
+
+Final Presentation: https://youtu.be/jtDwIMZu5vM
+
+
+
+
+## Videos
+
+
+
+Status #1: https://www.youtube.com/watch?v=wO9pK9ZcS_k
+
+
+
+Status #2:  https://www.youtube.com/watch?v=HEP5GPddDvI
+
+
+
+Status #3: https://www.youtube.com/watch?v=sdiI3Oz0_UU
+
+
+
+
+
+
 ## Status Updates
 
 ## Status Update 1
@@ -357,16 +400,6 @@ Sam- Completed error handling and updating the verification function to use the 
 # Roadblocks Challenges
 
 None
-
-
-
-## Videos
-
-Status #1: https://www.youtube.com/watch?v=wO9pK9ZcS_k
-
-Status #2:  https://www.youtube.com/watch?v=HEP5GPddDvI
-
-Status #3: https://www.youtube.com/watch?v=sdiI3Oz0_UU
 
 
 
