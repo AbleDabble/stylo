@@ -29,26 +29,6 @@ Final Presentation: https://youtu.be/jtDwIMZu5vM
 
 
 
-
-## Videos
-
-
-
-Status #1: https://www.youtube.com/watch?v=wO9pK9ZcS_k
-
-
-
-Status #2:  https://www.youtube.com/watch?v=HEP5GPddDvI
-
-
-
-Status #3: https://www.youtube.com/watch?v=sdiI3Oz0_UU
-
-
-
-
-
-
 ## Status Updates
 
 ## Status Update 1
