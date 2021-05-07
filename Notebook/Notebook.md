@@ -582,3 +582,131 @@ T: the type of data. The type of model to train where 1 = authorship identificat
 
 authorship verification, and 3 = authorship profiling. 
 
+# Summary of Final Implementation
+
+## Design
+
+
+## UI
+
+The main window presents the user with 3 initial options: “Authorship Verification”, “Authorship Identification”, “Authorship Profiling”
+
+
+Upon selecting an option, the user will be greeted with the respective panes:
+
+
+Authorship verification takes two usernames from either twitter or reddit and creates a corpus for the two users. The corpus is then given to the verification algorithm to determine if there is a match. A window opens that contains the results of whether or not the two users match.
+
+
+Authorship identification takes up to seven usernames and a block of text and uses that information to compare the likelihood that the text matches each user, and returns the most likely match. A window opens that shows the user most likely matching the text.
+
+
+Authorship profiling takes a single username and creates a corpus from either a twitter or reddit account that has the same name.
+
+
+## Algorithms
+
+### Verification
+
+The Authorship verification algorithm takes in two inputs for usernames and whether to use the reddit or twitter corpus. It generates profiles based on these users’ accounts and their text posts parsing over 300 features. One user is selected to represent the positive samples in the resulting data frame while the other user is held out from this initial dataframe. The negative samples in the dataframe are represented by a large number of other users. The resulting data frame is then heavily imbalanced with 50 times more negative samples than positive sample. A Support vector machine with a polynomial kernel and a degree of 3 is trained on the generated data weighting the negative samples at 0.2 to compensate for the imbalance. Once the training is complete the samples from the other user are put into the support vector machine and the resulting predictions recorded. If the number of matches is greater than 0.6 the users are determined to be the same person. 
+
+
+### Identification
+
+The identification model works in a similar manner to the verification model using almost all the same features. However the support vector machine is provided a different label for each user given in the input. Since there is no imbalance in the sampling no weights are provided, and a one vs rest comparison is done by a Support Vector Machine with a linear kernel. 
+
+
+### Profiling
+
+The profiling model uses a deep neural network that creates word embeddings from the user comments. The embeddings are passed to a bidirectional GRU layer. The ultimate output is binary. Instead of creating 16 different class labels we created 4 models that would each predict a different part of the Myers-Briggs Personality Type. One model predicts Introvert vs Extrovert, another Intuition vs Sensing, and so on until a complete personality prediction is provided. 
+
+
+## Web Scraping
+
+
+## Reddit
+
+
+The web scraper for Reddit obtains all comments of a username inputted via the GUI and formatts them for future use by the Authorship Algorithms. The scrapper will attempt to make a PRAW Reddit instance using a developer redditor account credentials which are stored in the config.json file (Note: User credentials are not stored on the config file on Github). If the Reddit instance is successfully instantiated then the program will attempt to grab a user using the inputted username. A PRAW user consists of posts, comments, karma, banned status, etc and if the user is not real then the program exits with (-1), if the user does exist then we pull the comment bodies of the user. The program checks if the comment is english and is over 350 characters as this is the minimum size needed for the Authorship algorithms. Once all comments have been filtered they will be written to a text file of the same name as the user, the file will not exceed 17500 characters written. This is so the data interfaces correctly with the Authorship algorithms.
+
+
+## Twitter
+
+The web scraper for Twitter obtains the most recent 50 tweets of an account that is input by the GUI. This means that the Twitter data will be self-updating in the sense that if the same user is downloaded then it will add the new tweets. The scraper works by first using the authentication tokens to verify itself with the Twitter API. Once access is gained, the scraper finds the account and reads in the users timeline based on the parameters used. AKA 50 recent tweets. If it can’t find the user or there is not enough data, an error is thrown to quit the function and not crash the program. After the tweets have been read, they are stored in a .txt file in blocks of 250 characters to later be used in the verification models. Finally, we can convert this data into csv files which will then be passed to the models to be used.
+
+
+## Limitations
+
+
+* Each of the algorithms requires a minimum input size for each user, so many newer accounts with fewer comments are not able to be used in any of the algorithms.
+
+* Verification
+
+* The Equal Error Rate is 0.21 meaning that the algorithm will incorrectly classify a block of text 21% of the time; however considering the size of each text block (350 characters) this is rather good based on the literature.
+
+* Identification
+
+* The true positive rate differed depending on the number of users provided as input varying between 0.57 for only 2 users with a subtle decline down to 0.22 when fifty users were provided as input
+
+* The reason that there is a substantial difference in performance between the verification and identification models despite their similarity is likely due to the lack of sample size for each label and the lack of features specific to the verification model.
+
+* Profiling
+
+    * For the model that predicted Intuition vs Sensing, the AUC was 0.77
+
+    * For the model that predicted Introvert vs Extrovert, the AUC was 0.82
+
+    * For the model that predicted Feeling vs Thinking, the AUC was 0.73
+
+    * For the model that predicted Prospecting vs Judging, the AUC was 0.71
+
+    * The success of the introvert/extrovert model over the others is likely due to the greater degree of scientific data indicating the predictive utility of that personality type compared to others; that is to say that it is more likely that there would be observable differences between extrovert and introvert behavior. 
+
+    * Both web-scraping tools require developer accounts on each platform in order to use. The reddit developer account is not too difficult to obtain but the twitter developer account does require a review before it can be used.
+
+
+
+## Future Direction
+
+The next steps for our software would be increasing the accuracy and efficiency of the models. Because of the size of the verification dataset required for each model and the complexity of some of the features it can take a while to generate the model. Speeding this up would be a priority as well as identifying new features to add to the identification model that would increase its accuracy. We would also like to expand the profiling model to predict additional traits, such as age, and gender. 
+
+
+## Statement of Work
+
+    
+
+Will - I worked on the various machine learning models and helped to write the functions that interfaced those models with the GUI to provide readable and easily interpretable results. 
+
+
+Andy - I worked with the Twitter API in order to collect user data that can be used in the Authorship algorithms. Then I was able to assist Ian with integrating the Twitter API into the 
+
+GUI. The scraper was modified throughout the semester to meet the necessary requirements and make sure that the proper errors were being handled if necessary.
+
+
+Ian - I worked with the team to find requirements for the user interface, and began to design the final product. After I had the design documents, I began to create a rough outline of the GUI. I then worked with the team's individual parts to add functionality to the program by creating functions in the python files that interfaced the back and front end together. Then, I began testing and modifying the GUI until it was presentable as a final product.
+
+
+Sam - I worked with the Reddit scrapping in order to collect new user data to feed to the Authorship algorithms and interfacing the algorithms with the scraper. I changed the scrapper throughout the semester to meet the requirements and return values of the algorithms.
+
+
+
+
+# Reflection
+
+ 
+
+## Lessons Learned
+
+We learned that it is important to ensure that communication stays open between team members and that meetings happen more often than not. We also learned how to plan the different parts of a complex project so that everything fits together well. 
+
+
+## If you had to do it again
+
+If we had to do it again, we would plan things out with a more strict timeline. Spend more time reading the documentation instead of writing code without an exact understanding of the tools we were using. We would have also put more time into things in the beginning. It would have benefited our team greatly to invest more time into weekly group meetings. Our plans were solid, but we could have made better use of meeting and discussing our progress.
+
+
+
+## Advice for Future teams
+
+Make sure to meet weekly if not more often. Maintain good communication. Start early and try to overestimate the amount of time a feature will take to implement. 
+
