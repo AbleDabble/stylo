@@ -14,17 +14,6 @@ def print_progress(stage, message, num_stages=4):
 
 
 
-@contextmanager
-def suppress_stdout():
-    with open(os.devnull, "w") as devnull:
-        old_stdout = sys.stdout
-        sys.stdout = devnull
-        try:  
-            yield
-        finally:
-            sys.stdout = old_stdout
-
-
 class Personality:
     def __init__(self):
         # Deduction Subjective: N = 0, S = 1
@@ -40,17 +29,13 @@ class Personality:
             self.tokenizer = pkl.load(f)
 
         print_progress(0, 'Loading Deduction Subjective Model')
-        with suppress_stdout():
-            self.ds = tf.keras.models.load_model('../models/ds')
+        self.ds = tf.keras.models.load_model('../models/ds')
         print_progress(1, 'Loading Deduction Objective Model')
-        with suppress_stdout():
-            self.do = tf.keras.models.load_model('../models/do')
+        self.do = tf.keras.models.load_model('../models/do')
         print_progress(2, 'Loading Induction Subjective Model')
-        with suppress_stdout():
-            self.isu = tf.keras.models.load_model('../models/is')
+        self.isu = tf.keras.models.load_model('../models/is')
         print_progress(3, 'Loading Induction Objective Model')
-        with suppress_stdout():
-            self.io = tf.keras.models.load_model('../models/io')
+        self.io = tf.keras.models.load_model('../models/io')
         print_progress(4, 'Done')
 
     def predict(self, text):
@@ -58,11 +43,10 @@ class Personality:
         tokenized = self.tokenizer.texts_to_sequences(text)
         tokenized = tf.keras.preprocessing.sequence.pad_sequences(tokenized, maxlen=1883, padding='post')
         tokenized = np.array(tokenized)
-        with suppress_stdout():
-            ds_result = self.ds.predict(tokenized)
-            do_result = self.do.predict(tokenized)
-            is_result = self.isu.predict(tokenized)
-            io_result = self.io.predict(tokenized)
+        ds_result = self.ds.predict(tokenized)
+        do_result = self.do.predict(tokenized)
+        is_result = self.isu.predict(tokenized)
+        io_result = self.io.predict(tokenized)
         result = ''
         print(ds_result)
         print(do_result)

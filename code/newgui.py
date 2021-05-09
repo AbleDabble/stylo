@@ -191,10 +191,13 @@ class Profiling(QWidget):
             r = start_personality_reddit(self.user.text().strip())
         if self.site == 'twitter':
             r = start_personality_twitter(self.user.text().strip())
-        if type(r) == int:
+        if type(r) != int:
             self._new_window = Results(f"The users predicted personality is {r}")
             self._new_window.show()
-        # Results Dialog
+            return
+        self._new_window = Results(f"Error Downloading user {self.user.text().strip()}")
+        self._new_window.show()
+
         
 
 class Verification(QWidget):

@@ -65,7 +65,7 @@ def start_verification(user1, user2, downloader, root_corpus, comment_size):
         ("MinMaxScaler", MinMaxScaler()),
         ('ED', ED()),
         ('MIFS', MIFS()),
-        ('SVC', SVC(kernel='poly', class_weight={0:0.21, 1: 1}, degree=3))
+        ('SVC', SVC(kernel='poly', class_weight={0:0.0125, 1: 1}, degree=3))
         ]) #type: ignore
     # Train the data
     print_progress(2, 'Training Model')
@@ -80,7 +80,7 @@ def start_verification(user1, user2, downloader, root_corpus, comment_size):
     likelihood = count/len(predictions)
     print_progress(4, f'Proportion of comments that match: {likelihood}')
 
-    if likelihood < 0.85:
+    if likelihood < 0.65:
         return False
     else:
         return True

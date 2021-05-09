@@ -31,7 +31,7 @@ def start_personality(username, downloader, root_corpus):
     # Create file path
     user_path = root_corpus + username + '.txt'
     with open(user_path, 'r') as f:
-        comments = user_path
+        comments = f.read()
     model = Personality()
     results = model.predict(comments)
     print('Results = ', results)
@@ -50,7 +50,7 @@ def start_personality_twitter(user):
     return start_personality(user, downloader, twitter_corpus)
 
 if __name__ == '__main__':
-    start_personality_reddit('Baerog')
+    start_personality_reddit('ShufflePlaylist')
 
     
 

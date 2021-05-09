@@ -77,6 +77,9 @@ class redditScraper():
                         user_comment = user_comment + cur_comment
                 elif len(user_comment) > 17500:
                     break;
+            else:
+                return -1
+
         except prawcore.exceptions.NotFound as e:
             print("\nCould not find user", username)
             print(e)
