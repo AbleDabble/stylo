@@ -142,6 +142,7 @@ cython_debug/
 config/config.json
 config/labels_twitter.json
 config/labels.json
+config/*.json
 corpora/reddit_corpus_csv/*.csv
 corpora/reddit_corpus/*.csv
 corpora/twitter_corpus/*.csv
